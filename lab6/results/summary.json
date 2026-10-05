@@ -1,0 +1,167 @@
+[
+  {
+    "target": "bmc",
+    "users": 1,
+    "name": "BMC: PowerState",
+    "requests": 10,
+    "failures": 0,
+    "error_percent": 0.0,
+    "average_ms": 551.9975101997261,
+    "p95_ms": 700.0,
+    "rps": 0.25239629117714923
+  },
+  {
+    "target": "bmc",
+    "users": 1,
+    "name": "BMC: system information",
+    "requests": 6,
+    "failures": 0,
+    "error_percent": 0.0,
+    "average_ms": 596.9036656654984,
+    "p95_ms": 670.0,
+    "rps": 0.15143777470628955
+  },
+  {
+    "target": "bmc",
+    "users": 1,
+    "name": "Aggregated",
+    "requests": 16,
+    "failures": 0,
+    "error_percent": 0.0,
+    "average_ms": 568.8373184993907,
+    "p95_ms": 700.0,
+    "rps": 0.4038340658834388
+  },
+  {
+    "target": "bmc",
+    "users": 5,
+    "name": "BMC: PowerState",
+    "requests": 36,
+    "failures": 0,
+    "error_percent": 0.0,
+    "average_ms": 724.3564641091021,
+    "p95_ms": 1300.0,
+    "rps": 0.9101612715713862
+  },
+  {
+    "target": "bmc",
+    "users": 5,
+    "name": "BMC: system information",
+    "requests": 35,
+    "failures": 0,
+    "error_percent": 0.0,
+    "average_ms": 811.6718951159522,
+    "p95_ms": 1600.0,
+    "rps": 0.8848790140277366
+  },
+  {
+    "target": "bmc",
+    "users": 5,
+    "name": "Aggregated",
+    "requests": 71,
+    "failures": 0,
+    "error_percent": 0.0,
+    "average_ms": 767.3992822110705,
+    "p95_ms": 1400.0,
+    "rps": 1.7950402855991228
+  },
+  {
+    "target": "bmc",
+    "users": 10,
+    "name": "BMC: PowerState",
+    "requests": 48,
+    "failures": 0,
+    "error_percent": 0.0,
+    "average_ms": 2177.160107833212,
+    "p95_ms": 3100.0,
+    "rps": 1.2211685388686728
+  },
+  {
+    "target": "bmc",
+    "users": 10,
+    "name": "BMC: system information",
+    "requests": 44,
+    "failures": 0,
+    "error_percent": 0.0,
+    "average_ms": 2223.909176727664,
+    "p95_ms": 3200.0,
+    "rps": 1.1194044939629502
+  },
+  {
+    "target": "bmc",
+    "users": 10,
+    "name": "Aggregated",
+    "requests": 92,
+    "failures": 0,
+    "error_percent": 0.0,
+    "average_ms": 2199.518358174037,
+    "p95_ms": 3200.0,
+    "rps": 2.340573032831623
+  },
+  {
+    "target": "bmc",
+    "users": 20,
+    "name": "BMC: PowerState",
+    "requests": 56,
+    "failures": 0,
+    "error_percent": 0.0,
+    "average_ms": 5252.448987286698,
+    "p95_ms": 7200.0,
+    "rps": 1.305318690323805
+  },
+  {
+    "target": "bmc",
+    "users": 20,
+    "name": "BMC: system information",
+    "requests": 54,
+    "failures": 0,
+    "error_percent": 0.0,
+    "average_ms": 5394.781702017536,
+    "p95_ms": 7100.0,
+    "rps": 1.2587001656693835
+  },
+  {
+    "target": "bmc",
+    "users": 20,
+    "name": "Aggregated",
+    "requests": 110,
+    "failures": 0,
+    "error_percent": 0.0,
+    "average_ms": 5322.3214108818365,
+    "p95_ms": 7100.0,
+    "rps": 2.5640188559931882
+  },
+  {
+    "target": "public",
+    "users": 10,
+    "name": "Public: /posts",
+    "requests": 33,
+    "failures": 0,
+    "error_percent": 0.0,
+    "average_ms": 336.497724242773,
+    "p95_ms": 710.0,
+    "rps": 0.8232883997119812
+  },
+  {
+    "target": "public",
+    "users": 10,
+    "name": "Public: wttr.in/Novosibirsk",
+    "requests": 50,
+    "failures": 0,
+    "error_percent": 0.0,
+    "average_ms": 867.718542580842,
+    "p95_ms": 1000.0,
+    "rps": 1.2474066662302745
+  },
+  {
+    "target": "public",
+    "users": 10,
+    "name": "Aggregated",
+    "requests": 83,
+    "failures": 0,
+    "error_percent": 0.0,
+    "average_ms": 656.5102654102844,
+    "p95_ms": 950.0,
+    "rps": 2.070695065942256
+  }
+]

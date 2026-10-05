@@ -1,0 +1,26 @@
+Host
+Status
+RUNNING
+Users
+10
+RPS
+2.6
+Failures
+0%
+EDIT
+STOP
+RESET
+STATISTICS
+CHARTS
+FAILURES
+EXCEPTIONS
+CURRENT RATIO
+DOWNLOAD DATA
+LOGS
+Type Name # Requests # Fails Median (ms) 95%ile (ms) 99%ile (ms) Average (ms) Min (ms) Max (ms) Average size (bytes) Current RPS Current Failures/s
+GET BMC: PowerState 43 0 600 1400 1700 708.83 336 1668 2578 0.9 0
+GET BMC: system information 29 0 540 1100 1200 587.26 325 1233 2578 0.9 0
+GET Public: /posts 20 0 350 1700 1700 502.39 171 1656 27520 0.5 0
+GET Public: wttr.in/Novosibirsk 17 0 2000 6900 6900 2237.8 751 6904 39654 0.3 0
+Aggregated 109 0 600 2200 4000 877.07 171 6904 12937.01 2.6 0
+ABOUT

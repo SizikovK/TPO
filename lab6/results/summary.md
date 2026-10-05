@@ -1,0 +1,17 @@
+| API | Users | Request | Count | Errors | Errors % | Mean ms | p95 ms | RPS |
+| --- | ---: | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| bmc | 1 | BMC: PowerState | 10 | 0 | 0.00 | 552.00 | 700 | 0.25 |
+| bmc | 1 | BMC: system information | 6 | 0 | 0.00 | 596.90 | 670 | 0.15 |
+| bmc | 1 | Aggregated | 16 | 0 | 0.00 | 568.84 | 700 | 0.40 |
+| bmc | 5 | BMC: PowerState | 36 | 0 | 0.00 | 724.36 | 1300 | 0.91 |
+| bmc | 5 | BMC: system information | 35 | 0 | 0.00 | 811.67 | 1600 | 0.88 |
+| bmc | 5 | Aggregated | 71 | 0 | 0.00 | 767.40 | 1400 | 1.80 |
+| bmc | 10 | BMC: PowerState | 48 | 0 | 0.00 | 2177.16 | 3100 | 1.22 |
+| bmc | 10 | BMC: system information | 44 | 0 | 0.00 | 2223.91 | 3200 | 1.12 |
+| bmc | 10 | Aggregated | 92 | 0 | 0.00 | 2199.52 | 3200 | 2.34 |
+| bmc | 20 | BMC: PowerState | 56 | 0 | 0.00 | 5252.45 | 7200 | 1.31 |
+| bmc | 20 | BMC: system information | 54 | 0 | 0.00 | 5394.78 | 7100 | 1.26 |
+| bmc | 20 | Aggregated | 110 | 0 | 0.00 | 5322.32 | 7100 | 2.56 |
+| public | 10 | Public: /posts | 33 | 0 | 0.00 | 336.50 | 710 | 0.82 |
+| public | 10 | Public: wttr.in/Novosibirsk | 50 | 0 | 0.00 | 867.72 | 1000 | 1.25 |
+| public | 10 | Aggregated | 83 | 0 | 0.00 | 656.51 | 950 | 2.07 |

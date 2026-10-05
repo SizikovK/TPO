@@ -1,0 +1,5 @@
+Открыт http://127.0.0.1:8089; классы OpenBMCUser и PublicAPIUser; пользователи=10, скорость=2/с
+Нажата START; нагрузка запущена через браузер
+state=running; users=10; total_rps=2.6003575415903284
+Нажата STOP; state=stopped
+Статистика и скриншоты сохранены в lab6/results
