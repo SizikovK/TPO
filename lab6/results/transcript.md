@@ -725,4 +725,3 @@ GET      Public: wttr.in/Novosibirsk                                            
 
 Exit code: 0
 ```
-

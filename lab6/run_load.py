@@ -38,6 +38,8 @@ def main():
             transcript.flush()
             print(result.stdout, flush=True)
             print(f'EXIT CODE: {result.returncode}', flush=True)
+    transcript_path = RESULTS / 'transcript.md'
+    transcript_path.write_text(transcript_path.read_text().rstrip() + '\n')
     return exit_code
 
 
