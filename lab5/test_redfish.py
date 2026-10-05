@@ -100,7 +100,7 @@ def test_power_on(redfish_session):
         f'Ожидались HTTP 202 и PowerState=On; HTTP {response.status_code}, состояния={states}')
 
 
-@pytest.fixture(scope='module')
+@pytest.fixture
 def cpu_temperatures(redfish_session):
     session = redfish_session[0]
     chassis = get(session, '/redfish/v1/Chassis')
@@ -123,6 +123,7 @@ def number(value):
 
 
 def test_cpu_temperature_normal(cpu_temperatures):
+    missing_thresholds = []
     for sensor in cpu_temperatures:
         reading = sensor.get('ReadingCelsius')
         assert number(reading), f'Нет числовой температуры CPU: {sensor}'
@@ -130,12 +131,15 @@ def test_cpu_temperature_normal(cpu_temperatures):
         assert sensor.get('Status', {}).get('State') == 'Enabled', sensor
         upper = sensor.get('UpperThresholdNonCritical')
         if not number(upper):
-            pytest.skip(f"Blocked: для {sensor['Name']} не задан UpperThresholdNonCritical")
-        assert reading < upper, f'{reading} °C >= {upper} °C'
+            missing_thresholds.append(sensor['Name'])
+        else:
+            assert reading < upper, f'{reading} °C >= {upper} °C'
         lower = sensor.get('LowerThresholdNonCritical')
         if number(lower):
             assert reading > lower, f'{reading} °C <= {lower} °C'
         LOG.info('%s: %s °C, верхняя граница нормы %s °C', sensor['Name'], reading, upper)
+    if missing_thresholds:
+        pytest.skip(f'Blocked: не задан UpperThresholdNonCritical: {missing_thresholds}')
 
 
 def test_cpu_sensors_redfish_ipmi(cpu_temperatures):

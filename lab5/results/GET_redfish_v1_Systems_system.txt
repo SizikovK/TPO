@@ -61,7 +61,7 @@ HTTP 200
     "TimeoutAction": "ResetSystem"
   },
   "Id": "system",
-  "LastResetTime": "2026-10-05T06:49:20+00:00",
+  "LastResetTime": "2026-10-05T07:41:40+00:00",
   "Links": {
     "Chassis": [
       {

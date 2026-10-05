@@ -1,0 +1,26 @@
+============================= test session starts ==============================
+platform linux -- Python 3.14.7, pytest-9.1.1, pluggy-1.6.0 -- /home/kathlyju/VSCODEEEEE/study/TPO/lab5/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/kathlyju/VSCODEEEEE/study/TPO/lab5
+configfile: pytest.ini
+plugins: anyio-4.15.1
+collecting ... collected 5 items / 4 deselected / 1 selected
+
+lab5/test_redfish.py::test_system_information 
+-------------------------------- live log setup --------------------------------
+INFO     test_redfish:test_redfish.py:30 POST /redfish/v1/SessionService/Sessions -> HTTP 201
+-------------------------------- live log call ---------------------------------
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:82 Status={'Health': 'OK', 'State': 'Disabled'}; PowerState=PoweringOff
+PASSED                                                                   [100%]
+------------------------------ live log teardown -------------------------------
+INFO     test_redfish:test_redfish.py:30 DELETE /redfish/v1/SessionService/Sessions/Rzl31MYwjW -> HTTP 200
+
+
+=============================== warnings summary ===============================
+test_redfish.py::test_system_information
+  /usr/lib/python3.14/site-packages/urllib3/connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================== 1 passed, 4 deselected, 1 warning in 2.56s ==================
