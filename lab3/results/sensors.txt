@@ -1,0 +1,137 @@
+BootProgress     | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+occ0             | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+occ1             | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu0             | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu1             | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+dimm0            | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+dimm1            | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+dimm2            | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+dimm3            | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+dimm4            | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+dimm5            | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+dimm6            | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+dimm7            | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+dimm8            | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+dimm9            | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+dimm10           | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+dimm11           | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+dimm12           | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+dimm13           | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+dimm14           | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+dimm15           | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+dimm0_temp       | na         |            | na    | na        | na        | na        | na        | na        | na        
+dimm1_temp       | na         |            | na    | na        | na        | na        | na        | na        | na        
+dimm2_temp       | na         |            | na    | na        | na        | na        | na        | na        | na        
+dimm3_temp       | na         |            | na    | na        | na        | na        | na        | na        | na        
+dimm4_temp       | na         |            | na    | na        | na        | na        | na        | na        | na        
+dimm5_temp       | na         |            | na    | na        | na        | na        | na        | na        | na        
+dimm6_temp       | na         |            | na    | na        | na        | na        | na        | na        | na        
+dimm7_temp       | na         |            | na    | na        | na        | na        | na        | na        | na        
+dimm8_temp       | na         |            | na    | na        | na        | na        | na        | na        | na        
+dimm9_temp       | na         |            | na    | na        | na        | na        | na        | na        | na        
+dimm10_temp      | na         |            | na    | na        | na        | na        | na        | na        | na        
+dimm11_temp      | na         |            | na    | na        | na        | na        | na        | na        | na        
+dimm12_temp      | na         |            | na    | na        | na        | na        | na        | na        | na        
+dimm13_temp      | na         |            | na    | na        | na        | na        | na        | na        | na        
+dimm14_temp      | na         |            | na    | na        | na        | na        | na        | na        | na        
+dimm15_temp      | na         |            | na    | na        | na        | na        | na        | na        | na        
+cpu0_core0       | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu0_core1       | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu0_core2       | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu0_core3       | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu0_core4       | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu0_core5       | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu0_core6       | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu0_core7       | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu0_core8       | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu0_core9       | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu0_core10      | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu0_core11      | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu0_core12      | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu0_core13      | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu0_core14      | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu0_core15      | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu0_core16      | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu0_core17      | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu0_core18      | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu0_core19      | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu0_core20      | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu0_core21      | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu0_core22      | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu0_core23      | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu1_core0       | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu1_core1       | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu1_core2       | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu1_core3       | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu1_core4       | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu1_core5       | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu1_core6       | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu1_core7       | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu1_core8       | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu1_core9       | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu1_core10      | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu1_core11      | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu1_core12      | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu1_core13      | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu1_core14      | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu1_core15      | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu1_core16      | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu1_core17      | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu1_core18      | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu1_core19      | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu1_core20      | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu1_core21      | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu1_core22      | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+cpu1_core23      | na         | discrete   | na    | na        | na        | na        | na        | na        | na        
+p0_core0_temp    | na         |            | na    | na        | na        | na        | na        | na        | na        
+p0_core1_temp    | na         |            | na    | na        | na        | na        | na        | na        | na        
+p0_core2_temp    | na         |            | na    | na        | na        | na        | na        | na        | na        
+p0_core3_temp    | na         |            | na    | na        | na        | na        | na        | na        | na        
+p0_core4_temp    | na         |            | na    | na        | na        | na        | na        | na        | na        
+p0_core5_temp    | na         |            | na    | na        | na        | na        | na        | na        | na        
+p0_core6_temp    | na         |            | na    | na        | na        | na        | na        | na        | na        
+p0_core7_temp    | na         |            | na    | na        | na        | na        | na        | na        | na        
+p0_core8_temp    | na         |            | na    | na        | na        | na        | na        | na        | na        
+p0_core9_temp    | na         |            | na    | na        | na        | na        | na        | na        | na        
+p0_core10_temp   | na         |            | na    | na        | na        | na        | na        | na        | na        
+p0_core11_temp   | na         |            | na    | na        | na        | na        | na        | na        | na        
+p0_core12_temp   | na         |            | na    | na        | na        | na        | na        | na        | na        
+p0_core13_temp   | na         |            | na    | na        | na        | na        | na        | na        | na        
+p0_core14_temp   | na         |            | na    | na        | na        | na        | na        | na        | na        
+p0_core15_temp   | na         |            | na    | na        | na        | na        | na        | na        | na        
+p0_core16_temp   | na         |            | na    | na        | na        | na        | na        | na        | na        
+p0_core17_temp   | na         |            | na    | na        | na        | na        | na        | na        | na        
+p0_core18_temp   | na         |            | na    | na        | na        | na        | na        | na        | na        
+p0_core19_temp   | na         |            | na    | na        | na        | na        | na        | na        | na        
+p0_core20_temp   | na         |            | na    | na        | na        | na        | na        | na        | na        
+p0_core21_temp   | na         |            | na    | na        | na        | na        | na        | na        | na        
+p0_core22_temp   | na         |            | na    | na        | na        | na        | na        | na        | na        
+p0_core23_temp   | na         |            | na    | na        | na        | na        | na        | na        | na        
+p1_core0_temp    | na         |            | na    | na        | na        | na        | na        | na        | na        
+p1_core1_temp    | na         |            | na    | na        | na        | na        | na        | na        | na        
+p1_core2_temp    | na         |            | na    | na        | na        | na        | na        | na        | na        
+p1_core3_temp    | na         |            | na    | na        | na        | na        | na        | na        | na        
+p1_core4_temp    | na         |            | na    | na        | na        | na        | na        | na        | na        
+p1_core5_temp    | na         |            | na    | na        | na        | na        | na        | na        | na        
+p1_core6_temp    | na         |            | na    | na        | na        | na        | na        | na        | na        
+p1_core7_temp    | na         |            | na    | na        | na        | na        | na        | na        | na        
+p1_core8_temp    | na         |            | na    | na        | na        | na        | na        | na        | na        
+p1_core9_temp    | na         |            | na    | na        | na        | na        | na        | na        | na        
+p1_core10_temp   | na         |            | na    | na        | na        | na        | na        | na        | na        
+p1_core11_temp   | na         |            | na    | na        | na        | na        | na        | na        | na        
+p1_core12_temp   | na         |            | na    | na        | na        | na        | na        | na        | na        
+p1_core13_temp   | na         |            | na    | na        | na        | na        | na        | na        | na        
+p1_core14_temp   | na         |            | na    | na        | na        | na        | na        | na        | na        
+p1_core15_temp   | na         |            | na    | na        | na        | na        | na        | na        | na        
+p1_core16_temp   | na         |            | na    | na        | na        | na        | na        | na        | na        
+p1_core17_temp   | na         |            | na    | na        | na        | na        | na        | na        | na        
+p1_core18_temp   | na         |            | na    | na        | na        | na        | na        | na        | na        
+p1_core19_temp   | na         |            | na    | na        | na        | na        | na        | na        | na        
+p1_core20_temp   | na         |            | na    | na        | na        | na        | na        | na        | na        
+p1_core21_temp   | na         |            | na    | na        | na        | na        | na        | na        | na        
+p1_core22_temp   | na         |            | na    | na        | na        | na        | na        | na        | na        
+p1_core23_temp   | na         |            | na    | na        | na        | na        | na        | na        | na        
+AttemptsLeft     | 0x0        | discrete   | 0x0300| na        | na        | na        | na        | na        | na        
+OperatingSystemS | 0x0        | discrete   | 0x0000| na        | na        | na        | na        | na        | na        
+
+EXIT_CODE=0

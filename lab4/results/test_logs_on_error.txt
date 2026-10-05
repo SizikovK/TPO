@@ -1,0 +1,41 @@
+Health
+Power
+Refresh
+root
+Overview
+Logs
+Hardware status
+Operations
+Settings
+Security and access
+Resource management
+Event logs
+0 items
+From date
+Select date
+No date selected
+To date
+Select date
+No date selected
+Filter
+Delete all
+Export all
+Select all
+ID
+(Click to sort ascending)
+Severity
+(Click to sort ascending)
+Date
+(Click to sort ascending)
+Description
+Status
+No items available
+Items per page
+10
+20
+30
+40
+View all
+‹
+1
+›

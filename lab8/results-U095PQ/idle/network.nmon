@@ -1,0 +1,1048 @@
+AAA,progname,nmon
+AAA,command,nmon -F /home/kathlyju/VSCODEEEEE/study/TPO/lab8/results-U095PQ/idle/network.nmon -s 1 -c 15 
+AAA,version,16s
+AAA,disks_per_line,150
+AAA,max_disks,256,set by -d option
+AAA,disks,7,
+AAA,host,cachyos-x8664
+AAA,user,kathlyju
+AAA,OS,Linux,6.18.48-1-cachyos-lts,#1 SMP PREEMPT_DYNAMIC Tue, 01 Sep 2026 08:17:08 +0000,x86_64
+AAA,runname,cachyos-x8664
+AAA,time,21:23.38
+AAA,date,25-SEP-2026
+AAA,interval,1
+AAA,snapshots,15
+AAA,cpus,8
+AAA,x86,VendorId,AuthenticAMD
+AAA,x86,ModelName,AMD Ryzen 5 7520U with Radeon Graphics
+AAA,x86,MHz,4181.258
+AAA,x86,bogomips,5588.95
+AAA,x86,ProcessorChips,1
+AAA,x86,Cores,4
+AAA,x86,hyperthreads,2
+AAA,x86,VirtualCPUs,8
+AAA,proc_stat_variables,8
+AAA,boottime,10:12 PM 22-Sep-2026
+AAA,note0, Warning - use the UNIX sort command to order this file before loading into a spreadsheet
+AAA,note1, The First Column is simply to get the output sorted in the right order
+AAA,note2, The T0001-T9999 column is a snapshot number. To work out the actual time; see the ZZZ section at the end
+CPU001,CPU 1 cachyos-x8664,User%,Sys%,Wait%,Idle%,Steal%
+CPU002,CPU 2 cachyos-x8664,User%,Sys%,Wait%,Idle%,Steal%
+CPU003,CPU 3 cachyos-x8664,User%,Sys%,Wait%,Idle%,Steal%
+CPU004,CPU 4 cachyos-x8664,User%,Sys%,Wait%,Idle%,Steal%
+CPU005,CPU 5 cachyos-x8664,User%,Sys%,Wait%,Idle%,Steal%
+CPU006,CPU 6 cachyos-x8664,User%,Sys%,Wait%,Idle%,Steal%
+CPU007,CPU 7 cachyos-x8664,User%,Sys%,Wait%,Idle%,Steal%
+CPU008,CPU 8 cachyos-x8664,User%,Sys%,Wait%,Idle%,Steal%
+CPU_ALL,CPU Total cachyos-x8664,User%,Sys%,Wait%,Idle%,Steal%,Busy,CPUs
+MEM,Memory MB cachyos-x8664,memtotal,hightotal,lowtotal,swaptotal,memfree,highfree,lowfree,swapfree,memshared,cached,active,bigfree,buffers,swapcached,inactive
+PROC,Processes cachyos-x8664,Runnable,Blocked,pswitch,syscall,read,write,fork,exec,sem,msg
+NET,Network I/O cachyos-x8664,lo-read-KB/s,docker0-read-KB/s,wlan0-read-KB/s,lo-write-KB/s,docker0-write-KB/s,wlan0-write-KB/s
+NETPACKET,Network Packets cachyos-x8664,lo-read/s,docker0-read/s,wlan0-read/s,lo-write/s,docker0-write/s,wlan0-write/s
+DISKBUSY,Disk %Busy cachyos-x8664,nvme0n1,nvme0n1p1,nvme0n1p2,nvme0n1p3,nvme0n1p4,nvme0n1p5,zram0
+DISKREAD,Disk Read KB/s cachyos-x8664,nvme0n1,nvme0n1p1,nvme0n1p2,nvme0n1p3,nvme0n1p4,nvme0n1p5,zram0
+DISKWRITE,Disk Write KB/s cachyos-x8664,nvme0n1,nvme0n1p1,nvme0n1p2,nvme0n1p3,nvme0n1p4,nvme0n1p5,zram0
+DISKXFER,Disk transfers per second cachyos-x8664,nvme0n1,nvme0n1p1,nvme0n1p2,nvme0n1p3,nvme0n1p4,nvme0n1p5,zram0
+DISKBSIZE,Disk Block Size cachyos-x8664,nvme0n1,nvme0n1p1,nvme0n1p2,nvme0n1p3,nvme0n1p4,nvme0n1p5,zram0
+JFSFILE,JFS Filespace %Used cachyos-x8664,/,/dev,/run,/tmp,/srv,/home,/var/log
+BBBP,000,/etc/release
+BBBP,001,/etc/release,""
+BBBP,002,/etc/release,"DISTRIB_ID=cachyos"
+BBBP,003,/etc/release,"DISTRIB_RELEASE=QrollingQ"
+BBBP,004,/etc/release,"DISTRIB_DESCRIPTION=QCachyOSQ"
+BBBP,005,/etc/release,"NAME=QCachyOS LinuxQ"
+BBBP,006,/etc/release,"PRETTY_NAME=QCachyOSQ"
+BBBP,007,/etc/release,"ID=cachyos"
+BBBP,008,/etc/release,"ID_LIKE=arch"
+BBBP,009,/etc/release,"BUILD_ID=rolling"
+BBBP,010,/etc/release,"ANSI_COLOR=Q38;2;23;147;209Q"
+BBBP,011,/etc/release,"HOME_URL=Qhttps://cachyos.org/Q"
+BBBP,012,/etc/release,"DOCUMENTATION_URL=Qhttps://wiki.cachyos.org/Q"
+BBBP,013,/etc/release,"SUPPORT_URL=Qhttps://discuss.cachyos.org/Q"
+BBBP,014,/etc/release,"BUG_REPORT_URL=Qhttps://github.com/cachyosQ"
+BBBP,015,/etc/release,"PRIVACY_POLICY_URL=Qhttps://terms.archlinux.org/docs/privacy-policy/Q"
+BBBP,016,/etc/release,"LOGO=cachyos"
+BBBP,017,lsb_release
+BBBP,018,lsb_release,"LSB Version:	n/a"
+BBBP,019,lsb_release,"Distributor ID:	cachyos"
+BBBP,020,lsb_release,"Description:	CachyOS"
+BBBP,021,lsb_release,"Release:	rolling"
+BBBP,022,lsb_release,"Codename:	n/a"
+BBBP,023,fdisk-l
+BBBP,024,lsblk
+BBBP,025,lsblk,"NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS"
+BBBP,026,lsblk,"zram0       253:0    0  14.9G  0 disk [SWAP]"
+BBBP,027,lsblk,"nvme0n1     259:0    0 953.9G  0 disk "
+BBBP,028,lsblk,"|-nvme0n1p1 259:1    0   100M  0 part "
+BBBP,029,lsblk,"|-nvme0n1p2 259:2    0    16M  0 part "
+BBBP,030,lsblk,"|-nvme0n1p3 259:3    0 488.2G  0 part "
+BBBP,031,lsblk,"|-nvme0n1p4 259:4    0   4.1G  0 part /boot"
+BBBP,032,lsblk,"`-nvme0n1p5 259:5    0 461.5G  0 part /var/tmp"
+BBBP,033,lsblk,"                                      /var/cache"
+BBBP,034,lsblk,"                                      /var/log"
+BBBP,035,lsblk,"                                      /home"
+BBBP,036,lsblk,"                                      /srv"
+BBBP,037,lsblk,"                                      /root"
+BBBP,038,lsblk,"                                      /"
+BBBP,039,lscpu
+BBBP,040,lscpu,"Architecture:                            x86_64"
+BBBP,041,lscpu,"CPU op-mode(s):                          32-bit, 64-bit"
+BBBP,042,lscpu,"Address sizes:                           44 bits physical, 48 bits virtual"
+BBBP,043,lscpu,"Byte Order:                              Little Endian"
+BBBP,044,lscpu,"CPU(s):                                  8"
+BBBP,045,lscpu,"On-line CPU(s) list:                     0-7"
+BBBP,046,lscpu,"Vendor ID:                               AuthenticAMD"
+BBBP,047,lscpu,"Model name:                              AMD Ryzen 5 7520U with Radeon Graphics"
+BBBP,048,lscpu,"CPU family:                              23"
+BBBP,049,lscpu,"Model:                                   160"
+BBBP,050,lscpu,"Thread(s) per core:                      2"
+BBBP,051,lscpu,"Core(s) per socket:                      4"
+BBBP,052,lscpu,"Socket(s):                               1"
+BBBP,053,lscpu,"Stepping:                                0"
+BBBP,054,lscpu,"Microcode version:                       0x8a0000a"
+BBBP,055,lscpu,"Frequency boost:                         enabled"
+BBBP,056,lscpu,"CPU(s) scaling MHz:                      95%"
+BBBP,057,lscpu,"CPU max MHz:                             4386.4722"
+BBBP,058,lscpu,"CPU min MHz:                             422.7930"
+BBBP,059,lscpu,"BogoMIPS:                                5588.95"
+BBBP,060,lscpu,"Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip rdpid overflow_recov succor smca sev sev_es"
+BBBP,061,lscpu,"Virtualization:                          AMD-V"
+BBBP,062,lscpu,"L1d cache:                               128 KiB (4 instances)"
+BBBP,063,lscpu,"L1i cache:                               128 KiB (4 instances)"
+BBBP,064,lscpu,"L2 cache:                                2 MiB (4 instances)"
+BBBP,065,lscpu,"L3 cache:                                4 MiB (1 instance)"
+BBBP,066,lscpu,"NUMA node(s):                            1"
+BBBP,067,lscpu,"NUMA node0 CPU(s):                       0-7"
+BBBP,068,lscpu,"Vulnerability Gather data sampling:      Not affected"
+BBBP,069,lscpu,"Vulnerability Ghostwrite:                Not affected"
+BBBP,070,lscpu,"Vulnerability Indirect target selection: Not affected"
+BBBP,071,lscpu,"Vulnerability Itlb multihit:             Not affected"
+BBBP,072,lscpu,"Vulnerability L1tf:                      Not affected"
+BBBP,073,lscpu,"Vulnerability Mds:                       Not affected"
+BBBP,074,lscpu,"Vulnerability Meltdown:                  Not affected"
+BBBP,075,lscpu,"Vulnerability Mmio stale data:           Not affected"
+BBBP,076,lscpu,"Vulnerability Old microcode:             Not affected"
+BBBP,077,lscpu,"Vulnerability Reg file data sampling:    Not affected"
+BBBP,078,lscpu,"Vulnerability Retbleed:                  Mitigation; untrained return thunk; SMT enabled with STIBP protection"
+BBBP,079,lscpu,"Vulnerability Spec rstack overflow:      Mitigation; Safe RET"
+BBBP,080,lscpu,"Vulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl"
+BBBP,081,lscpu,"Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization"
+BBBP,082,lscpu,"Vulnerability Spectre v2:                Mitigation; Retpolines; IBPB conditional; STIBP always-on; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected"
+BBBP,083,lscpu,"Vulnerability Srbds:                     Not affected"
+BBBP,084,lscpu,"Vulnerability Tsa:                       Not affected"
+BBBP,085,lscpu,"Vulnerability Tsx async abort:           Not affected"
+BBBP,086,lscpu,"Vulnerability Vmscape:                   Mitigation; IBPB before exit to userspace"
+BBBP,087,lshw
+BBBP,088,/proc/cpuinfo
+BBBP,089,/proc/cpuinfo,"processor	: 0"
+BBBP,090,/proc/cpuinfo,"vendor_id	: AuthenticAMD"
+BBBP,091,/proc/cpuinfo,"cpu family	: 23"
+BBBP,092,/proc/cpuinfo,"model		: 160"
+BBBP,093,/proc/cpuinfo,"model name	: AMD Ryzen 5 7520U with Radeon Graphics"
+BBBP,094,/proc/cpuinfo,"stepping	: 0"
+BBBP,095,/proc/cpuinfo,"microcode	: 0x8a0000a"
+BBBP,096,/proc/cpuinfo,"cpu MHz		: 4162.827"
+BBBP,097,/proc/cpuinfo,"cache size	: 512 KB"
+BBBP,098,/proc/cpuinfo,"physical id	: 0"
+BBBP,099,/proc/cpuinfo,"siblings	: 8"
+BBBP,100,/proc/cpuinfo,"core id		: 0"
+BBBP,101,/proc/cpuinfo,"cpu cores	: 4"
+BBBP,102,/proc/cpuinfo,"apicid		: 0"
+BBBP,103,/proc/cpuinfo,"initial apicid	: 0"
+BBBP,104,/proc/cpuinfo,"fpu		: yes"
+BBBP,105,/proc/cpuinfo,"fpu_exception	: yes"
+BBBP,106,/proc/cpuinfo,"cpuid level	: 16"
+BBBP,107,/proc/cpuinfo,"wp		: yes"
+BBBP,108,/proc/cpuinfo,"flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip rdpid overflow_recov succor smca sev sev_es"
+BBBP,109,/proc/cpuinfo,"bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso ibpb_no_ret spectre_v2_user vmscape"
+BBBP,110,/proc/cpuinfo,"bogomips	: 5588.95"
+BBBP,111,/proc/cpuinfo,"TLB size	: 3072 4K pages"
+BBBP,112,/proc/cpuinfo,"clflush size	: 64"
+BBBP,113,/proc/cpuinfo,"cache_alignment	: 64"
+BBBP,114,/proc/cpuinfo,"address sizes	: 44 bits physical, 48 bits virtual"
+BBBP,115,/proc/cpuinfo,"power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]"
+BBBP,116,/proc/cpuinfo,""
+BBBP,117,/proc/cpuinfo,"processor	: 1"
+BBBP,118,/proc/cpuinfo,"vendor_id	: AuthenticAMD"
+BBBP,119,/proc/cpuinfo,"cpu family	: 23"
+BBBP,120,/proc/cpuinfo,"model		: 160"
+BBBP,121,/proc/cpuinfo,"model name	: AMD Ryzen 5 7520U with Radeon Graphics"
+BBBP,122,/proc/cpuinfo,"stepping	: 0"
+BBBP,123,/proc/cpuinfo,"microcode	: 0x8a0000a"
+BBBP,124,/proc/cpuinfo,"cpu MHz		: 4155.051"
+BBBP,125,/proc/cpuinfo,"cache size	: 512 KB"
+BBBP,126,/proc/cpuinfo,"physical id	: 0"
+BBBP,127,/proc/cpuinfo,"siblings	: 8"
+BBBP,128,/proc/cpuinfo,"core id		: 0"
+BBBP,129,/proc/cpuinfo,"cpu cores	: 4"
+BBBP,130,/proc/cpuinfo,"apicid		: 1"
+BBBP,131,/proc/cpuinfo,"initial apicid	: 1"
+BBBP,132,/proc/cpuinfo,"fpu		: yes"
+BBBP,133,/proc/cpuinfo,"fpu_exception	: yes"
+BBBP,134,/proc/cpuinfo,"cpuid level	: 16"
+BBBP,135,/proc/cpuinfo,"wp		: yes"
+BBBP,136,/proc/cpuinfo,"flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip rdpid overflow_recov succor smca sev sev_es"
+BBBP,137,/proc/cpuinfo,"bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso ibpb_no_ret spectre_v2_user vmscape"
+BBBP,138,/proc/cpuinfo,"bogomips	: 5588.95"
+BBBP,139,/proc/cpuinfo,"TLB size	: 3072 4K pages"
+BBBP,140,/proc/cpuinfo,"clflush size	: 64"
+BBBP,141,/proc/cpuinfo,"cache_alignment	: 64"
+BBBP,142,/proc/cpuinfo,"address sizes	: 44 bits physical, 48 bits virtual"
+BBBP,143,/proc/cpuinfo,"power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]"
+BBBP,144,/proc/cpuinfo,""
+BBBP,145,/proc/cpuinfo,"processor	: 2"
+BBBP,146,/proc/cpuinfo,"vendor_id	: AuthenticAMD"
+BBBP,147,/proc/cpuinfo,"cpu family	: 23"
+BBBP,148,/proc/cpuinfo,"model		: 160"
+BBBP,149,/proc/cpuinfo,"model name	: AMD Ryzen 5 7520U with Radeon Graphics"
+BBBP,150,/proc/cpuinfo,"stepping	: 0"
+BBBP,151,/proc/cpuinfo,"microcode	: 0x8a0000a"
+BBBP,152,/proc/cpuinfo,"cpu MHz		: 4161.309"
+BBBP,153,/proc/cpuinfo,"cache size	: 512 KB"
+BBBP,154,/proc/cpuinfo,"physical id	: 0"
+BBBP,155,/proc/cpuinfo,"siblings	: 8"
+BBBP,156,/proc/cpuinfo,"core id		: 1"
+BBBP,157,/proc/cpuinfo,"cpu cores	: 4"
+BBBP,158,/proc/cpuinfo,"apicid		: 2"
+BBBP,159,/proc/cpuinfo,"initial apicid	: 2"
+BBBP,160,/proc/cpuinfo,"fpu		: yes"
+BBBP,161,/proc/cpuinfo,"fpu_exception	: yes"
+BBBP,162,/proc/cpuinfo,"cpuid level	: 16"
+BBBP,163,/proc/cpuinfo,"wp		: yes"
+BBBP,164,/proc/cpuinfo,"flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip rdpid overflow_recov succor smca sev sev_es"
+BBBP,165,/proc/cpuinfo,"bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso ibpb_no_ret spectre_v2_user vmscape"
+BBBP,166,/proc/cpuinfo,"bogomips	: 5588.95"
+BBBP,167,/proc/cpuinfo,"TLB size	: 3072 4K pages"
+BBBP,168,/proc/cpuinfo,"clflush size	: 64"
+BBBP,169,/proc/cpuinfo,"cache_alignment	: 64"
+BBBP,170,/proc/cpuinfo,"address sizes	: 44 bits physical, 48 bits virtual"
+BBBP,171,/proc/cpuinfo,"power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]"
+BBBP,172,/proc/cpuinfo,""
+BBBP,173,/proc/cpuinfo,"processor	: 3"
+BBBP,174,/proc/cpuinfo,"vendor_id	: AuthenticAMD"
+BBBP,175,/proc/cpuinfo,"cpu family	: 23"
+BBBP,176,/proc/cpuinfo,"model		: 160"
+BBBP,177,/proc/cpuinfo,"model name	: AMD Ryzen 5 7520U with Radeon Graphics"
+BBBP,178,/proc/cpuinfo,"stepping	: 0"
+BBBP,179,/proc/cpuinfo,"microcode	: 0x8a0000a"
+BBBP,180,/proc/cpuinfo,"cpu MHz		: 4162.556"
+BBBP,181,/proc/cpuinfo,"cache size	: 512 KB"
+BBBP,182,/proc/cpuinfo,"physical id	: 0"
+BBBP,183,/proc/cpuinfo,"siblings	: 8"
+BBBP,184,/proc/cpuinfo,"core id		: 1"
+BBBP,185,/proc/cpuinfo,"cpu cores	: 4"
+BBBP,186,/proc/cpuinfo,"apicid		: 3"
+BBBP,187,/proc/cpuinfo,"initial apicid	: 3"
+BBBP,188,/proc/cpuinfo,"fpu		: yes"
+BBBP,189,/proc/cpuinfo,"fpu_exception	: yes"
+BBBP,190,/proc/cpuinfo,"cpuid level	: 16"
+BBBP,191,/proc/cpuinfo,"wp		: yes"
+BBBP,192,/proc/cpuinfo,"flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip rdpid overflow_recov succor smca sev sev_es"
+BBBP,193,/proc/cpuinfo,"bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso ibpb_no_ret spectre_v2_user vmscape"
+BBBP,194,/proc/cpuinfo,"bogomips	: 5588.95"
+BBBP,195,/proc/cpuinfo,"TLB size	: 3072 4K pages"
+BBBP,196,/proc/cpuinfo,"clflush size	: 64"
+BBBP,197,/proc/cpuinfo,"cache_alignment	: 64"
+BBBP,198,/proc/cpuinfo,"address sizes	: 44 bits physical, 48 bits virtual"
+BBBP,199,/proc/cpuinfo,"power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]"
+BBBP,200,/proc/cpuinfo,""
+BBBP,201,/proc/cpuinfo,"processor	: 4"
+BBBP,202,/proc/cpuinfo,"vendor_id	: AuthenticAMD"
+BBBP,203,/proc/cpuinfo,"cpu family	: 23"
+BBBP,204,/proc/cpuinfo,"model		: 160"
+BBBP,205,/proc/cpuinfo,"model name	: AMD Ryzen 5 7520U with Radeon Graphics"
+BBBP,206,/proc/cpuinfo,"stepping	: 0"
+BBBP,207,/proc/cpuinfo,"microcode	: 0x8a0000a"
+BBBP,208,/proc/cpuinfo,"cpu MHz		: 4166.147"
+BBBP,209,/proc/cpuinfo,"cache size	: 512 KB"
+BBBP,210,/proc/cpuinfo,"physical id	: 0"
+BBBP,211,/proc/cpuinfo,"siblings	: 8"
+BBBP,212,/proc/cpuinfo,"core id		: 2"
+BBBP,213,/proc/cpuinfo,"cpu cores	: 4"
+BBBP,214,/proc/cpuinfo,"apicid		: 4"
+BBBP,215,/proc/cpuinfo,"initial apicid	: 4"
+BBBP,216,/proc/cpuinfo,"fpu		: yes"
+BBBP,217,/proc/cpuinfo,"fpu_exception	: yes"
+BBBP,218,/proc/cpuinfo,"cpuid level	: 16"
+BBBP,219,/proc/cpuinfo,"wp		: yes"
+BBBP,220,/proc/cpuinfo,"flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip rdpid overflow_recov succor smca sev sev_es"
+BBBP,221,/proc/cpuinfo,"bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso ibpb_no_ret spectre_v2_user vmscape"
+BBBP,222,/proc/cpuinfo,"bogomips	: 5588.95"
+BBBP,223,/proc/cpuinfo,"TLB size	: 3072 4K pages"
+BBBP,224,/proc/cpuinfo,"clflush size	: 64"
+BBBP,225,/proc/cpuinfo,"cache_alignment	: 64"
+BBBP,226,/proc/cpuinfo,"address sizes	: 44 bits physical, 48 bits virtual"
+BBBP,227,/proc/cpuinfo,"power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]"
+BBBP,228,/proc/cpuinfo,""
+BBBP,229,/proc/cpuinfo,"processor	: 5"
+BBBP,230,/proc/cpuinfo,"vendor_id	: AuthenticAMD"
+BBBP,231,/proc/cpuinfo,"cpu family	: 23"
+BBBP,232,/proc/cpuinfo,"model		: 160"
+BBBP,233,/proc/cpuinfo,"model name	: AMD Ryzen 5 7520U with Radeon Graphics"
+BBBP,234,/proc/cpuinfo,"stepping	: 0"
+BBBP,235,/proc/cpuinfo,"microcode	: 0x8a0000a"
+BBBP,236,/proc/cpuinfo,"cpu MHz		: 4165.601"
+BBBP,237,/proc/cpuinfo,"cache size	: 512 KB"
+BBBP,238,/proc/cpuinfo,"physical id	: 0"
+BBBP,239,/proc/cpuinfo,"siblings	: 8"
+BBBP,240,/proc/cpuinfo,"core id		: 2"
+BBBP,241,/proc/cpuinfo,"cpu cores	: 4"
+BBBP,242,/proc/cpuinfo,"apicid		: 5"
+BBBP,243,/proc/cpuinfo,"initial apicid	: 5"
+BBBP,244,/proc/cpuinfo,"fpu		: yes"
+BBBP,245,/proc/cpuinfo,"fpu_exception	: yes"
+BBBP,246,/proc/cpuinfo,"cpuid level	: 16"
+BBBP,247,/proc/cpuinfo,"wp		: yes"
+BBBP,248,/proc/cpuinfo,"flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip rdpid overflow_recov succor smca sev sev_es"
+BBBP,249,/proc/cpuinfo,"bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso ibpb_no_ret spectre_v2_user vmscape"
+BBBP,250,/proc/cpuinfo,"bogomips	: 5588.95"
+BBBP,251,/proc/cpuinfo,"TLB size	: 3072 4K pages"
+BBBP,252,/proc/cpuinfo,"clflush size	: 64"
+BBBP,253,/proc/cpuinfo,"cache_alignment	: 64"
+BBBP,254,/proc/cpuinfo,"address sizes	: 44 bits physical, 48 bits virtual"
+BBBP,255,/proc/cpuinfo,"power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]"
+BBBP,256,/proc/cpuinfo,""
+BBBP,257,/proc/cpuinfo,"processor	: 6"
+BBBP,258,/proc/cpuinfo,"vendor_id	: AuthenticAMD"
+BBBP,259,/proc/cpuinfo,"cpu family	: 23"
+BBBP,260,/proc/cpuinfo,"model		: 160"
+BBBP,261,/proc/cpuinfo,"model name	: AMD Ryzen 5 7520U with Radeon Graphics"
+BBBP,262,/proc/cpuinfo,"stepping	: 0"
+BBBP,263,/proc/cpuinfo,"microcode	: 0x8a0000a"
+BBBP,264,/proc/cpuinfo,"cpu MHz		: 4161.009"
+BBBP,265,/proc/cpuinfo,"cache size	: 512 KB"
+BBBP,266,/proc/cpuinfo,"physical id	: 0"
+BBBP,267,/proc/cpuinfo,"siblings	: 8"
+BBBP,268,/proc/cpuinfo,"core id		: 3"
+BBBP,269,/proc/cpuinfo,"cpu cores	: 4"
+BBBP,270,/proc/cpuinfo,"apicid		: 6"
+BBBP,271,/proc/cpuinfo,"initial apicid	: 6"
+BBBP,272,/proc/cpuinfo,"fpu		: yes"
+BBBP,273,/proc/cpuinfo,"fpu_exception	: yes"
+BBBP,274,/proc/cpuinfo,"cpuid level	: 16"
+BBBP,275,/proc/cpuinfo,"wp		: yes"
+BBBP,276,/proc/cpuinfo,"flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip rdpid overflow_recov succor smca sev sev_es"
+BBBP,277,/proc/cpuinfo,"bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso ibpb_no_ret spectre_v2_user vmscape"
+BBBP,278,/proc/cpuinfo,"bogomips	: 5588.95"
+BBBP,279,/proc/cpuinfo,"TLB size	: 3072 4K pages"
+BBBP,280,/proc/cpuinfo,"clflush size	: 64"
+BBBP,281,/proc/cpuinfo,"cache_alignment	: 64"
+BBBP,282,/proc/cpuinfo,"address sizes	: 44 bits physical, 48 bits virtual"
+BBBP,283,/proc/cpuinfo,"power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]"
+BBBP,284,/proc/cpuinfo,""
+BBBP,285,/proc/cpuinfo,"processor	: 7"
+BBBP,286,/proc/cpuinfo,"vendor_id	: AuthenticAMD"
+BBBP,287,/proc/cpuinfo,"cpu family	: 23"
+BBBP,288,/proc/cpuinfo,"model		: 160"
+BBBP,289,/proc/cpuinfo,"model name	: AMD Ryzen 5 7520U with Radeon Graphics"
+BBBP,290,/proc/cpuinfo,"stepping	: 0"
+BBBP,291,/proc/cpuinfo,"microcode	: 0x8a0000a"
+BBBP,292,/proc/cpuinfo,"cpu MHz		: 4155.602"
+BBBP,293,/proc/cpuinfo,"cache size	: 512 KB"
+BBBP,294,/proc/cpuinfo,"physical id	: 0"
+BBBP,295,/proc/cpuinfo,"siblings	: 8"
+BBBP,296,/proc/cpuinfo,"core id		: 3"
+BBBP,297,/proc/cpuinfo,"cpu cores	: 4"
+BBBP,298,/proc/cpuinfo,"apicid		: 7"
+BBBP,299,/proc/cpuinfo,"initial apicid	: 7"
+BBBP,300,/proc/cpuinfo,"fpu		: yes"
+BBBP,301,/proc/cpuinfo,"fpu_exception	: yes"
+BBBP,302,/proc/cpuinfo,"cpuid level	: 16"
+BBBP,303,/proc/cpuinfo,"wp		: yes"
+BBBP,304,/proc/cpuinfo,"flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip rdpid overflow_recov succor smca sev sev_es"
+BBBP,305,/proc/cpuinfo,"bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass retbleed smt_rsb srso ibpb_no_ret spectre_v2_user vmscape"
+BBBP,306,/proc/cpuinfo,"bogomips	: 5588.95"
+BBBP,307,/proc/cpuinfo,"TLB size	: 3072 4K pages"
+BBBP,308,/proc/cpuinfo,"clflush size	: 64"
+BBBP,309,/proc/cpuinfo,"cache_alignment	: 64"
+BBBP,310,/proc/cpuinfo,"address sizes	: 44 bits physical, 48 bits virtual"
+BBBP,311,/proc/cpuinfo,"power management: ts ttp tm hwpstate cpb eff_freq_ro [13] [14]"
+BBBP,312,/proc/cpuinfo,""
+BBBP,313,/proc/meminfo
+BBBP,314,/proc/meminfo,"MemTotal:       15623644 kB"
+BBBP,315,/proc/meminfo,"MemFree:          449900 kB"
+BBBP,316,/proc/meminfo,"MemAvailable:    3604132 kB"
+BBBP,317,/proc/meminfo,"Buffers:              56 kB"
+BBBP,318,/proc/meminfo,"Cached:          3657144 kB"
+BBBP,319,/proc/meminfo,"SwapCached:         6080 kB"
+BBBP,320,/proc/meminfo,"Active:          4591784 kB"
+BBBP,321,/proc/meminfo,"Inactive:        4320828 kB"
+BBBP,322,/proc/meminfo,"Active(anon):    3673084 kB"
+BBBP,323,/proc/meminfo,"Inactive(anon):  2087296 kB"
+BBBP,324,/proc/meminfo,"Active(file):     918700 kB"
+BBBP,325,/proc/meminfo,"Inactive(file):  2233532 kB"
+BBBP,326,/proc/meminfo,"Unevictable:        3224 kB"
+BBBP,327,/proc/meminfo,"Mlocked:            3224 kB"
+BBBP,328,/proc/meminfo,"SwapTotal:      15623164 kB"
+BBBP,329,/proc/meminfo,"SwapFree:        4993684 kB"
+BBBP,330,/proc/meminfo,"Zswap:                 0 kB"
+BBBP,331,/proc/meminfo,"Zswapped:              0 kB"
+BBBP,332,/proc/meminfo,"Dirty:              5288 kB"
+BBBP,333,/proc/meminfo,"Writeback:             0 kB"
+BBBP,334,/proc/meminfo,"AnonPages:       5223320 kB"
+BBBP,335,/proc/meminfo,"Mapped:          1727852 kB"
+BBBP,336,/proc/meminfo,"Shmem:           1057904 kB"
+BBBP,337,/proc/meminfo,"KReclaimable:     337596 kB"
+BBBP,338,/proc/meminfo,"Slab:             654108 kB"
+BBBP,339,/proc/meminfo,"SReclaimable:     337596 kB"
+BBBP,340,/proc/meminfo,"SUnreclaim:       316512 kB"
+BBBP,341,/proc/meminfo,"KernelStack:       46188 kB"
+BBBP,342,/proc/meminfo,"PageTables:       147552 kB"
+BBBP,343,/proc/meminfo,"SecPageTables:      8944 kB"
+BBBP,344,/proc/meminfo,"NFS_Unstable:          0 kB"
+BBBP,345,/proc/meminfo,"Bounce:                0 kB"
+BBBP,346,/proc/meminfo,"WritebackTmp:          0 kB"
+BBBP,347,/proc/meminfo,"CommitLimit:    23434984 kB"
+BBBP,348,/proc/meminfo,"Committed_AS:   41164612 kB"
+BBBP,349,/proc/meminfo,"VmallocTotal:   34359738367 kB"
+BBBP,350,/proc/meminfo,"VmallocUsed:      208916 kB"
+BBBP,351,/proc/meminfo,"VmallocChunk:          0 kB"
+BBBP,352,/proc/meminfo,"Percpu:             8992 kB"
+BBBP,353,/proc/meminfo,"HardwareCorrupted:     0 kB"
+BBBP,354,/proc/meminfo,"AnonHugePages:    342016 kB"
+BBBP,355,/proc/meminfo,"ShmemHugePages:        0 kB"
+BBBP,356,/proc/meminfo,"ShmemPmdMapped:        0 kB"
+BBBP,357,/proc/meminfo,"FileHugePages:     34816 kB"
+BBBP,358,/proc/meminfo,"FilePmdMapped:     34816 kB"
+BBBP,359,/proc/meminfo,"CmaTotal:              0 kB"
+BBBP,360,/proc/meminfo,"CmaFree:               0 kB"
+BBBP,361,/proc/meminfo,"Unaccepted:            0 kB"
+BBBP,362,/proc/meminfo,"Balloon:               0 kB"
+BBBP,363,/proc/meminfo,"HugePages_Total:       0"
+BBBP,364,/proc/meminfo,"HugePages_Free:        0"
+BBBP,365,/proc/meminfo,"HugePages_Rsvd:        0"
+BBBP,366,/proc/meminfo,"HugePages_Surp:        0"
+BBBP,367,/proc/meminfo,"Hugepagesize:       2048 kB"
+BBBP,368,/proc/meminfo,"Hugetlb:               0 kB"
+BBBP,369,/proc/meminfo,"DirectMap4k:     7026688 kB"
+BBBP,370,/proc/meminfo,"DirectMap2M:     8996864 kB"
+BBBP,371,/proc/meminfo,"DirectMap1G:     1048576 kB"
+BBBP,372,/proc/stat
+BBBP,373,/proc/stat,"cpu  4269055 2356424 3747976 46272394 163204 697490 159476 0 16 1684306"
+BBBP,374,/proc/stat,"cpu0 558343 307896 506328 5679035 22481 82593 28347 0 0 220372"
+BBBP,375,/proc/stat,"cpu1 497623 284024 434693 5897893 18090 71908 20845 0 0 203647"
+BBBP,376,/proc/stat,"cpu2 544056 305905 503327 5621328 22194 143065 46424 0 15 218616"
+BBBP,377,/proc/stat,"cpu3 486692 284996 438180 5907645 18704 72942 18319 0 0 202990"
+BBBP,378,/proc/stat,"cpu4 559729 306902 504247 5691513 22285 88158 13082 0 0 220561"
+BBBP,379,/proc/stat,"cpu5 500369 285194 438598 5902965 18499 71579 10378 0 0 202985"
+BBBP,380,/proc/stat,"cpu6 585287 302157 497807 5692717 22440 79796 12268 0 0 218297"
+BBBP,381,/proc/stat,"cpu7 536952 279347 424792 5879294 18506 87444 9810 0 0 196833"
+BBBP,382,/proc/stat,"intr 1888118643 142 90602 0 0 0 0 0 3438408 0 168 58228962 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12 2 11 1 0 703 0 0 0 0 0 0 0 0 15313319 0 0 0 0 0 0 0 0 2604457 0 0 0 0 0 0 0 0 6446 241623 182057 238388 186749 250801 185241 254711 193085 11683427 0 0 0 3438408 308913 206 5589 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,383,/proc/stat,"ctxt 3512663649"
+BBBP,384,/proc/stat,"btime 1790089933"
+BBBP,385,/proc/stat,"processes 554679"
+BBBP,386,/proc/stat,"procs_running 1"
+BBBP,387,/proc/stat,"procs_blocked 1"
+BBBP,388,/proc/stat,"softirq 317673709 1479086 16688583 1455 2335684 43455 0 23939398 177672157 67796 95446095"
+BBBP,389,/proc/version
+BBBP,390,/proc/version,"Linux version 6.18.48-1-cachyos-lts (linux-cachyos-lts@cachyos) (clang version 22.1.8, LLD 22.1.8) #1 SMP PREEMPT_DYNAMIC Tue, 01 Sep 2026 08:17:08 +0000"
+BBBP,391,/proc/net/dev
+BBBP,392,/proc/net/dev,"Inter-|   Receive                                                |  Transmit"
+BBBP,393,/proc/net/dev," face |bytes    packets errs drop fifo frame compressed multicast|bytes    packets errs drop fifo colls carrier compressed"
+BBBP,394,/proc/net/dev,"    lo: 5018540502 2641756    0    0    0     0          0         0 5018540502 2641756    0    0    0     0       0          0"
+BBBP,395,/proc/net/dev,"docker0:       0       0    0    0    0     0          0         0        0       0    0   65    0     0       0          0"
+BBBP,396,/proc/net/dev," wlan0: 3141487406 2219516    0    0    0     0          0         0 173975168 1135106    0    0    0     0       0          0"
+BBBP,397,/proc/diskinfo
+BBBP,398,/proc/diskstats
+BBBP,399,/proc/diskstats," 259       0 nvme0n1 5347701 341147 382077697 13321140 6591895 104434 223911464 16478703 0 1959878 29950762 40609 0 157541400 22054 357638 128864"
+BBBP,400,/proc/diskstats," 259       1 nvme0n1p1 106 0 17128 756 0 0 0 0 0 59 756 0 0 0 0 0 0"
+BBBP,401,/proc/diskstats," 259       2 nvme0n1p2 94 0 15736 285 0 0 0 0 0 30 285 0 0 0 0 0 0"
+BBBP,402,/proc/diskstats," 259       3 nvme0n1p3 103 0 17080 273 0 0 0 0 0 75 273 0 0 0 0 0 0"
+BBBP,403,/proc/diskstats," 259       4 nvme0n1p4 30077 6693 4258433 109444 3095 1158 598344 9117 0 2938 118562 0 0 0 0 0 0"
+BBBP,404,/proc/diskstats," 259       5 nvme0n1p5 5317197 334454 377761856 13210143 6588794 103276 223313120 16469584 0 2187811 29701782 40609 0 157541400 22054 0 0"
+BBBP,405,/proc/diskstats," 253       0 zram0 23998617 0 192001216 384649 30666901 0 247027640 771217 0 1286243 1155866 0 0 0 0 0 0"
+BBBP,406,/sbin/multipath
+BBBP,407,/dev/mapper
+BBBP,408,/dev/mapper,"total 0"
+BBBP,409,/dev/mapper,"crw------- 1 root root 10, 236 Sep 25 18:45 control"
+BBBP,410,/dev/mpath
+BBBP,411,/dev/dm-*
+BBBP,412,/dev/md*
+BBBP,413,/dev/sd*
+BBBP,414,/proc/partitions
+BBBP,415,/proc/partitions,"major minor  #blocks  name"
+BBBP,416,/proc/partitions,""
+BBBP,417,/proc/partitions," 259        0 1000204632 nvme0n1"
+BBBP,418,/proc/partitions," 259        1     102400 nvme0n1p1"
+BBBP,419,/proc/partitions," 259        2      16384 nvme0n1p2"
+BBBP,420,/proc/partitions," 259        3  511880192 nvme0n1p3"
+BBBP,421,/proc/partitions," 259        4    4292608 nvme0n1p4"
+BBBP,422,/proc/partitions," 259        5  483912004 nvme0n1p5"
+BBBP,423,/proc/partitions," 253        0   15623168 zram0"
+BBBP,424,/proc/1/stat
+BBBP,425,/proc/1/stat,"1 (systemd) S 0 1 1 0 -1 4194560 153671 2904366 8129 54200 656 517 16200 17112 20 0 1 0 14 22839296 2787 18446744073709551615 1 1 0 0 0 0 671173123 4096 1260 0 0 0 17 6 0 0 0 0 0 0 0 0 0 0 0 0 0"
+BBBP,426,/proc/net/rpc/nfs
+BBBP,427,/proc/net/rpc/nfsd
+BBBP,428,/proc/modules
+BBBP,429,/proc/modules,"tcp_diag 20480 0 - Live 0x0000000000000000"
+BBBP,430,/proc/modules,"inet_diag 20480 1 tcp_diag, Live 0x0000000000000000"
+BBBP,431,/proc/modules,"ccm 20480 3 - Live 0x0000000000000000"
+BBBP,432,/proc/modules,"rfcomm 106496 4 - Live 0x0000000000000000"
+BBBP,433,/proc/modules,"snd_seq_dummy 12288 0 - Live 0x0000000000000000"
+BBBP,434,/proc/modules,"snd_hrtimer 12288 1 - Live 0x0000000000000000"
+BBBP,435,/proc/modules,"snd_seq 139264 7 snd_seq_dummy, Live 0x0000000000000000"
+BBBP,436,/proc/modules,"snd_seq_device 16384 1 snd_seq, Live 0x0000000000000000"
+BBBP,437,/proc/modules,"xt_MASQUERADE 16384 1 - Live 0x0000000000000000"
+BBBP,438,/proc/modules,"bridge 487424 0 - Live 0x0000000000000000"
+BBBP,439,/proc/modules,"stp 12288 1 bridge, Live 0x0000000000000000"
+BBBP,440,/proc/modules,"llc 16384 2 bridge,stp, Live 0x0000000000000000"
+BBBP,441,/proc/modules,"xfrm_user 73728 1 - Live 0x0000000000000000"
+BBBP,442,/proc/modules,"xfrm_algo 20480 1 xfrm_user, Live 0x0000000000000000"
+BBBP,443,/proc/modules,"xt_set 24576 0 - Live 0x0000000000000000"
+BBBP,444,/proc/modules,"ip_set 69632 1 xt_set, Live 0x0000000000000000"
+BBBP,445,/proc/modules,"nft_chain_nat 12288 5 - Live 0x0000000000000000"
+BBBP,446,/proc/modules,"nf_nat 65536 2 xt_MASQUERADE,nft_chain_nat, Live 0x0000000000000000"
+BBBP,447,/proc/modules,"overlay 245760 0 - Live 0x0000000000000000"
+BBBP,448,/proc/modules,"cmac 12288 2 - Live 0x0000000000000000"
+BBBP,449,/proc/modules,"algif_hash 16384 1 - Live 0x0000000000000000"
+BBBP,450,/proc/modules,"algif_skcipher 12288 1 - Live 0x0000000000000000"
+BBBP,451,/proc/modules,"af_alg 36864 6 algif_hash,algif_skcipher, Live 0x0000000000000000"
+BBBP,452,/proc/modules,"bnep 36864 2 - Live 0x0000000000000000"
+BBBP,453,/proc/modules,"ip6t_REJECT 12288 1 - Live 0x0000000000000000"
+BBBP,454,/proc/modules,"nf_reject_ipv6 24576 1 ip6t_REJECT, Live 0x0000000000000000"
+BBBP,455,/proc/modules,"xt_hl 12288 22 - Live 0x0000000000000000"
+BBBP,456,/proc/modules,"ip6t_rt 16384 3 - Live 0x0000000000000000"
+BBBP,457,/proc/modules,"snd_soc_dmic 12288 1 - Live 0x0000000000000000"
+BBBP,458,/proc/modules,"snd_acp6x_pdm_dma 16384 1 - Live 0x0000000000000000"
+BBBP,459,/proc/modules,"snd_soc_acp6x_mach 45056 4 - Live 0x0000000000000000"
+BBBP,460,/proc/modules,"snd_sof_amd_acp70 16384 0 - Live 0x0000000000000000"
+BBBP,461,/proc/modules,"snd_sof_amd_acp63 16384 0 - Live 0x0000000000000000"
+BBBP,462,/proc/modules,"snd_sof_amd_vangogh 16384 0 - Live 0x0000000000000000"
+BBBP,463,/proc/modules,"snd_sof_amd_rembrandt 16384 0 - Live 0x0000000000000000"
+BBBP,464,/proc/modules,"snd_sof_amd_renoir 16384 0 - Live 0x0000000000000000"
+BBBP,465,/proc/modules,"ipt_REJECT 12288 1 - Live 0x0000000000000000"
+BBBP,466,/proc/modules,"nf_reject_ipv4 16384 1 ipt_REJECT, Live 0x0000000000000000"
+BBBP,467,/proc/modules,"snd_sof_amd_acp 69632 5 snd_sof_amd_acp70,snd_sof_amd_acp63,snd_sof_amd_vangogh,snd_sof_amd_rembrandt,snd_sof_amd_renoir, Live 0x0000000000000000"
+BBBP,468,/proc/modules,"snd_sof_pci 24576 5 snd_sof_amd_acp70,snd_sof_amd_acp63,snd_sof_amd_vangogh,snd_sof_amd_rembrandt,snd_sof_amd_renoir, Live 0x0000000000000000"
+BBBP,469,/proc/modules,"xt_LOG 16384 10 - Live 0x0000000000000000"
+BBBP,470,/proc/modules,"nf_log_syslog 28672 10 - Live 0x0000000000000000"
+BBBP,471,/proc/modules,"snd_sof_xtensa_dsp 16384 1 snd_sof_amd_acp, Live 0x0000000000000000"
+BBBP,472,/proc/modules,"snd_sof 495616 2 snd_sof_amd_acp,snd_sof_pci, Live 0x0000000000000000"
+BBBP,473,/proc/modules,"nft_limit 16384 13 - Live 0x0000000000000000"
+BBBP,474,/proc/modules,"snd_sof_utils 16384 1 snd_sof, Live 0x0000000000000000"
+BBBP,475,/proc/modules,"snd_pci_ps 36864 0 - Live 0x0000000000000000"
+BBBP,476,/proc/modules,"rtw88_8821cu 12288 0 - Live 0x0000000000000000"
+BBBP,477,/proc/modules,"snd_soc_acpi_amd_match 16384 3 snd_sof_amd_acp70,snd_sof_amd_acp63,snd_pci_ps, Live 0x0000000000000000"
+BBBP,478,/proc/modules,"xt_limit 12288 0 - Live 0x0000000000000000"
+BBBP,479,/proc/modules,"rtw88_8821c 98304 1 rtw88_8821cu, Live 0x0000000000000000"
+BBBP,480,/proc/modules,"soundwire_amd 49152 2 snd_sof_amd_acp,snd_pci_ps, Live 0x0000000000000000"
+BBBP,481,/proc/modules,"soundwire_generic_allocation 24576 1 soundwire_amd, Live 0x0000000000000000"
+BBBP,482,/proc/modules,"xt_addrtype 12288 8 - Live 0x0000000000000000"
+BBBP,483,/proc/modules,"snd_amd_sdw_acpi 16384 2 snd_sof_amd_acp,snd_pci_ps, Live 0x0000000000000000"
+BBBP,484,/proc/modules,"rtw88_usb 36864 1 rtw88_8821cu, Live 0x0000000000000000"
+BBBP,485,/proc/modules,"soundwire_bus 1216512 2 soundwire_amd,soundwire_generic_allocation, Live 0x0000000000000000"
+BBBP,486,/proc/modules,"xt_tcpudp 20480 60 - Live 0x0000000000000000"
+BBBP,487,/proc/modules,"rtw88_core 352256 2 rtw88_8821c,rtw88_usb, Live 0x0000000000000000"
+BBBP,488,/proc/modules,"snd_soc_sdca 102400 1 soundwire_bus, Live 0x0000000000000000"
+BBBP,489,/proc/modules,"vfat 24576 1 - Live 0x0000000000000000"
+BBBP,490,/proc/modules,"fat 110592 1 vfat, Live 0x0000000000000000"
+BBBP,491,/proc/modules,"snd_hda_codec_atihdmi 20480 1 - Live 0x0000000000000000"
+BBBP,492,/proc/modules,"snd_hda_codec_alc269 151552 1 - Live 0x0000000000000000"
+BBBP,493,/proc/modules,"xt_conntrack 12288 17 - Live 0x0000000000000000"
+BBBP,494,/proc/modules,"snd_soc_core 434176 6 snd_soc_dmic,snd_acp6x_pdm_dma,snd_soc_acp6x_mach,snd_sof,soundwire_amd,snd_soc_sdca, Live 0x0000000000000000"
+BBBP,495,/proc/modules,"snd_hda_scodec_component 20480 1 snd_hda_codec_alc269, Live 0x0000000000000000"
+BBBP,496,/proc/modules,"ac97_bus 12288 1 snd_soc_core, Live 0x0000000000000000"
+BBBP,497,/proc/modules,"snd_hda_codec_realtek_lib 73728 1 snd_hda_codec_alc269, Live 0x0000000000000000"
+BBBP,498,/proc/modules,"snd_ctl_led 24576 0 - Live 0x0000000000000000"
+BBBP,499,/proc/modules,"snd_hda_codec_generic 126976 2 snd_hda_codec_alc269,snd_hda_codec_realtek_lib, Live 0x0000000000000000"
+BBBP,500,/proc/modules,"snd_hda_codec_hdmi 61440 1 snd_hda_codec_atihdmi, Live 0x0000000000000000"
+BBBP,501,/proc/modules,"btusb 81920 0 - Live 0x0000000000000000"
+BBBP,502,/proc/modules,"uvcvideo 184320 0 - Live 0x0000000000000000"
+BBBP,503,/proc/modules,"snd_pcm_dmaengine 20480 1 snd_soc_core, Live 0x0000000000000000"
+BBBP,504,/proc/modules,"nf_conntrack 208896 3 xt_MASQUERADE,nf_nat,xt_conntrack, Live 0x0000000000000000"
+BBBP,505,/proc/modules,"snd_hda_intel 65536 11 - Live 0x0000000000000000"
+BBBP,506,/proc/modules,"btmtk 36864 1 btusb, Live 0x0000000000000000"
+BBBP,507,/proc/modules,"mac80211 1802240 2 rtw88_usb,rtw88_core, Live 0x0000000000000000"
+BBBP,508,/proc/modules,"snd_compress 36864 1 snd_soc_core, Live 0x0000000000000000"
+BBBP,509,/proc/modules,"uvc 12288 1 uvcvideo, Live 0x0000000000000000"
+BBBP,510,/proc/modules,"nf_defrag_ipv6 24576 1 nf_conntrack, Live 0x0000000000000000"
+BBBP,511,/proc/modules,"snd_hda_codec 229376 6 snd_hda_codec_atihdmi,snd_hda_codec_alc269,snd_hda_codec_realtek_lib,snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel, Live 0x0000000000000000"
+BBBP,512,/proc/modules,"joydev 28672 0 - Live 0x0000000000000000"
+BBBP,513,/proc/modules,"btbcm 24576 1 btusb, Live 0x0000000000000000"
+BBBP,514,/proc/modules,"videobuf2_vmalloc 20480 1 uvcvideo, Live 0x0000000000000000"
+BBBP,515,/proc/modules,"nf_defrag_ipv4 12288 1 nf_conntrack, Live 0x0000000000000000"
+BBBP,516,/proc/modules,"snd_rpl_pci_acp6x 16384 0 - Live 0x0000000000000000"
+BBBP,517,/proc/modules,"videobuf2_memops 16384 1 videobuf2_vmalloc, Live 0x0000000000000000"
+BBBP,518,/proc/modules,"mousedev 28672 0 - Live 0x0000000000000000"
+BBBP,519,/proc/modules,"btintel 77824 1 btusb, Live 0x0000000000000000"
+BBBP,520,/proc/modules,"snd_hda_core 159744 7 snd_hda_codec_atihdmi,snd_hda_codec_alc269,snd_hda_codec_realtek_lib,snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec, Live 0x0000000000000000"
+BBBP,521,/proc/modules,"nft_compat 20480 123 - Live 0x0000000000000000"
+BBBP,522,/proc/modules,"snd_acp_pci 12288 0 - Live 0x0000000000000000"
+BBBP,523,/proc/modules,"videobuf2_v4l2 36864 1 uvcvideo, Live 0x0000000000000000"
+BBBP,524,/proc/modules,"snd_amd_acpi_mach 12288 1 snd_acp_pci, Live 0x0000000000000000"
+BBBP,525,/proc/modules,"snd_intel_dspcfg 49152 2 snd_sof,snd_hda_intel, Live 0x0000000000000000"
+BBBP,526,/proc/modules,"btrtl 32768 1 btusb, Live 0x0000000000000000"
+BBBP,527,/proc/modules,"snd_acp_legacy_common 20480 1 snd_acp_pci, Live 0x0000000000000000"
+BBBP,528,/proc/modules,"asus_nb_wmi 32768 0 - Live 0x0000000000000000"
+BBBP,529,/proc/modules,"x_tables 69632 12 xt_MASQUERADE,xt_set,ip6t_REJECT,xt_hl,ip6t_rt,ipt_REJECT,xt_LOG,xt_limit,xt_addrtype,xt_tcpudp,xt_conntrack,nft_compat, Live 0x0000000000000000"
+BBBP,530,/proc/modules,"amd_atl 65536 1 - Live 0x0000000000000000"
+BBBP,531,/proc/modules,"snd_intel_sdw_acpi 16384 1 snd_intel_dspcfg, Live 0x0000000000000000"
+BBBP,532,/proc/modules,"intel_rapl_msr 20480 0 - Live 0x0000000000000000"
+BBBP,533,/proc/modules,"videobuf2_common 94208 4 uvcvideo,videobuf2_vmalloc,videobuf2_memops,videobuf2_v4l2, Live 0x0000000000000000"
+BBBP,534,/proc/modules,"snd_pci_acp6x 20480 0 - Live 0x0000000000000000"
+BBBP,535,/proc/modules,"snd_hwdep 24576 1 snd_hda_codec, Live 0x0000000000000000"
+BBBP,536,/proc/modules,"hid_multitouch 36864 0 - Live 0x0000000000000000"
+BBBP,537,/proc/modules,"intel_rapl_common 57344 1 intel_rapl_msr, Live 0x0000000000000000"
+BBBP,538,/proc/modules,"cfg80211 1515520 2 rtw88_core,mac80211, Live 0x0000000000000000"
+BBBP,539,/proc/modules,"asus_armoury 106496 0 - Live 0x0000000000000000"
+BBBP,540,/proc/modules,"videodev 421888 2 uvcvideo,videobuf2_v4l2, Live 0x0000000000000000"
+BBBP,541,/proc/modules,"snd_pcm 229376 17 snd_acp6x_pdm_dma,snd_sof_amd_acp,snd_sof,snd_sof_utils,snd_pci_ps,soundwire_amd,snd_soc_sdca,snd_soc_core,snd_hda_codec_hdmi,snd_pcm_dmaengine,snd_hda_intel,snd_compress,snd_hda_codec,snd_hda_core,snd_acp_legacy_common,snd_pci_acp6x, Live 0x0000000000000000"
+BBBP,542,/proc/modules,"bluetooth 1163264 35 rfcomm,bnep,btusb,btmtk,btbcm,btintel,btrtl, Live 0x0000000000000000"
+BBBP,543,/proc/modules,"snd_pci_acp5x 20480 0 - Live 0x0000000000000000"
+BBBP,544,/proc/modules,"libarc4 12288 1 mac80211, Live 0x0000000000000000"
+BBBP,545,/proc/modules,"snd_timer 57344 3 snd_hrtimer,snd_seq,snd_pcm, Live 0x0000000000000000"
+BBBP,546,/proc/modules,"mc 90112 4 uvcvideo,videobuf2_v4l2,videobuf2_common,videodev, Live 0x0000000000000000"
+BBBP,547,/proc/modules,"firmware_attributes_class 12288 1 asus_armoury, Live 0x0000000000000000"
+BBBP,548,/proc/modules,"snd_rn_pci_acp3x 24576 0 - Live 0x0000000000000000"
+BBBP,549,/proc/modules,"asus_wmi 126976 2 asus_nb_wmi,asus_armoury, Live 0x0000000000000000"
+BBBP,550,/proc/modules,"polyval_clmulni 12288 0 - Live 0x0000000000000000"
+BBBP,551,/proc/modules,"snd_acp_config 20480 10 snd_sof_amd_acp70,snd_sof_amd_acp63,snd_sof_amd_vangogh,snd_sof_amd_rembrandt,snd_sof_amd_renoir,snd_pci_ps,snd_acp_pci,snd_pci_acp6x,snd_pci_acp5x,snd_rn_pci_acp3x, Live 0x0000000000000000"
+BBBP,552,/proc/modules,"snd 159744 47 snd_seq,snd_seq_device,snd_sof,snd_soc_sdca,snd_hda_codec_alc269,snd_soc_core,snd_hda_codec_realtek_lib,snd_ctl_led,snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_compress,snd_hda_codec,snd_hwdep,snd_pcm,snd_timer, Live 0x0000000000000000"
+BBBP,553,/proc/modules,"snd_soc_acpi 16384 5 snd_sof_amd_acp,snd_pci_ps,snd_amd_acpi_mach,snd_acp_legacy_common,snd_acp_config, Live 0x0000000000000000"
+BBBP,554,/proc/modules,"i2c_piix4 36864 0 - Live 0x0000000000000000"
+BBBP,555,/proc/modules,"nf_tables 421888 666 nft_chain_nat,nft_limit,nft_compat, Live 0x0000000000000000"
+BBBP,556,/proc/modules,"ghash_clmulni_intel 12288 0 - Live 0x0000000000000000"
+BBBP,557,/proc/modules,"platform_profile 20480 1 asus_wmi, Live 0x0000000000000000"
+BBBP,558,/proc/modules,"nfnetlink 20480 4 ip_set,nft_compat,nf_tables, Live 0x0000000000000000"
+BBBP,559,/proc/modules,"aesni_intel 106496 4 - Live 0x0000000000000000"
+BBBP,560,/proc/modules,"rfkill 45056 8 cfg80211,bluetooth,asus_wmi, Live 0x0000000000000000"
+BBBP,561,/proc/modules,"sparse_keymap 12288 1 asus_wmi, Live 0x0000000000000000"
+BBBP,562,/proc/modules,"pcspkr 12288 0 - Live 0x0000000000000000"
+BBBP,563,/proc/modules,"wmi_bmof 12288 0 - Live 0x0000000000000000"
+BBBP,564,/proc/modules,"rapl 20480 0 - Live 0x0000000000000000"
+BBBP,565,/proc/modules,"snd_pci_acp3x 20480 0 - Live 0x0000000000000000"
+BBBP,566,/proc/modules,"soundcore 16384 2 snd_ctl_led,snd, Live 0x0000000000000000"
+BBBP,567,/proc/modules,"i2c_smbus 20480 1 i2c_piix4, Live 0x0000000000000000"
+BBBP,568,/proc/modules,"k10temp 16384 0 - Live 0x0000000000000000"
+BBBP,569,/proc/modules,"i2c_hid_acpi 12288 0 - Live 0x0000000000000000"
+BBBP,570,/proc/modules,"i2c_hid 49152 1 i2c_hid_acpi, Live 0x0000000000000000"
+BBBP,571,/proc/modules,"amd_pmc 61440 0 - Live 0x0000000000000000"
+BBBP,572,/proc/modules,"vboxnetflt 40960 0 - Live 0x0000000000000000 (OE)"
+BBBP,573,/proc/modules,"vboxnetadp 28672 0 - Live 0x0000000000000000 (OE)"
+BBBP,574,/proc/modules,"mac_hid 12288 0 - Live 0x0000000000000000"
+BBBP,575,/proc/modules,"vboxdrv 724992 2 vboxnetflt,vboxnetadp, Live 0x0000000000000000 (OE)"
+BBBP,576,/proc/modules,"kvm_amd 258048 10 - Live 0x0000000000000000"
+BBBP,577,/proc/modules,"ccp 208896 1 kvm_amd, Live 0x0000000000000000"
+BBBP,578,/proc/modules,"kvm 1515520 9 kvm_amd, Live 0x0000000000000000"
+BBBP,579,/proc/modules,"irqbypass 16384 1 kvm, Live 0x0000000000000000"
+BBBP,580,/proc/modules,"dm_mod 237568 0 - Live 0x0000000000000000"
+BBBP,581,/proc/modules,"ntsync 20480 0 - Live 0x0000000000000000"
+BBBP,582,/proc/modules,"i2c_dev 24576 0 - Live 0x0000000000000000"
+BBBP,583,/proc/modules,"crypto_user 12288 0 - Live 0x0000000000000000"
+BBBP,584,/proc/modules,"pkcs8_key_parser 12288 0 - Live 0x0000000000000000"
+BBBP,585,/proc/modules,"zram 77824 1 - Live 0x0000000000000000"
+BBBP,586,/proc/modules,"842_compress 24576 1 zram, Live 0x0000000000000000"
+BBBP,587,/proc/modules,"842_decompress 16384 1 zram, Live 0x0000000000000000"
+BBBP,588,/proc/modules,"lz4hc_compress 20480 1 zram, Live 0x0000000000000000"
+BBBP,589,/proc/modules,"lz4_compress 24576 1 zram, Live 0x0000000000000000"
+BBBP,590,/proc/modules,"amdgpu 16838656 158 - Live 0x0000000000000000"
+BBBP,591,/proc/modules,"drm_panel_backlight_quirks 12288 1 amdgpu, Live 0x0000000000000000"
+BBBP,592,/proc/modules,"drm_buddy 12288 1 amdgpu, Live 0x0000000000000000"
+BBBP,593,/proc/modules,"drm_suballoc_helper 20480 1 amdgpu, Live 0x0000000000000000"
+BBBP,594,/proc/modules,"drm_exec 16384 1 amdgpu, Live 0x0000000000000000"
+BBBP,595,/proc/modules,"i2c_algo_bit 20480 1 amdgpu, Live 0x0000000000000000"
+BBBP,596,/proc/modules,"gpu_sched 69632 1 amdgpu, Live 0x0000000000000000"
+BBBP,597,/proc/modules,"amdxcp 12288 1 amdgpu, Live 0x0000000000000000"
+BBBP,598,/proc/modules,"nvme 73728 2 - Live 0x0000000000000000"
+BBBP,599,/proc/modules,"drm_ttm_helper 16384 1 amdgpu, Live 0x0000000000000000"
+BBBP,600,/proc/modules,"ttm 131072 2 amdgpu,drm_ttm_helper, Live 0x0000000000000000"
+BBBP,601,/proc/modules,"nvme_core 278528 3 nvme, Live 0x0000000000000000"
+BBBP,602,/proc/modules,"nvme_keyring 20480 1 nvme_core, Live 0x0000000000000000"
+BBBP,603,/proc/modules,"drm_display_helper 282624 1 amdgpu, Live 0x0000000000000000"
+BBBP,604,/proc/modules,"nvme_auth 32768 1 nvme_core, Live 0x0000000000000000"
+BBBP,605,/proc/modules,"hkdf 12288 1 nvme_auth, Live 0x0000000000000000"
+BBBP,606,/proc/modules,"cec 102400 2 amdgpu,drm_display_helper, Live 0x0000000000000000"
+BBBP,607,/proc/modules,"video 81920 3 asus_nb_wmi,asus_wmi,amdgpu, Live 0x0000000000000000"
+BBBP,608,/proc/modules,"wmi 36864 4 asus_armoury,asus_wmi,wmi_bmof,video, Live 0x0000000000000000"
+BBBP,609,/proc/modules,"serio_raw 20480 0 - Live 0x0000000000000000"
+BBBP,610,ifconfig
+BBBP,611,/bin/df-m
+BBBP,612,/bin/df-m,"Filesystem     1M-blocks   Used Available Use% Mounted on"
+BBBP,613,/bin/df-m,"ddev/nvme0n1p5    472571 124616    345752  27% /"
+BBBP,614,/bin/df-m,"devtmpfs            7525      0      7525   0% /dev"
+BBBP,615,/bin/df-m,"tmpfs               7629     84      7546   2% /dev/shm"
+BBBP,616,/bin/df-m,"efivarfs               1      1         1  15% /sys/firmware/efi/efivars"
+BBBP,617,/bin/df-m,"tmpfs               3052      2      3050   1% /run"
+BBBP,618,/bin/df-m,"tmpfs               7629   1266      6363  17% /tmp"
+BBBP,619,/bin/df-m,"ddev/nvme0n1p5    472571 124616    345752  27% /root"
+BBBP,620,/bin/df-m,"ddev/nvme0n1p5    472571 124616    345752  27% /srv"
+BBBP,621,/bin/df-m,"ddev/nvme0n1p5    472571 124616    345752  27% /home"
+BBBP,622,/bin/df-m,"ddev/nvme0n1p5    472571 124616    345752  27% /var/log"
+BBBP,623,/bin/df-m,"ddev/nvme0n1p5    472571 124616    345752  27% /var/cache"
+BBBP,624,/bin/df-m,"ddev/nvme0n1p5    472571 124616    345752  27% /var/tmp"
+BBBP,625,/bin/df-m,"ddev/nvme0n1p4      4184   1253      2932  30% /boot"
+BBBP,626,/bin/df-m,"tmpfs               1526      1      1526   1% /run/user/1000"
+BBBP,627,/bin/df-m,"none                   1      0         1   0% /run/credentials/systemd-resolved.service"
+BBBP,628,/bin/df-m,"none                   1      0         1   0% /run/credentials/systemd-journald.service"
+BBBP,629,/bin/mount
+BBBP,630,/bin/mount,"ddev/nvme0n1p5 on / type btrfs (rw,noatime,compress=zstd:1,ssd,discard=async,space_cache=v2,subvolid=256,subvol=/@)"
+BBBP,631,/bin/mount,"devtmpfs on /dev type devtmpfs (rw,nosuid,size=7705448k,nr_inodes=1926362,mode=755,inode64)"
+BBBP,632,/bin/mount,"tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,inode64,usrquota)"
+BBBP,633,/bin/mount,"devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=600,ptmxmode=000)"
+BBBP,634,/bin/mount,"sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)"
+BBBP,635,/bin/mount,"securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)"
+BBBP,636,/bin/mount,"cgroup2 on /sys/fs/cgroup type cgroup2 (rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot,memory_hugetlb_accounting)"
+BBBP,637,/bin/mount,"none on /sys/fs/pstore type pstore (rw,nosuid,nodev,noexec,relatime)"
+BBBP,638,/bin/mount,"efivarfs on /sys/firmware/efi/efivars type efivarfs (rw,nosuid,nodev,noexec,relatime)"
+BBBP,639,/bin/mount,"bpf on /sys/fs/bpf type bpf (rw,nosuid,nodev,noexec,relatime,mode=700)"
+BBBP,640,/bin/mount,"proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)"
+BBBP,641,/bin/mount,"tmpfs on /run type tmpfs (rw,nosuid,nodev,size=3124732k,nr_inodes=819200,mode=755,inode64)"
+BBBP,642,/bin/mount,"systemd-1 on /proc/sys/fs/binfmt_misc type autofs (rw,relatime,fd=44,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=6957)"
+BBBP,643,/bin/mount,"tracefs on /sys/kernel/tracing type tracefs (rw,nosuid,nodev,noexec,relatime)"
+BBBP,644,/bin/mount,"hugetlbfs on /dev/hugepages type hugetlbfs (rw,nosuid,nodev,relatime,pagesize=2M)"
+BBBP,645,/bin/mount,"mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)"
+BBBP,646,/bin/mount,"configfs on /sys/kernel/config type configfs (rw,nosuid,nodev,noexec,relatime)"
+BBBP,647,/bin/mount,"debugfs on /sys/kernel/debug type debugfs (rw,nosuid,nodev,noexec,relatime)"
+BBBP,648,/bin/mount,"fusectl on /sys/fs/fuse/connections type fusectl (rw,nosuid,nodev,noexec,relatime)"
+BBBP,649,/bin/mount,"binfmt_misc on /proc/sys/fs/binfmt_misc type binfmt_misc (rw,nosuid,nodev,noexec,relatime)"
+BBBP,650,/bin/mount,"tmpfs on /tmp type tmpfs (rw,noatime,inode64)"
+BBBP,651,/bin/mount,"ddev/nvme0n1p5 on /root type btrfs (rw,noatime,compress=zstd:1,ssd,discard=async,space_cache=v2,subvolid=258,subvol=/@root)"
+BBBP,652,/bin/mount,"ddev/nvme0n1p5 on /srv type btrfs (rw,noatime,compress=zstd:1,ssd,discard=async,space_cache=v2,subvolid=259,subvol=/@srv)"
+BBBP,653,/bin/mount,"ddev/nvme0n1p5 on /home type btrfs (rw,noatime,compress=zstd:1,ssd,discard=async,space_cache=v2,subvolid=257,subvol=/@home)"
+BBBP,654,/bin/mount,"ddev/nvme0n1p5 on /var/log type btrfs (rw,noatime,compress=zstd:1,ssd,discard=async,space_cache=v2,subvolid=262,subvol=/@log)"
+BBBP,655,/bin/mount,"ddev/nvme0n1p5 on /var/cache type btrfs (rw,noatime,compress=zstd:1,ssd,discard=async,space_cache=v2,subvolid=260,subvol=/@cache)"
+BBBP,656,/bin/mount,"ddev/nvme0n1p5 on /var/tmp type btrfs (rw,noatime,compress=zstd:1,ssd,discard=async,space_cache=v2,subvolid=261,subvol=/@tmp)"
+BBBP,657,/bin/mount,"ddev/nvme0n1p4 on /boot type vfat (rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro)"
+BBBP,658,/bin/mount,"tmpfs on /run/user/1000 type tmpfs (rw,nosuid,nodev,relatime,size=1562364k,nr_inodes=390591,mode=700,uid=1000,gid=1000,inode64)"
+BBBP,659,/bin/mount,"gvfsd-fuse on /run/user/1000/gvfs type fuse.gvfsd-fuse (rw,nosuid,nodev,relatime,user_id=1000,group_id=1000)"
+BBBP,660,/bin/mount,"portal on /run/user/1000/doc type fuse.portal (rw,nosuid,nodev,relatime,user_id=1000,group_id=1000)"
+BBBP,661,/bin/mount,"none on /run/credentials/systemd-resolved.service type tmpfs (ro,nosuid,nodev,noexec,relatime,nosymfollow,size=1024k,nr_inodes=1024,mode=700,inode64,noswap)"
+BBBP,662,/bin/mount,"none on /run/credentials/systemd-journald.service type tmpfs (ro,nosuid,nodev,noexec,relatime,nosymfollow,size=1024k,nr_inodes=1024,mode=700,inode64,noswap)"
+BBBP,663,/etc/fstab
+BBBP,664,/etc/fstab,"# /etc/fstab: static file system information."
+BBBP,665,/etc/fstab,"#"
+BBBP,666,/etc/fstab,"# Use 'blkid' to print the universally unique identifier for a device; this may"
+BBBP,667,/etc/fstab,"# be used with UUID= as a more robust way to name devices that works even if"
+BBBP,668,/etc/fstab,"# disks are added and removed. See fstab(5)."
+BBBP,669,/etc/fstab,"#"
+BBBP,670,/etc/fstab,"# <file system>             <mount point>  <type>  <options>  <dump>  <pass>"
+BBBP,671,/etc/fstab,"UUID=184B-6254                            /boot          vfat    defaults,umask=0077 0 2"
+BBBP,672,/etc/fstab,"UUID=fd640fce-34a1-4fe4-af3e-ec9c1475bd3d /              btrfs   subvol=/@,defaults,noatime,compress=zstd:1 0 0"
+BBBP,673,/etc/fstab,"UUID=fd640fce-34a1-4fe4-af3e-ec9c1475bd3d /home          btrfs   subvol=/@home,defaults,noatime,compress=zstd:1 0 0"
+BBBP,674,/etc/fstab,"UUID=fd640fce-34a1-4fe4-af3e-ec9c1475bd3d /root          btrfs   subvol=/@root,defaults,noatime,compress=zstd:1 0 0"
+BBBP,675,/etc/fstab,"UUID=fd640fce-34a1-4fe4-af3e-ec9c1475bd3d /srv           btrfs   subvol=/@srv,defaults,noatime,compress=zstd:1 0 0"
+BBBP,676,/etc/fstab,"UUID=fd640fce-34a1-4fe4-af3e-ec9c1475bd3d /var/cache     btrfs   subvol=/@cache,defaults,noatime,compress=zstd:1 0 0"
+BBBP,677,/etc/fstab,"UUID=fd640fce-34a1-4fe4-af3e-ec9c1475bd3d /var/tmp       btrfs   subvol=/@tmp,defaults,noatime,compress=zstd:1 0 0"
+BBBP,678,/etc/fstab,"UUID=fd640fce-34a1-4fe4-af3e-ec9c1475bd3d /var/log       btrfs   subvol=/@log,defaults,noatime,compress=zstd:1 0 0"
+BBBP,679,/etc/fstab,"tmpfs                                     /tmp           tmpfs   defaults,noatime,mode=1777 0 0"
+BBBP,680,netstat -r
+BBBP,681,uptime
+BBBP,682,uptime," 21:23:38 up 2 days, 23:11,  1 user,  load average: 1.44, 1.37, 1.69"
+BBBP,683,getconf PAGESIZE
+BBBP,684,getconf PAGESIZE,"4096"
+ZZZZ,T0001,21:23:39,25-SEP-2026
+CPU001,T0001,14.7,11.0,0.0,74.3,0.0
+CPU002,T0001,18.0,10.8,0.0,71.2,0.0
+CPU003,T0001,16.4,9.1,0.9,73.6,0.0
+CPU004,T0001,12.7,8.2,0.0,79.1,0.0
+CPU005,T0001,13.9,8.3,0.0,77.8,0.0
+CPU006,T0001,10.2,9.3,0.0,80.6,0.0
+CPU007,T0001,15.5,10.0,0.0,74.5,0.0
+CPU008,T0001,10.8,9.0,1.8,78.4,0.0
+CPU_ALL,T0001,13.6,9.4,0.3,76.6,0.0,,8
+MEM,T0001,15257.5,-0.0,-0.0,15257.0,417.3,-0.0,-0.0,4878.0,1033.1,3578.9,4505.8,-1.0,0.1,5.9,4220.8
+VM,Paging and Virtual Memory,nr_dirty,nr_writeback,nr_unstable,nr_page_table_pages,nr_mapped,nr_slab_reclaimable,pgpgin,pgpgout,pswpin,pswpout,pgfree,pgactivate,pgdeactivate,pgfault,pgmajfault,pginodesteal,slabs_scanned,kswapd_steal,kswapd_inodesteal,pageoutrun,allocstall,pgrotated,pgalloc_high,pgalloc_normal,pgalloc_dma,pgrefill_high,pgrefill_normal,pgrefill_dma,pgsteal_high,pgsteal_normal,pgsteal_dma,pgscan_kswapd_high,pgscan_kswapd_normal,pgscan_kswapd_dma,pgscan_direct_high,pgscan_direct_normal,pgscan_direct_dma
+VM,T0001,1621,0,0,36809,434594,84399,9160,708,414,0,10822,0,0,22057,435,0,0,0,0,0,0,0,0,18276,0,0,0,0,0,0,0,0,0,0,0,0,0
+PROC,T0001,2,0,0.0,-1.0,-1.0,-1.0,0.0,-1.0,-1.0,-1.0
+NET,T0001,0.1,0.0,0.2,0.1,0.0,0.1
+NETPACKET,T0001,1.7,0.0,2.6,1.7,0.0,0.9
+JFSFILE,T0001,26.4,0.0,0.1,16.6,26.4,26.4,26.4
+DISKBUSY,T0001,3.5,0.0,0.0,0.0,0.0,4.4,0.0
+DISKREAD,T0001,6546.1,0.0,0.0,0.0,0.0,6546.1,1444.6
+DISKWRITE,T0001,617.6,0.0,0.0,0.0,0.0,617.6,0.0
+DISKXFER,T0001,153.5,0.0,0.0,0.0,0.0,153.5,361.2
+DISKBSIZE,T0001,46.7,0.0,0.0,0.0,0.0,46.7,4.0
+ZZZZ,T0002,21:23:40,25-SEP-2026
+CPU001,T0002,13.5,7.3,0.0,79.2,0.0
+CPU002,T0002,9.3,5.2,0.0,85.6,0.0
+CPU003,T0002,9.3,6.2,1.0,83.5,0.0
+CPU004,T0002,6.1,6.1,0.0,87.8,0.0
+CPU005,T0002,11.1,8.1,3.0,77.8,0.0
+CPU006,T0002,14.3,6.1,0.0,79.6,0.0
+CPU007,T0002,8.2,6.2,0.0,85.6,0.0
+CPU008,T0002,11.0,7.0,0.0,82.0,0.0
+CPU_ALL,T0002,10.3,6.8,0.6,82.3,0.0,,8
+MEM,T0002,15257.5,-0.0,-0.0,15257.0,417.2,-0.0,-0.0,4878.0,1033.2,3581.1,4507.2,-1.0,0.1,5.9,4222.4
+VM,T0002,1690,0,0,36822,434614,84399,124,3080,3,0,2636,0,0,957,5,0,0,0,0,0,0,0,0,3552,0,0,0,0,0,0,0,0,0,0,0,0,0
+PROC,T0002,4,0,55383.5,-1.0,-1.0,-1.0,5.0,-1.0,-1.0,-1.0
+NET,T0002,0.0,0.0,0.1,0.0,0.0,0.0
+NETPACKET,T0002,0.0,0.0,1.0,0.0,0.0,0.0
+JFSFILE,T0002,26.4,0.0,0.1,16.6,26.4,26.4,26.4
+DISKBUSY,T0002,3.0,0.0,0.0,0.0,0.0,3.0,0.0
+DISKREAD,T0002,111.9,0.0,0.0,0.0,0.0,111.9,12.0
+DISKWRITE,T0002,3076.6,0.0,0.0,0.0,0.0,3076.6,0.0
+DISKXFER,T0002,215.8,0.0,0.0,0.0,0.0,215.8,3.0
+DISKBSIZE,T0002,14.8,0.0,0.0,0.0,0.0,14.8,4.0
+ZZZZ,T0003,21:23:41,25-SEP-2026
+CPU001,T0003,14.1,6.1,0.0,79.8,0.0
+CPU002,T0003,10.2,6.1,1.0,82.7,0.0
+CPU003,T0003,13.3,8.2,0.0,78.6,0.0
+CPU004,T0003,11.1,6.1,0.0,82.8,0.0
+CPU005,T0003,12.0,8.0,0.0,80.0,0.0
+CPU006,T0003,8.2,6.1,0.0,85.7,0.0
+CPU007,T0003,12.1,8.1,0.0,79.8,0.0
+CPU008,T0003,9.1,5.1,1.0,84.8,0.0
+CPU_ALL,T0003,11.3,6.4,0.3,82.1,0.0,,8
+MEM,T0003,15257.5,-0.0,-0.0,15257.0,415.3,-0.0,-0.0,4878.2,1033.1,3581.3,4508.0,-1.0,0.1,5.9,4223.1
+VM,T0003,1811,0,0,36796,434614,84399,288,136,45,0,2940,0,0,1108,46,0,0,0,0,0,0,0,0,3300,0,0,0,0,0,0,0,0,0,0,0,0,0
+PROC,T0003,3,0,56458.3,-1.0,-1.0,-1.0,5.0,-1.0,-1.0,-1.0
+NET,T0003,0.0,0.0,0.2,0.0,0.0,0.0
+NETPACKET,T0003,0.0,0.0,2.0,0.0,0.0,0.0
+JFSFILE,T0003,26.4,0.0,0.1,16.6,26.4,26.4,26.4
+DISKBUSY,T0003,3.0,0.0,0.0,0.0,0.0,3.0,0.0
+DISKREAD,T0003,107.9,0.0,0.0,0.0,0.0,107.9,179.8
+DISKWRITE,T0003,135.9,0.0,0.0,0.0,0.0,135.9,0.0
+DISKXFER,T0003,38.0,0.0,0.0,0.0,0.0,38.0,45.0
+DISKBSIZE,T0003,6.4,0.0,0.0,0.0,0.0,6.4,4.0
+ZZZZ,T0004,21:23:42,25-SEP-2026
+CPU001,T0004,11.5,6.2,0.0,82.3,0.0
+CPU002,T0004,6.1,7.1,0.0,86.7,0.0
+CPU003,T0004,10.3,9.3,0.0,80.4,0.0
+CPU004,T0004,11.3,5.2,0.0,83.5,0.0
+CPU005,T0004,8.3,7.3,0.0,84.4,0.0
+CPU006,T0004,10.1,8.1,0.0,81.8,0.0
+CPU007,T0004,9.2,9.2,1.0,80.6,0.0
+CPU008,T0004,16.2,7.1,0.0,76.8,0.0
+CPU_ALL,T0004,10.8,7.3,0.1,81.8,0.0,,8
+MEM,T0004,15257.5,-0.0,-0.0,15257.0,414.3,-0.0,-0.0,4878.2,1033.1,3581.6,4509.2,-1.0,0.1,5.9,4223.5
+VM,T0004,1908,0,0,36822,434664,84399,64,556,16,0,2622,0,0,958,18,0,0,0,0,0,0,0,0,2934,0,0,0,0,0,0,0,0,0,0,0,0,0
+PROC,T0004,3,0,54414.4,-1.0,-1.0,-1.0,3.0,-1.0,-1.0,-1.0
+NET,T0004,0.2,0.0,0.2,0.2,0.0,0.1
+NETPACKET,T0004,2.0,0.0,1.0,2.0,0.0,1.0
+JFSFILE,T0004,26.4,0.0,0.1,16.6,26.4,26.4,26.4
+DISKBUSY,T0004,1.0,0.0,0.0,0.0,0.0,1.0,0.0
+DISKREAD,T0004,0.0,0.0,0.0,0.0,0.0,0.0,63.9
+DISKWRITE,T0004,555.5,0.0,0.0,0.0,0.0,555.5,0.0
+DISKXFER,T0004,46.0,0.0,0.0,0.0,0.0,46.0,16.0
+DISKBSIZE,T0004,12.1,0.0,0.0,0.0,0.0,12.1,4.0
+ZZZZ,T0005,21:23:43,25-SEP-2026
+CPU001,T0005,11.2,6.1,0.0,82.7,0.0
+CPU002,T0005,6.2,5.2,0.0,88.7,0.0
+CPU003,T0005,15.3,6.1,0.0,78.6,0.0
+CPU004,T0005,10.3,6.2,0.0,83.5,0.0
+CPU005,T0005,6.2,6.2,0.0,87.5,0.0
+CPU006,T0005,7.3,4.2,0.0,88.5,0.0
+CPU007,T0005,12.1,5.1,0.0,82.8,0.0
+CPU008,T0005,8.2,5.1,0.0,86.7,0.0
+CPU_ALL,T0005,9.7,5.8,0.0,84.5,0.0,,8
+MEM,T0005,15257.5,-0.0,-0.0,15257.0,411.1,-0.0,-0.0,4878.3,1033.1,3581.6,4510.8,-1.0,0.1,5.9,4223.5
+VM,T0005,1925,0,0,36795,434664,84399,8,0,2,0,2531,0,0,1051,3,0,0,0,0,0,0,0,0,2937,0,0,0,0,0,0,0,0,0,0,0,0,0
+PROC,T0005,2,0,54138.2,-1.0,-1.0,-1.0,2.0,-1.0,-1.0,-1.0
+NET,T0005,0.4,0.0,0.0,0.4,0.0,0.0
+NETPACKET,T0005,8.0,0.0,0.0,8.0,0.0,0.0
+JFSFILE,T0005,26.4,0.0,0.1,16.6,26.4,26.4,26.4
+DISKBUSY,T0005,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+DISKREAD,T0005,0.0,0.0,0.0,0.0,0.0,0.0,8.0
+DISKWRITE,T0005,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+DISKXFER,T0005,0.0,0.0,0.0,0.0,0.0,0.0,2.0
+DISKBSIZE,T0005,0.0,0.0,0.0,0.0,0.0,0.0,4.0
+ZZZZ,T0006,21:23:44,25-SEP-2026
+CPU001,T0006,9.2,9.2,1.0,80.6,0.0
+CPU002,T0006,11.9,5.9,0.0,82.2,0.0
+CPU003,T0006,11.2,7.1,0.0,81.6,0.0
+CPU004,T0006,10.0,7.0,0.0,83.0,0.0
+CPU005,T0006,11.2,8.2,0.0,80.6,0.0
+CPU006,T0006,13.0,8.0,0.0,79.0,0.0
+CPU007,T0006,8.3,5.2,0.0,86.5,0.0
+CPU008,T0006,13.1,7.1,1.0,78.8,0.0
+CPU_ALL,T0006,10.7,7.0,0.3,82.0,0.0,,8
+MEM,T0006,15257.5,-0.0,-0.0,15257.0,408.9,-0.0,-0.0,4878.3,1033.1,3582.2,4511.7,-1.0,0.1,5.9,4224.0
+VM,T0006,2073,0,0,36820,434668,84399,32,1272,8,0,2555,0,0,844,9,0,0,0,0,0,0,0,0,2948,0,0,0,0,0,0,0,0,0,0,0,0,0
+PROC,T0006,2,0,54771.5,-1.0,-1.0,-1.0,2.0,-1.0,-1.0,-1.0
+NET,T0006,0.3,0.0,0.4,0.3,0.0,0.2
+NETPACKET,T0006,4.0,0.0,4.0,4.0,0.0,2.0
+JFSFILE,T0006,26.4,0.0,0.1,16.6,26.4,26.4,26.4
+DISKBUSY,T0006,2.0,0.0,0.0,0.0,0.0,3.0,0.0
+DISKREAD,T0006,0.0,0.0,0.0,0.0,0.0,0.0,32.0
+DISKWRITE,T0006,1271.0,0.0,0.0,0.0,0.0,1271.0,0.0
+DISKXFER,T0006,103.9,0.0,0.0,0.0,0.0,103.9,8.0
+DISKBSIZE,T0006,12.2,0.0,0.0,0.0,0.0,12.2,4.0
+ZZZZ,T0007,21:23:45,25-SEP-2026
+CPU001,T0007,15.7,8.8,2.0,73.5,0.0
+CPU002,T0007,11.0,8.0,1.0,80.0,0.0
+CPU003,T0007,17.0,11.0,0.0,72.0,0.0
+CPU004,T0007,17.6,9.8,0.0,72.5,0.0
+CPU005,T0007,16.2,11.1,0.0,72.7,0.0
+CPU006,T0007,11.5,11.5,1.0,76.0,0.0
+CPU007,T0007,14.1,9.1,0.0,76.8,0.0
+CPU008,T0007,16.0,11.0,0.0,73.0,0.0
+CPU_ALL,T0007,14.9,10.0,0.4,74.8,0.0,,8
+MEM,T0007,15257.5,-0.0,-0.0,15257.0,366.1,-0.0,-0.0,4916.8,1033.2,3590.0,4557.0,-1.0,0.1,5.9,4224.1
+VM,T0007,2152,0,0,36833,436099,84399,51172,420,9574,0,5526,0,0,11537,9907,0,0,0,0,0,0,0,0,17192,0,0,0,0,0,0,0,0,0,0,0,0,0
+PROC,T0007,15,0,54251.2,-1.0,-1.0,-1.0,4.0,-1.0,-1.0,-1.0
+NET,T0007,0.7,0.0,0.3,0.7,0.0,0.4
+NETPACKET,T0007,10.0,0.0,4.0,10.0,0.0,4.0
+JFSFILE,T0007,26.4,0.0,0.1,16.6,26.4,26.4,26.4
+DISKBUSY,T0007,4.0,0.0,0.0,0.0,0.0,3.0,5.0
+DISKREAD,T0007,12863.7,0.0,0.0,0.0,0.0,12863.7,38838.9
+DISKWRITE,T0007,419.6,0.0,0.0,0.0,0.0,419.6,0.0
+DISKXFER,T0007,331.7,0.0,0.0,0.0,0.0,331.7,9709.7
+DISKBSIZE,T0007,40.0,0.0,0.0,0.0,0.0,40.0,4.0
+ZZZZ,T0008,21:23:46,25-SEP-2026
+CPU001,T0008,15.6,8.3,0.0,76.0,0.0
+CPU002,T0008,9.2,8.2,0.0,82.7,0.0
+CPU003,T0008,16.3,6.1,1.0,76.5,0.0
+CPU004,T0008,14.3,7.1,0.0,78.6,0.0
+CPU005,T0008,14.4,7.2,2.1,76.3,0.0
+CPU006,T0008,14.3,7.1,0.0,78.6,0.0
+CPU007,T0008,15.2,9.1,0.0,75.8,0.0
+CPU008,T0008,12.0,9.0,0.0,79.0,0.0
+CPU_ALL,T0008,14.2,8.1,0.4,77.3,0.0,,8
+MEM,T0008,15257.5,-0.0,-0.0,15257.0,353.6,-0.0,-0.0,4929.9,1033.2,3592.1,4567.0,-1.0,0.1,6.2,4222.4
+VM,T0008,733,0,0,36823,436428,84399,14592,12888,3342,0,6815,0,0,5133,3361,0,0,0,0,0,0,0,0,7569,0,0,0,0,0,0,0,0,0,0,0,0,0
+PROC,T0008,3,0,59124.3,-1.0,-1.0,-1.0,2.0,-1.0,-1.0,-1.0
+NET,T0008,0.0,0.0,0.1,0.0,0.0,0.0
+NETPACKET,T0008,0.0,0.0,1.0,0.0,0.0,0.0
+JFSFILE,T0008,26.4,0.0,0.1,16.6,26.4,26.4,26.4
+DISKBUSY,T0008,4.0,0.0,0.0,0.0,0.0,6.0,3.0
+DISKREAD,T0008,1221.9,0.0,0.0,0.0,0.0,1221.9,12766.2
+DISKWRITE,T0008,12866.1,0.0,0.0,0.0,0.0,12866.1,0.0
+DISKXFER,T0008,789.7,0.0,0.0,0.0,0.0,789.7,3191.6
+DISKBSIZE,T0008,17.8,0.0,0.0,0.0,0.0,17.8,4.0
+ZZZZ,T0009,21:23:47,25-SEP-2026
+CPU001,T0009,13.9,8.9,0.0,77.2,0.0
+CPU002,T0009,5.1,5.1,0.0,89.8,0.0
+CPU003,T0009,10.2,8.2,0.0,81.6,0.0
+CPU004,T0009,12.0,7.0,0.0,81.0,0.0
+CPU005,T0009,11.0,7.0,0.0,82.0,0.0
+CPU006,T0009,10.3,5.2,0.0,84.5,0.0
+CPU007,T0009,9.3,4.1,1.0,85.6,0.0
+CPU008,T0009,12.0,5.0,0.0,83.0,0.0
+CPU_ALL,T0009,10.3,6.3,0.1,83.3,0.0,,8
+MEM,T0009,15257.5,-0.0,-0.0,15257.0,352.1,-0.0,-0.0,4930.0,1033.2,3592.6,4567.6,-1.0,0.1,6.2,4222.7
+VM,T0009,890,0,0,36823,436429,84399,152,420,38,0,2563,0,0,741,39,0,0,0,0,0,0,0,0,2829,0,0,0,0,0,0,0,0,0,0,0,0,0
+PROC,T0009,5,0,54361.6,-1.0,-1.0,-1.0,2.0,-1.0,-1.0,-1.0
+NET,T0009,0.0,0.0,0.0,0.0,0.0,0.0
+NETPACKET,T0009,0.0,0.0,0.0,0.0,0.0,0.0
+JFSFILE,T0009,26.4,0.0,0.1,16.6,26.4,26.4,26.4
+DISKBUSY,T0009,2.0,0.0,0.0,0.0,0.0,1.0,0.0
+DISKREAD,T0009,0.0,0.0,0.0,0.0,0.0,0.0,151.9
+DISKWRITE,T0009,419.7,0.0,0.0,0.0,0.0,419.7,0.0
+DISKXFER,T0009,36.0,0.0,0.0,0.0,0.0,36.0,38.0
+DISKBSIZE,T0009,11.7,0.0,0.0,0.0,0.0,11.7,4.0
+ZZZZ,T0010,21:23:48,25-SEP-2026
+CPU001,T0010,12.2,6.1,0.0,81.6,0.0
+CPU002,T0010,13.1,9.1,0.0,77.8,0.0
+CPU003,T0010,12.9,11.9,0.0,75.2,0.0
+CPU004,T0010,14.3,7.1,0.0,78.6,0.0
+CPU005,T0010,9.3,8.2,0.0,82.5,0.0
+CPU006,T0010,9.2,6.1,1.0,83.7,0.0
+CPU007,T0010,10.2,8.2,0.0,81.6,0.0
+CPU008,T0010,10.1,6.1,0.0,83.8,0.0
+CPU_ALL,T0010,11.1,7.9,0.1,80.8,0.0,,8
+MEM,T0010,15257.5,-0.0,-0.0,15257.0,348.6,-0.0,-0.0,4930.2,1033.2,3593.1,4570.5,-1.0,0.1,6.2,4223.3
+VM,T0010,1000,0,0,36822,436442,84399,132,776,33,0,3612,0,0,2563,36,0,0,0,0,0,0,0,0,3971,0,0,0,0,0,0,0,0,0,0,0,0,0
+PROC,T0010,5,0,55654.5,-1.0,-1.0,-1.0,15.0,-1.0,-1.0,-1.0
+NET,T0010,2.3,0.0,4.5,2.3,0.0,3.3
+NETPACKET,T0010,11.0,0.0,11.0,11.0,0.0,10.0
+JFSFILE,T0010,26.4,0.0,0.1,16.6,26.4,26.4,26.4
+DISKBUSY,T0010,1.0,0.0,0.0,0.0,0.0,2.0,0.0
+DISKREAD,T0010,0.0,0.0,0.0,0.0,0.0,0.0,131.9
+DISKWRITE,T0010,775.4,0.0,0.0,0.0,0.0,775.4,0.0
+DISKXFER,T0010,63.9,0.0,0.0,0.0,0.0,63.9,33.0
+DISKBSIZE,T0010,12.1,0.0,0.0,0.0,0.0,12.1,4.0
+ZZZZ,T0011,21:23:49,25-SEP-2026
+CPU001,T0011,8.2,7.2,0.0,84.5,0.0
+CPU002,T0011,13.1,6.1,0.0,80.8,0.0
+CPU003,T0011,7.2,6.2,0.0,86.6,0.0
+CPU004,T0011,11.0,4.0,1.0,84.0,0.0
+CPU005,T0011,7.1,9.1,0.0,83.8,0.0
+CPU006,T0011,9.4,5.2,0.0,85.4,0.0
+CPU007,T0011,8.1,8.1,1.0,82.8,0.0
+CPU008,T0011,12.2,5.1,0.0,82.7,0.0
+CPU_ALL,T0011,9.5,6.4,0.1,84.0,0.0,,8
+MEM,T0011,15257.5,-0.0,-0.0,15257.0,349.1,-0.0,-0.0,4930.3,1033.2,3593.5,4571.0,-1.0,0.1,6.2,4223.7
+VM,T0011,1107,0,0,36823,436443,84399,96,716,24,0,3128,0,0,1378,26,0,0,0,0,0,0,0,0,3386,0,0,0,0,0,0,0,0,0,0,0,0,0
+PROC,T0011,5,0,54819.5,-1.0,-1.0,-1.0,2.0,-1.0,-1.0,-1.0
+NET,T0011,109.5,0.0,106.9,109.5,0.0,9.7
+NETPACKET,T0011,112.9,0.0,78.9,112.9,0.0,66.9
+JFSFILE,T0011,26.4,0.0,0.1,16.6,26.4,26.4,26.4
+DISKBUSY,T0011,2.0,0.0,0.0,0.0,0.0,2.0,0.0
+DISKREAD,T0011,0.0,0.0,0.0,0.0,0.0,0.0,95.9
+DISKWRITE,T0011,715.4,0.0,0.0,0.0,0.0,715.4,0.0
+DISKXFER,T0011,57.9,0.0,0.0,0.0,0.0,57.9,24.0
+DISKBSIZE,T0011,12.3,0.0,0.0,0.0,0.0,12.3,4.0
+ZZZZ,T0012,21:23:50,25-SEP-2026
+CPU001,T0012,9.4,10.4,1.0,79.2,0.0
+CPU002,T0012,10.3,8.2,0.0,81.4,0.0
+CPU003,T0012,10.3,8.2,0.0,81.4,0.0
+CPU004,T0012,9.2,8.2,0.0,82.7,0.0
+CPU005,T0012,9.4,8.3,2.1,80.2,0.0
+CPU006,T0012,12.1,9.1,0.0,78.8,0.0
+CPU007,T0012,10.2,9.2,0.0,80.6,0.0
+CPU008,T0012,13.3,8.2,2.0,76.5,0.0
+CPU_ALL,T0012,10.7,8.4,0.8,80.1,0.0,,8
+MEM,T0012,15257.5,-0.0,-0.0,15257.0,344.4,-0.0,-0.0,4930.4,1033.2,3609.9,4571.9,-1.0,0.1,6.2,4239.9
+VM,T0012,4166,0,0,36823,436443,84399,4656,684,32,0,3863,0,0,2509,33,0,0,0,0,0,0,0,0,8307,0,0,0,0,0,0,0,0,0,0,0,0,0
+PROC,T0012,6,0,56842.0,-1.0,-1.0,-1.0,17.0,-1.0,-1.0,-1.0
+NET,T0012,102.6,0.0,100.5,102.6,0.0,5.0
+NETPACKET,T0012,105.8,0.0,71.9,105.8,0.0,48.9
+JFSFILE,T0012,26.4,0.0,0.1,16.6,26.4,26.4,26.4
+DISKBUSY,T0012,4.0,0.0,0.0,0.0,0.0,4.0,0.0
+DISKREAD,T0012,4521.0,0.0,0.0,0.0,0.0,4521.0,127.8
+DISKWRITE,T0012,682.9,0.0,0.0,0.0,0.0,682.9,0.0
+DISKXFER,T0012,337.5,0.0,0.0,0.0,0.0,337.5,32.0
+DISKBSIZE,T0012,15.4,0.0,0.0,0.0,0.0,15.4,4.0
+ZZZZ,T0013,21:23:51,25-SEP-2026
+CPU001,T0013,9.3,8.2,0.0,82.5,0.0
+CPU002,T0013,17.3,7.1,0.0,75.5,0.0
+CPU003,T0013,8.3,12.5,0.0,79.2,0.0
+CPU004,T0013,9.2,7.1,0.0,83.7,0.0
+CPU005,T0013,15.2,7.1,0.0,77.8,0.0
+CPU006,T0013,11.0,8.0,0.0,81.0,0.0
+CPU007,T0013,10.3,11.3,0.0,78.4,0.0
+CPU008,T0013,7.4,7.4,0.0,85.1,0.0
+CPU_ALL,T0013,11.3,8.7,0.0,80.0,0.0,,8
+MEM,T0013,15257.5,-0.0,-0.0,15257.0,340.9,-0.0,-0.0,4930.5,1033.1,3611.5,4573.2,-1.0,0.1,6.2,4241.8
+VM,T0013,1138,0,0,36898,436448,84399,196,28676,29,0,3741,0,0,2537,32,0,0,0,0,0,0,0,0,4333,0,0,0,0,0,0,0,0,0,0,0,0,0
+PROC,T0013,3,0,63868.7,-1.0,-1.0,-1.0,15.0,-1.0,-1.0,-1.0
+NET,T0013,184.4,0.0,180.3,184.4,0.0,12.4
+NETPACKET,T0013,254.8,0.0,137.9,254.8,0.0,75.9
+JFSFILE,T0013,26.4,0.0,0.1,16.6,26.4,26.4,26.4
+DISKBUSY,T0013,6.0,0.0,0.0,0.0,0.0,8.0,0.0
+DISKREAD,T0013,79.9,0.0,0.0,0.0,0.0,79.9,115.9
+DISKWRITE,T0013,28648.1,0.0,0.0,0.0,0.0,28648.1,0.0
+DISKXFER,T0013,1698.3,0.0,0.0,0.0,0.0,1698.3,29.0
+DISKBSIZE,T0013,16.9,0.0,0.0,0.0,0.0,16.9,4.0
+ZZZZ,T0014,21:23:52,25-SEP-2026
+CPU001,T0014,7.2,7.2,1.0,84.5,0.0
+CPU002,T0014,12.1,6.1,0.0,81.8,0.0
+CPU003,T0014,12.0,9.0,0.0,79.0,0.0
+CPU004,T0014,9.2,6.1,1.0,83.7,0.0
+CPU005,T0014,12.4,6.2,0.0,81.4,0.0
+CPU006,T0014,9.8,7.8,1.0,81.4,0.0
+CPU007,T0014,12.1,7.1,0.0,80.8,0.0
+CPU008,T0014,10.1,5.1,0.0,84.8,0.0
+CPU_ALL,T0014,10.3,6.7,0.4,82.6,0.0,,8
+MEM,T0014,15257.5,-0.0,-0.0,15257.0,340.2,-0.0,-0.0,4930.6,1033.2,3613.1,4574.2,-1.0,0.1,6.2,4242.1
+VM,T0014,496,0,0,36824,436464,84399,84,5556,21,0,3261,0,0,1236,23,0,0,0,0,0,0,0,0,3681,0,0,0,0,0,0,0,0,0,0,0,0,0
+PROC,T0014,3,0,55999.8,-1.0,-1.0,-1.0,2.0,-1.0,-1.0,-1.0
+NET,T0014,13.6,0.0,16.4,13.6,0.0,8.7
+NETPACKET,T0014,24.0,0.0,36.0,24.0,0.0,29.0
+JFSFILE,T0014,26.4,0.0,0.1,16.6,26.4,26.4,26.4
+DISKBUSY,T0014,3.0,0.0,0.0,0.0,0.0,4.0,0.0
+DISKREAD,T0014,0.0,0.0,0.0,0.0,0.0,0.0,83.9
+DISKWRITE,T0014,5551.2,0.0,0.0,0.0,0.0,5551.2,0.0
+DISKXFER,T0014,234.8,0.0,0.0,0.0,0.0,234.8,21.0
+DISKBSIZE,T0014,23.6,0.0,0.0,0.0,0.0,23.6,4.0
+ZZZZ,T0015,21:23:53,25-SEP-2026
+CPU001,T0015,11.6,8.4,0.0,80.0,0.0
+CPU002,T0015,12.5,6.2,0.0,81.2,0.0
+CPU003,T0015,12.4,9.3,1.0,77.3,0.0
+CPU004,T0015,13.1,10.1,0.0,76.8,0.0
+CPU005,T0015,13.3,9.2,0.0,77.6,0.0
+CPU006,T0015,13.4,7.2,0.0,79.4,0.0
+CPU007,T0015,12.6,10.5,0.0,76.8,0.0
+CPU008,T0015,12.2,7.1,2.0,78.6,0.0
+CPU_ALL,T0015,12.8,8.8,0.3,78.1,0.0,,8
+MEM,T0015,15257.5,-0.0,-0.0,15257.0,333.0,-0.0,-0.0,4930.7,1033.2,3613.1,4578.9,-1.0,0.1,6.2,4242.6
+VM,T0015,747,0,0,36888,436863,84399,116,144,24,0,10520,0,0,13966,26,0,0,0,0,0,0,0,0,11805,0,0,0,0,0,0,0,0,0,0,0,0,0
+PROC,T0015,5,0,56921.8,-1.0,-1.0,-1.0,62.9,-1.0,-1.0,-1.0
+NET,T0015,14.0,0.0,12.6,14.0,0.0,8.1
+NETPACKET,T0015,29.9,0.0,26.9,29.9,0.0,22.0
+JFSFILE,T0015,26.4,0.0,0.1,16.6,26.4,26.4,26.4
+DISKBUSY,T0015,3.0,0.0,0.0,0.0,0.0,3.0,0.0
+DISKREAD,T0015,20.0,0.0,0.0,0.0,0.0,20.0,95.8
+DISKWRITE,T0015,143.7,0.0,0.0,0.0,0.0,143.7,0.0
+DISKXFER,T0015,19.0,0.0,0.0,0.0,0.0,19.0,24.0
+DISKBSIZE,T0015,8.6,0.0,0.0,0.0,0.0,8.6,4.0

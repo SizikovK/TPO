@@ -1,0 +1,16 @@
+
+ID=openbmc-openpower
+NAME="Phosphor OpenBMC (Phosphor OpenBMC Project Reference Distro)"
+VERSION="3.0.0-dev"
+VERSION_ID=3.0.0-dev-734-gf330cd08ac
+VERSION_CODENAME="styhead"
+PRETTY_NAME="Phosphor OpenBMC (Phosphor OpenBMC Project Reference Distro) 3.0.0-dev"
+CPE_NAME="cpe:/o:openembedded:openbmc-openpower:3.0.0-dev-734-gf330cd08ac"
+BUILD_ID="20250902012112"
+OPENBMC_TARGET_MACHINE="romulus"
+EXTENDED_VERSION="3.0.0-dev-734-gf330cd08ac"
+CurrentBMCState     : xyz.openbmc_project.State.BMC.BMCState.Ready
+CurrentPowerState   : xyz.openbmc_project.State.Chassis.PowerState.Off
+CurrentHostState    : xyz.openbmc_project.State.Host.HostState.Off
+BootProgress        : xyz.openbmc_project.State.Boot.Progress.ProgressStages.Unspecified
+OperatingSystemState: xyz.openbmc_project.State.OperatingSystem.Status.OSStatus.Inactive

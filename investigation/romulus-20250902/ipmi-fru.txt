@@ -1,0 +1,69 @@
+FRU Device Description : Builtin FRU Device (ID 0)
+ Device not present (Requested sensor, data, or record not found)
+
+FRU Device Description : cpu0 (ID 1)
+ Device not present (Requested sensor, data, or record not found)
+
+FRU Device Description : cpu1 (ID 2)
+ Device not present (Requested sensor, data, or record not found)
+
+FRU Device Description : system (ID 3)
+ Device not present (Requested sensor, data, or record not found)
+
+FRU Device Description : dimm0 (ID 4)
+ Device not present (Requested sensor, data, or record not found)
+
+FRU Device Description : dimm1 (ID 5)
+ Device not present (Requested sensor, data, or record not found)
+
+FRU Device Description : dimm2 (ID 6)
+ Device not present (Requested sensor, data, or record not found)
+
+FRU Device Description : dimm3 (ID 7)
+ Device not present (Requested sensor, data, or record not found)
+
+FRU Device Description : dimm4 (ID 8)
+ Device not present (Requested sensor, data, or record not found)
+
+FRU Device Description : dimm5 (ID 9)
+ Device not present (Requested sensor, data, or record not found)
+
+FRU Device Description : dimm6 (ID 10)
+ Device not present (Requested sensor, data, or record not found)
+
+FRU Device Description : dimm7 (ID 11)
+ Device not present (Requested sensor, data, or record not found)
+
+FRU Device Description : dimm8 (ID 12)
+ Device not present (Requested sensor, data, or record not found)
+
+FRU Device Description : dimm9 (ID 13)
+ Device not present (Requested sensor, data, or record not found)
+
+FRU Device Description : dimm10 (ID 14)
+ Device not present (Requested sensor, data, or record not found)
+
+FRU Device Description : dimm11 (ID 15)
+ Device not present (Requested sensor, data, or record not found)
+
+FRU Device Description : dimm12 (ID 16)
+ Device not present (Requested sensor, data, or record not found)
+
+FRU Device Description : dimm13 (ID 17)
+ Device not present (Requested sensor, data, or record not found)
+
+FRU Device Description : dimm14 (ID 18)
+ Device not present (Requested sensor, data, or record not found)
+
+FRU Device Description : dimm15 (ID 19)
+ Device not present (Requested sensor, data, or record not found)
+
+FRU Device Description : fan0 (ID 50)
+ Device not present (Requested sensor, data, or record not found)
+
+FRU Device Description : fan1 (ID 51)
+ Device not present (Requested sensor, data, or record not found)
+
+FRU Device Description : fan2 (ID 52)
+ Device not present (Requested sensor, data, or record not found)
+

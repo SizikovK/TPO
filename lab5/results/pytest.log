@@ -1,0 +1,26 @@
+INFO     test_redfish:test_redfish.py:30 POST /redfish/v1/SessionService/Sessions -> HTTP 201
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:82 Status={'Health': 'OK', 'State': 'Disabled'}; PowerState=Off
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 POST /redfish/v1/Systems/system/Actions/ComputerSystem.Reset -> HTTP 204
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:98 Включение: HTTP 204; состояния=['Off', 'PoweringOn', 'PoweringOff', 'PoweringOff', 'Off', 'Off', 'Off', 'Off', 'PoweringOn', 'PoweringOn', 'Off', 'Off', 'Off', 'Off', 'Off', 'Off']
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Chassis -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Chassis/chassis -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Chassis/chassis/Thermal -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 DELETE /redfish/v1/SessionService/Sessions/VhjQSmWHDj -> HTTP 200

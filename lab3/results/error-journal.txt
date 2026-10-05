@@ -1,0 +1,231 @@
+
+CURSOR=s=a30e277c589240e18c77ad28d2e320ab;i=364;b=97d127b0542c4e668791bdc891a0068c;m=a61f02a;t=65caaee870e51;x=335239952967fad0
+POWERON_RC=0
+Sep 30 03:31:18 romulus phosphor-host-state-manager[352]: Host state transition request of xyz.openbmc_project.State.Host.Transition.On
+Sep 30 03:31:18 romulus systemd[1]: Created slice Slice /system/avsbus-disable.
+Sep 30 03:31:18 romulus systemd[1]: Created slice Slice /system/avsbus-enable.
+Sep 30 03:31:18 romulus systemd[1]: Created slice Slice /system/cfam_override.
+Sep 30 03:31:18 romulus systemd[1]: Created slice Slice /system/fsi-scan.
+Sep 30 03:31:19 romulus systemd[1]: Created slice Slice /system/mapper-subtree-remove.
+Sep 30 03:31:19 romulus systemd[1]: Created slice Slice /system/mboxd-reload.
+Sep 30 03:31:19 romulus systemd[1]: Created slice Slice /system/obmc-enable-host-watchdog.
+Sep 30 03:31:19 romulus systemd[1]: Created slice Slice /system/obmc-power-start.
+Sep 30 03:31:19 romulus systemd[1]: Created slice Slice /system/op-continue-mpreboot.
+Sep 30 03:31:19 romulus systemd[1]: Created slice Slice /system/phosphor-create-chassis-poweron-log.
+Sep 30 03:31:19 romulus systemd[1]: Created slice Slice /system/phosphor-fan-control-init.
+Sep 30 03:31:19 romulus systemd[1]: Created slice Slice /system/phosphor-fan-monitor-init.
+Sep 30 03:31:19 romulus systemd[1]: Created slice Slice /system/phosphor-fan-presence-tach.
+Sep 30 03:31:19 romulus systemd[1]: Created slice Slice /system/phosphor-reset-host-reboot-attempts.
+Sep 30 03:31:19 romulus systemd[1]: Created slice Slice /system/phosphor-reset-host-recovery.
+Sep 30 03:31:19 romulus systemd[1]: Created slice Slice /system/phosphor-set-chassis-transition-to-on.
+Sep 30 03:31:19 romulus systemd[1]: Created slice Slice /system/phosphor-set-host-transition-to-running.
+Sep 30 03:31:19 romulus systemd[1]: Created slice Slice /system/phosphor-wait-power-on.
+Sep 30 03:31:19 romulus systemd[1]: Created slice Slice /system/phosphor-watchdog.
+Sep 30 03:31:19 romulus systemd[1]: Created slice Slice /system/start_host.
+Sep 30 03:31:19 romulus systemd[1]: Created slice Slice /system/vrm-control.
+Sep 30 03:31:19 romulus systemd[1]: Starting mapper subtree-remove /xyz/openbmc_project/logging:xyz.openbmc_project.Logging.ErrorBlocksTransition...
+Sep 30 03:31:20 romulus systemd[1]: Starting mapper subtree-remove /xyz/openbmc_project/software:xyz.openbmc_project.Software.ActivationBlocksTransition...
+Sep 30 03:31:20 romulus systemd[1]: Starting Wait for /org/openbmc/mboxd...
+Sep 30 03:31:20 romulus systemd[1]: Starting Wait for /xyz/openbmc_project/watchdog/host0...
+Sep 30 03:31:20 romulus systemd[1]: Starting Assert power_on LED...
+Sep 30 03:31:20 romulus systemd[1]: Starting CFAM reset...
+Sep 30 03:31:21 romulus systemd[1]: Starting Create info log indicating chassis0 poweron has started...
+Sep 30 03:31:21 romulus systemd[1]: Started Phosphor GPIO checkstop monitor.
+Sep 30 03:31:21 romulus systemd[1]: Starting Reset host reboot counter...
+Sep 30 03:31:21 romulus systemd[1]: Recover host0 after bmc reboot was skipped because of an unmet condition check (ConditionPathExists=/run/openbmc/chassis@0-on).
+Sep 30 03:31:21 romulus (-monitor)[457]: phosphor-gpio-monitor@checkstop.service: Referenced but unset environment variable evaluates to an empty string: EXTRA_ARGS
+Sep 30 03:31:21 romulus systemd[1]: Starting Set Chassis state to transition to on...
+Sep 30 03:31:22 romulus systemd[1]: Starting Set host state to transition to running...
+Sep 30 03:31:22 romulus sh[456]: o "/xyz/openbmc_project/logging/entry/1"
+Sep 30 03:31:22 romulus systemd[1]: Started Phosphor poweron watchdog.
+Sep 30 03:31:23 romulus phosphor-chassis-state-manager[331]: Change to Chassis Power State: xyz.openbmc_project.State.Chassis.PowerState.TransitioningToOn
+Sep 30 03:31:23 romulus phosphor-host-state-manager[352]: Change to Host State: xyz.openbmc_project.State.Host.HostState.TransitioningToRunning
+Sep 30 03:31:24 romulus phosphor-watchdog[463]: Action Targets:
+Sep 30 03:31:24 romulus phosphor-watchdog[463]:   xyz.openbmc_project.State.Watchdog.Action.PowerCycle -> obmc-host-timeout@0.target
+Sep 30 03:31:24 romulus phosphor-watchdog[463]:   xyz.openbmc_project.State.Watchdog.Action.PowerOff -> obmc-host-timeout@0.target
+Sep 30 03:31:24 romulus phosphor-watchdog[463]:   xyz.openbmc_project.State.Watchdog.Action.HardReset -> obmc-host-timeout@0.target
+Sep 30 03:31:24 romulus systemd[1]: mapper-subtree-remove@-xyz-openbmc\x5fproject-logging\x3Axyz.openbmc_project.Logging.ErrorBlocksTransition.service: Deactivated successfully.
+Sep 30 03:31:24 romulus systemd[1]: Finished mapper subtree-remove /xyz/openbmc_project/logging:xyz.openbmc_project.Logging.ErrorBlocksTransition.
+Sep 30 03:31:24 romulus systemd[1]: mapper-subtree-remove@-xyz-openbmc\x5fproject-software\x3Axyz.openbmc_project.Software.ActivationBlocksTransition.service: Deactivated successfully.
+Sep 30 03:31:24 romulus systemd[1]: Finished mapper subtree-remove /xyz/openbmc_project/software:xyz.openbmc_project.Software.ActivationBlocksTransition.
+Sep 30 03:31:24 romulus systemd[1]: Finished Wait for /org/openbmc/mboxd.
+Sep 30 03:31:24 romulus systemd[1]: Finished Wait for /xyz/openbmc_project/watchdog/host0.
+Sep 30 03:31:24 romulus systemd[1]: Finished Assert power_on LED.
+Sep 30 03:31:24 romulus systemd[1]: Finished CFAM reset.
+Sep 30 03:31:25 romulus systemd[1]: Finished Create info log indicating chassis0 poweron has started.
+Sep 30 03:31:25 romulus systemd[1]: phosphor-reset-host-reboot-attempts@0.service: Deactivated successfully.
+Sep 30 03:31:25 romulus systemd[1]: Finished Reset host reboot counter.
+Sep 30 03:31:25 romulus systemd[1]: Finished Set Chassis state to transition to on.
+Sep 30 03:31:25 romulus systemd[1]: Finished Set host state to transition to running.
+Sep 30 03:31:25 romulus systemd[1]: Reached target Power0 On (Pre).
+Sep 30 03:31:25 romulus systemd[1]: Starting Reload mboxd during power on...
+Sep 30 03:31:25 romulus systemd[1]: Starting Start Power On for Chassis0...
+Sep 30 03:31:26 romulus mboxctl[476]: Reset: Success
+Sep 30 03:31:26 romulus ipmid[340]: Command in process, no attention
+Sep 30 03:31:26 romulus systemd[1]: Finished Reload mboxd during power on.
+Sep 30 03:31:26 romulus power_control.exe[231]: PowerControl: setting power up SOFTWARE_PGOOD to 1
+Sep 30 03:31:26 romulus power_control.exe[231]: PowerControl: setting power up BMC_POWER_UP to 1
+Sep 30 03:31:27 romulus systemd[1]: Finished Start Power On for Chassis0.
+Sep 30 03:31:27 romulus systemd[1]: Starting Disable the AVS bus on the VRMs...
+Sep 30 03:31:27 romulus systemd[1]: Starting Wait for Power0 to turn on...
+Sep 30 03:31:27 romulus avsbus-disable.sh[483]: Error: Write failed
+Sep 30 03:31:28 romulus avsbus-disable.sh[484]: Error: Write failed
+Sep 30 03:31:28 romulus avsbus-disable.sh[485]: Error: Write failed
+Sep 30 03:31:28 romulus avsbus-disable.sh[486]: Error: Write failed
+Sep 30 03:31:28 romulus avsbus-disable.sh[487]: Error: Write failed
+Sep 30 03:31:28 romulus avsbus-disable.sh[488]: Error: Write failed
+Sep 30 03:31:28 romulus avsbus-disable.sh[489]: Error: Write failed
+Sep 30 03:31:28 romulus avsbus-disable.sh[490]: Error: Write failed
+Sep 30 03:31:28 romulus avsbus-disable.sh[491]: Error: Write failed
+Sep 30 03:31:28 romulus avsbus-disable.sh[492]: Error: Write failed
+Sep 30 03:31:28 romulus avsbus-disable.sh[493]: Error: Write failed
+Sep 30 03:31:28 romulus bmcwebd[220]: [http2_connection.hpp:610] 0xac0110 Error while reading: End of file
+Sep 30 03:31:28 romulus avsbus-disable.sh[494]: Error: Write failed
+Sep 30 03:31:28 romulus avsbus-disable.sh[495]: Error: Write failed
+Sep 30 03:31:28 romulus avsbus-disable.sh[496]: Error: Write failed
+Sep 30 03:31:28 romulus systemd[1]: avsbus-disable@0.service: Main process exited, code=exited, status=1/FAILURE
+Sep 30 03:31:28 romulus systemd[1]: avsbus-disable@0.service: Failed with result 'exit-code'.
+Sep 30 03:31:28 romulus systemd[1]: Failed to start Disable the AVS bus on the VRMs.
+Sep 30 03:31:28 romulus systemd[1]: Dependency failed for Chassis0 (Power On).
+Sep 30 03:31:29 romulus systemd[1]: Dependency failed for Start Host0 Minimum.
+Sep 30 03:31:29 romulus systemd[1]: Dependency failed for Start Host0.
+Sep 30 03:31:29 romulus systemd[1]: obmc-host-start@0.target: Job obmc-host-start@0.target/start failed with result 'dependency'.
+Sep 30 03:31:29 romulus systemd[1]: obmc-host-start@0.target: Triggering OnFailure= dependencies.
+Sep 30 03:31:29 romulus phosphor-systemd-target-monitor[305]: Monitored systemd unit has hit an error, unit:obmc-chassis-poweron@0.target, result:dependency
+Sep 30 03:31:29 romulus systemd[1]: obmc-host-startmin@0.target: Job obmc-host-startmin@0.target/start failed with result 'dependency'.
+Sep 30 03:31:29 romulus systemd[1]: obmc-host-startmin@0.target: Triggering OnFailure= dependencies.
+Sep 30 03:31:29 romulus phosphor-dump-manager[273]: OriginatorId is not provided
+Sep 30 03:31:29 romulus phosphor-dump-manager[273]: OriginatorType is not provided. Replacing the string with the default value
+Sep 30 03:31:29 romulus phosphor-dump-manager[273]: Initiating new BMC dump with type: user path: 
+Sep 30 03:31:29 romulus systemd[1]: obmc-chassis-poweron@0.target: Job obmc-chassis-poweron@0.target/start failed with result 'dependency'.
+Sep 30 03:31:29 romulus systemd[1]: obmc-chassis-poweron@0.target: Triggering OnFailure= dependencies.
+Sep 30 03:31:29 romulus phosphor-systemd-target-monitor[305]: Monitored systemd unit has hit an error, unit:obmc-host-startmin@0.target, result:dependency
+Sep 30 03:31:29 romulus phosphor-dump-manager[273]: OriginatorId is not provided
+Sep 30 03:31:29 romulus phosphor-dump-manager[273]: OriginatorType is not provided. Replacing the string with the default value
+Sep 30 03:31:29 romulus phosphor-dump-manager[273]: Another user initiated dump in progress
+Sep 30 03:31:29 romulus phosphor-dump-manager[273]: The service is temporarily unavailable.
+Sep 30 03:31:29 romulus phosphor-systemd-target-monitor[305]: Failed to create BMC dump, exception:sd_bus_call noreply: xyz.openbmc_project.Common.Error.Unavailable: The service is temporarily unavailable.
+Sep 30 03:31:29 romulus phosphor-systemd-target-monitor[305]: Monitored systemd unit has hit an error, unit:obmc-host-start@0.target, result:dependency
+Sep 30 03:31:29 romulus systemd[1]: Created slice Slice /system/obmc-power-stop.
+Sep 30 03:31:30 romulus phosphor-dump-manager[273]: OriginatorId is not provided
+Sep 30 03:31:30 romulus systemd[1]: Created slice Slice /system/obmc-powered-off.
+Sep 30 03:31:30 romulus phosphor-dump-manager[273]: OriginatorType is not provided. Replacing the string with the default value
+Sep 30 03:31:30 romulus phosphor-dump-manager[273]: Another user initiated dump in progress
+Sep 30 03:31:30 romulus phosphor-dump-manager[273]: The service is temporarily unavailable.
+Sep 30 03:31:30 romulus phosphor-systemd-target-monitor[305]: Failed to create BMC dump, exception:sd_bus_call noreply: xyz.openbmc_project.Common.Error.Unavailable: The service is temporarily unavailable.
+Sep 30 03:31:30 romulus systemd[1]: Created slice Slice /system/op-stop-instructions.
+Sep 30 03:31:30 romulus systemd[1]: Created slice Slice /system/phosphor-clear-one-time.
+Sep 30 03:31:30 romulus ipmid[340]: Host control timeout hit!
+Sep 30 03:31:30 romulus ipmid[340]: Failed to deliver host command
+Sep 30 03:31:30 romulus ipmid[340]: Failed to deliver host command
+Sep 30 03:31:30 romulus systemd[1]: Created slice Slice /system/phosphor-reset-sensor-states.
+Sep 30 03:31:30 romulus systemd[1]: Created slice Slice /system/phosphor-set-chassis-transition-to-off.
+Sep 30 03:31:30 romulus systemd[1]: Created slice Slice /system/phosphor-set-host-transition-to-off.
+Sep 30 03:31:30 romulus systemd[1]: Created slice Slice /system/phosphor-wait-power-off.
+Sep 30 03:31:30 romulus systemd[1]: Stopped target Chassis0 (Reset Check).
+Sep 30 03:31:30 romulus systemd[1]: Reached target Host0 (Stopped).
+Sep 30 03:31:30 romulus systemd[1]: Reached target Power0 Off (Pre).
+Sep 30 03:31:30 romulus systemd[1]: Starting Wait for /xyz/openbmc_project/control/host0/auto_reboot/one_time...
+Sep 30 03:31:30 romulus systemd[1]: Starting Reset host sensors...
+Sep 30 03:31:31 romulus systemd[1]: Starting Set Chassis state to transition to off...
+Sep 30 03:31:31 romulus systemd[1]: Starting Set host state to transition to off...
+Sep 30 03:31:31 romulus systemd[1]: Starting Wait for Power0 to turn off...
+Sep 30 03:31:31 romulus systemd[1]: Starting Apply voltage overrides to VRMs...
+Sep 30 03:31:32 romulus systemd-journald[118]: Forwarding to syslog missed 138 messages.
+Sep 30 03:31:32 romulus phosphor-chassis-state-manager[331]: Change to Chassis Power State: xyz.openbmc_project.State.Chassis.PowerState.TransitioningToOff
+Sep 30 03:31:33 romulus phosphor-host-state-manager[352]: Change to Host State: xyz.openbmc_project.State.Host.HostState.TransitioningToOff
+Sep 30 03:31:33 romulus vrm.sh[523]: rail        set        read        current
+Sep 30 03:31:33 romulus vrm.sh[523]: -------        ------- ------- -------
+Sep 30 03:31:33 romulus systemd[1]: Finished Wait for /xyz/openbmc_project/control/host0/auto_reboot/one_time.
+Sep 30 03:31:33 romulus vrm.sh[523]: vdna
+Sep 30 03:31:33 romulus vrm.sh[530]: Error: Write failed
+Sep 30 03:31:33 romulus systemd[1]: Finished Set Chassis state to transition to off.
+Sep 30 03:31:33 romulus systemd[1]: Finished Set host state to transition to off.
+Sep 30 03:31:33 romulus vrm.sh[536]: Error: Write failed
+Sep 30 03:31:34 romulus vrm.sh[538]: Error: Read failed
+Sep 30 03:31:34 romulus vrm.sh[523]:         0.000V
+Sep 30 03:31:34 romulus vrm.sh[547]: Error: Read failed
+Sep 30 03:31:34 romulus vrm.sh[523]:         0.000V
+Sep 30 03:31:34 romulus vrm.sh[552]: Error: Read failed
+Sep 30 03:31:34 romulus vrm.sh[523]: /usr/bin/vrm-control.sh: line 28: /0x800 : syntax error: operand expected (error token is "/0x800 ")
+Sep 30 03:31:34 romulus systemd[1]: vrm-control@0.service: Main process exited, code=exited, status=1/FAILURE
+Sep 30 03:31:34 romulus systemd[1]: vrm-control@0.service: Failed with result 'exit-code'.
+Sep 30 03:31:34 romulus systemd[1]: Failed to start Apply voltage overrides to VRMs.
+Sep 30 03:31:35 romulus systemd[1]: Finished Wait for Power0 to turn off.
+Sep 30 03:31:35 romulus systemd[1]: Reached target Stop Host0 (Pre).
+Sep 30 03:31:35 romulus systemd[1]: Starting Enable the AVS bus on VRMs...
+Sep 30 03:31:35 romulus systemd[1]: Started Start Power Off for Chassis0.
+Sep 30 03:31:35 romulus systemd[1]: Reached target Power0 Off (Starting).
+Sep 30 03:31:35 romulus systemd[1]: Reached target Power0 (Off).
+Sep 30 03:31:36 romulus systemd[1]: Started Power is off to Chassis0.
+Sep 30 03:31:36 romulus systemd[1]: Stop instructions for host0 was skipped because of an unmet condition check (ConditionPathExists=/sys/class/fsi-master/fsi0/slave@00:00/cfam_id).
+Sep 30 03:31:36 romulus avsbus-enable.sh[567]: Error: Write failed
+Sep 30 03:31:36 romulus avsbus-enable.sh[570]: Error: Write failed
+Sep 30 03:31:36 romulus systemd[1]: Starting Reset one-time properties on chassis off...
+Sep 30 03:31:36 romulus avsbus-enable.sh[571]: Error: Write failed
+Sep 30 03:31:36 romulus avsbus-enable.sh[572]: Error: Write failed
+Sep 30 03:31:36 romulus avsbus-enable.sh[573]: Error: Write failed
+Sep 30 03:31:37 romulus avsbus-enable.sh[574]: Error: Write failed
+Sep 30 03:31:37 romulus power_control.exe[231]: PowerControl: setting power up SOFTWARE_PGOOD to 0
+Sep 30 03:31:37 romulus power_control.exe[231]: PowerControl: setting power up BMC_POWER_UP to 0
+Sep 30 03:31:37 romulus avsbus-enable.sh[576]: Error: Write failed
+Sep 30 03:31:37 romulus avsbus-enable.sh[577]: Error: Write failed
+Sep 30 03:31:37 romulus avsbus-enable.sh[578]: Error: Write failed
+Sep 30 03:31:37 romulus systemd[1]: phosphor-reset-sensor-states@0.service: Deactivated successfully.
+Sep 30 03:31:37 romulus systemd[1]: Finished Reset host sensors.
+Sep 30 03:31:37 romulus avsbus-enable.sh[579]: Error: Write failed
+Sep 30 03:31:37 romulus avsbus-enable.sh[580]: Error: Write failed
+Sep 30 03:31:37 romulus avsbus-enable.sh[581]: Error: Write failed
+Sep 30 03:31:37 romulus avsbus-enable.sh[582]: Error: Write failed
+Sep 30 03:31:37 romulus systemd[1]: phosphor-clear-one-time@0.service: Deactivated successfully.
+Sep 30 03:31:37 romulus systemd[1]: Finished Reset one-time properties on chassis off.
+Sep 30 03:31:37 romulus avsbus-enable.sh[583]: Error: Write failed
+Sep 30 03:31:37 romulus systemd[1]: avsbus-enable@0.service: Main process exited, code=exited, status=1/FAILURE
+Sep 30 03:31:38 romulus systemd[1]: avsbus-enable@0.service: Failed with result 'exit-code'.
+Sep 30 03:31:38 romulus systemd[1]: Failed to start Enable the AVS bus on VRMs.
+Sep 30 03:31:38 romulus systemd[1]: Reached target Chassis0 (Powered Off).
+Sep 30 03:31:38 romulus systemd[1]: Reached target Chassis0 (Power Off).
+Sep 30 03:31:38 romulus systemd[1]: Reached target Quiesce Target.
+Sep 30 03:31:39 romulus systemd[1]: Reached target Stop Host0.
+Sep 30 03:31:40 romulus bmcwebd[220]: [http2_connection.hpp:610] 0xac00f0 Error while reading: End of file
+Sep 30 03:31:40 romulus systemd[1]: obmc-powered-off@0.service: Deactivated successfully.
+Sep 30 03:31:40 romulus phosphor-chassis-state-manager[331]: Received signal that power OFF is complete
+Sep 30 03:31:40 romulus phosphor-chassis-state-manager[331]: Change to Chassis Power State: xyz.openbmc_project.State.Chassis.PowerState.Off
+Sep 30 03:31:40 romulus phosphor-host-state-manager[352]: Auto reboot enabled and boot count at 3, rebooting
+Sep 30 03:31:40 romulus phosphor-host-state-manager[352]: Beginning reboot...
+Sep 30 03:31:40 romulus phosphor-host-state-manager[352]: Host state transition request of xyz.openbmc_project.State.Host.Transition.Reboot
+Sep 30 03:31:41 romulus phosphor-host-state-manager[352]: Received signal that host is off
+Sep 30 03:31:41 romulus phosphor-host-state-manager[352]: Change to Host State: xyz.openbmc_project.State.Host.HostState.Off
+Sep 30 03:31:41 romulus systemd[1]: Created slice Slice /system/phosphor-reboot-host.
+Sep 30 03:31:41 romulus systemd[1]: Starting Wait for /org/openbmc/HostIpmi/1...
+Sep 30 03:31:41 romulus systemd[1]: Started Reboot host0.
+Sep 30 03:31:42 romulus systemd[1]: Finished Wait for /org/openbmc/HostIpmi/1.
+Sep 30 03:31:42 romulus systemd[1]: Starting Soft power off of the host...
+Sep 30 03:31:46 romulus ipmid[340]: Host control timeout hit!
+Sep 30 03:31:46 romulus phosphor-softpoweroff[595]: Timeout on host attention, continue with power down
+Sep 30 03:31:46 romulus systemd[1]: xyz.openbmc_project.Ipmi.Internal.SoftPowerOff.service: Deactivated successfully.
+Sep 30 03:31:46 romulus systemd[1]: Finished Soft power off of the host.
+Sep 30 03:31:46 romulus systemd[1]: Reached target Power0 Host Off.
+Sep 30 03:31:46 romulus systemd[1]: Reached target Reboot Host0.
+Sep 30 03:31:48 romulus host-reboot[592]: reboot count (2) is greater then 0 or host did not crash so reboot host
+Sep 30 03:31:49 romulus systemd[1]: Stopped target Chassis0 (Powered Off).
+Sep 30 03:31:49 romulus systemd[1]: Stopped target Reboot Host0.
+  UNIT                           LOAD   ACTIVE SUB    JOB   DESCRIPTION
+* avsbus-disable@0.service       loaded failed failed       Disable the AVS bus on the VRMs
+* avsbus-enable@0.service        loaded failed failed start Enable the AVS bus on VRMs
+* phosphor-reboot-host@0.service loaded failed failed       Reboot host0
+* vrm-control@0.service          loaded failed failed start Apply voltage overrides to VRMs
+
+Legend: LOAD   -> Reflects whether the unit definition was properly loaded.
+        ACTIVE -> The high-level unit activation state, i.e. generalization of SUB.
+        SUB    -> The low-level unit activation state, values depend on unit type.
+        JOB    -> Pending job for the unit.
+
+4 loaded units listed.
+CurrentBMCState     : xyz.openbmc_project.State.BMC.BMCState.Ready
+CurrentPowerState   : xyz.openbmc_project.State.Chassis.PowerState.TransitioningToOff
+CurrentHostState    : xyz.openbmc_project.State.Host.HostState.TransitioningToOff
+BootProgress        : xyz.openbmc_project.State.Boot.Progress.ProgressStages.Unspecified
+OperatingSystemState: xyz.openbmc_project.State.OperatingSystem.Status.OSStatus.Inactive
+Chassis is xyz.openbmc_project.State.Chassis.PowerState.TransitioningToOff, request rejected, use --force to override
+POWEROFF_RC=1

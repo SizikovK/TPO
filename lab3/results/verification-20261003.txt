@@ -1,0 +1,101 @@
+
+$ ipmitool -I lanplus -H 127.0.0.1 -p 3623 -U root -P WrongLabPassword1 mc info
+EXIT_CODE=1
+
+$ ipmitool -I lanplus -H 127.0.0.1 -p 3623 -U root -P 0penBmc mc info
+Device ID                 : 0
+Device Revision           : 0
+Firmware Revision         : 3.00
+IPMI Version              : 2.0
+Manufacturer ID           : 0
+Manufacturer Name         : Unknown
+Product ID                : 0 (0x0000)
+Product Name              : Unknown (0x00)
+Device Available          : yes
+Provides Device SDRs      : yes
+Additional Device Support :
+    Sensor Device
+    SEL Device
+    FRU Inventory Device
+    Chassis Device
+Aux Firmware Rev Info     : 
+    0x00
+    0x00
+    0x00
+    0x00
+EXIT_CODE=0
+
+$ ipmitool -I lanplus -H 127.0.0.1 -p 3623 -U root -P 0penBmc chassis power status
+Chassis Power is off
+EXIT_CODE=0
+
+$ ipmitool -I lanplus -H 127.0.0.1 -p 3623 -U root -P 0penBmc sdr type Voltage
+EXIT_CODE=0
+
+$ cat /etc/os-release
+ID=openbmc-openpower
+NAME="Phosphor OpenBMC (Phosphor OpenBMC Project Reference Distro)"
+VERSION="3.0.0-dev"
+VERSION_ID=3.0.0-dev-734-gf330cd08ac
+VERSION_CODENAME="styhead"
+PRETTY_NAME="Phosphor OpenBMC (Phosphor OpenBMC Project Reference Distro) 3.0.0-dev"
+CPE_NAME="cpe:/o:openembedded:openbmc-openpower:3.0.0-dev-734-gf330cd08ac"
+BUILD_ID="20250902012112"
+OPENBMC_TARGET_MACHINE="romulus"
+EXTENDED_VERSION="3.0.0-dev-734-gf330cd08ac"
+$ obmcutil state
+CurrentBMCState     : xyz.openbmc_project.State.BMC.BMCState.Ready
+CurrentPowerState   : xyz.openbmc_project.State.Chassis.PowerState.Off
+CurrentHostState    : xyz.openbmc_project.State.Host.HostState.Off
+BootProgress        : xyz.openbmc_project.State.Boot.Progress.ProgressStages.Unspecified
+OperatingSystemState: xyz.openbmc_project.State.OperatingSystem.Status.OSStatus.Inactive
+CURSOR=s=3ed5082bf7e7428cbdb53b52f028c0f9;i=386;b=8062e3ade110495694cd7436d75047fb;m=1e2ec64a;t=65ce717fd4a60;x=99af39d6136f91b9
+$ obmcutil poweron
+POWERON_RC=0
+$ sleep 30
+$ journalctl -b --after-cursor="$cursor" -u avsbus-disable@0.service -u org.openbmc.control.Power@0.service --no-pager
+Oct 03 03:17:59 romulus power_control.exe[231]: PowerControl: setting power up SOFTWARE_PGOOD to 1
+Oct 03 03:17:59 romulus power_control.exe[231]: PowerControl: setting power up BMC_POWER_UP to 1
+Oct 03 03:17:59 romulus systemd[1]: Starting Disable the AVS bus on the VRMs...
+Oct 03 03:17:59 romulus avsbus-disable.sh[635]: Error: Write failed
+Oct 03 03:17:59 romulus avsbus-disable.sh[636]: Error: Write failed
+Oct 03 03:17:59 romulus avsbus-disable.sh[637]: Error: Write failed
+Oct 03 03:18:00 romulus avsbus-disable.sh[638]: Error: Write failed
+Oct 03 03:18:00 romulus avsbus-disable.sh[639]: Error: Write failed
+Oct 03 03:18:00 romulus avsbus-disable.sh[640]: Error: Write failed
+Oct 03 03:18:00 romulus avsbus-disable.sh[641]: Error: Write failed
+Oct 03 03:18:00 romulus avsbus-disable.sh[642]: Error: Write failed
+Oct 03 03:18:00 romulus avsbus-disable.sh[643]: Error: Write failed
+Oct 03 03:18:00 romulus avsbus-disable.sh[644]: Error: Write failed
+Oct 03 03:18:00 romulus avsbus-disable.sh[645]: Error: Write failed
+Oct 03 03:18:00 romulus avsbus-disable.sh[646]: Error: Write failed
+Oct 03 03:18:00 romulus avsbus-disable.sh[647]: Error: Write failed
+Oct 03 03:18:00 romulus avsbus-disable.sh[648]: Error: Write failed
+Oct 03 03:18:00 romulus systemd[1]: avsbus-disable@0.service: Main process exited, code=exited, status=1/FAILURE
+Oct 03 03:18:00 romulus systemd[1]: avsbus-disable@0.service: Failed with result 'exit-code'.
+Oct 03 03:18:00 romulus systemd[1]: Failed to start Disable the AVS bus on the VRMs.
+Oct 03 03:18:07 romulus power_control.exe[231]: PowerControl: setting power up SOFTWARE_PGOOD to 0
+Oct 03 03:18:07 romulus power_control.exe[231]: PowerControl: setting power up BMC_POWER_UP to 0
+$ systemctl --failed --no-pager
+  UNIT                             LOAD   ACTIVE SUB    JOB   DESCRIPTION
+* avsbus-disable@0.service         loaded failed failed start Disable the AVS bus on the VRMs
+* avsbus-enable@0.service          loaded failed failed start Enable the AVS bus on VRMs
+* phosphor-wait-power-on@0.service loaded failed failed start Wait for Power0 to turn on
+* vrm-control@0.service            loaded failed failed start Apply voltage overrides to VRMs
+
+Legend: LOAD   -> Reflects whether the unit definition was properly loaded.
+        ACTIVE -> The high-level unit activation state, i.e. generalization of SUB.
+        SUB    -> The low-level unit activation state, values depend on unit type.
+        JOB    -> Pending job for the unit.
+
+4 loaded units listed.
+$ obmcutil state
+CurrentBMCState     : xyz.openbmc_project.State.BMC.BMCState.Ready
+CurrentPowerState   : xyz.openbmc_project.State.Chassis.PowerState.Off
+CurrentHostState    : xyz.openbmc_project.State.Host.HostState.TransitioningToRunning
+BootProgress        : xyz.openbmc_project.State.Boot.Progress.ProgressStages.Unspecified
+OperatingSystemState: xyz.openbmc_project.State.OperatingSystem.Status.OSStatus.Inactive
+$ obmcutil poweroff
+Chassis is xyz.openbmc_project.State.Chassis.PowerState.TransitioningToOn, request rejected, use --force to override
+POWEROFF_RC=1
+SSH_EXIT_CODE= 0

@@ -1,0 +1,24 @@
+============================= test session starts ==============================
+platform linux -- Python 3.14.7, pytest-9.1.1, pluggy-1.6.0 -- /home/kathlyju/VSCODEEEEE/study/TPO/lab4/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/kathlyju/VSCODEEEEE/study/TPO
+collecting ... collected 6 items
+
+lab4/test_webui.py::test_successful_login PASSED                         [ 16%]
+lab4/test_webui.py::test_invalid_credentials[wrong_username] PASSED      [ 33%]
+lab4/test_webui.py::test_invalid_credentials[wrong_password] PASSED      [ 50%]
+lab4/test_webui.py::test_voltage_monitoring SKIPPED (Blocked: датчик...) [ 66%]
+lab4/test_webui.py::test_logs_on_error FAILED                            [ 83%]
+lab4/test_webui.py::test_account_lockout SKIPPED (Blocked: AccountLo...) [100%]
+
+=================================== FAILURES ===================================
+______________________________ test_logs_on_error ______________________________
+lab4/test_webui.py:192: in test_logs_on_error
+    pytest.fail('После подтверждённой ошибки входа за 60 с нет новой записи Warning/Critical '
+E   Failed: После подтверждённой ошибки входа за 60 с нет новой записи Warning/Critical об авторизации в Event logs. Новые строки: set()
+- generated xml file: /home/kathlyju/VSCODEEEEE/study/TPO/lab4/results/assignment-check.xml -
+=========================== short test summary info ============================
+SKIPPED [1] lab4/test_webui.py:147: Blocked: датчик матплаты и допустимые пределы не заданы; строки UI: ['No items available']
+SKIPPED [1] lab4/test_webui.py:202: Blocked: AccountLockoutThreshold=0, блокировка отключена в образе
+FAILED lab4/test_webui.py::test_logs_on_error - Failed: После подтверждённой ...
+============== 1 failed, 3 passed, 2 skipped in 100.44s (0:01:40) ==============

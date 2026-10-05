@@ -1,0 +1,9 @@
+
+ Performance counter stats for process id '534280':
+
+       12382703311      cycles                                                                
+       12538308100      instructions                                                          
+         281507859      cache-misses                                                          
+
+      15.002308679 seconds time elapsed
+

@@ -1,0 +1,2 @@
+Source: GET https://127.0.0.1:3443/js/app.8096d993.js
+interceptors.response.use(void 0,e=>{let t=e.response;return 401==t.status&&"/login"!=t.config.url&&(window.location="/login",kX.commit("authentication/logout")),403==t.status&&(mu(t.data)?OX.push("/change-password"):kX.commit("global/setUnauthorized")),Promise.reject(e)});var pu={get(e,t){return hu.get(e,t)},delete(e,t){return hu.delete(e,t)},post(e,t,r){re

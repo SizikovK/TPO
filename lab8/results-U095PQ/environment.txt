@@ -1,0 +1,6 @@
+2026-09-25T21:23:38+07:00
+Linux 6.18.48-1-cachyos-lts x86_64 GNU/Linux
+perf version 7.2.7-1
+nmon version 16s
+    PID COMMAND
+ 534280 qemu-system-arm -m 256 -M romulus-bmc -nographic -drive file=lab1/romulus/obmc-phosphor-image-romulus.static.mtd,format=raw,if=mtd -net nic -net user,hostfwd=tcp::2222-:22,hostfwd=tcp::2443-:443,hostfwd=udp::2623-:623,hostname=qemu

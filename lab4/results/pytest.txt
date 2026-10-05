@@ -1,0 +1,62 @@
+============================= test session starts ==============================
+platform linux -- Python 3.14.7, pytest-9.1.1, pluggy-1.6.0 -- /home/kathlyju/VSCODEEEEE/study/TPO/lab4/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/kathlyju/VSCODEEEEE/study/TPO
+collecting ... collected 6 items
+
+lab4/test_webui.py::test_successful_login PASSED                         [ 16%]
+lab4/test_webui.py::test_invalid_credentials[wrong_username] FAILED      [ 33%]
+lab4/test_webui.py::test_invalid_credentials[wrong_password] FAILED      [ 50%]
+lab4/test_webui.py::test_voltage_monitoring SKIPPED (Blocked: датчик...) [ 66%]
+lab4/test_webui.py::test_logs_on_error FAILED                            [ 83%]
+lab4/test_webui.py::test_account_lockout SKIPPED (Blocked: AccountLo...) [100%]
+
+=================================== FAILURES ===================================
+___________________ test_invalid_credentials[wrong_username] ___________________
+lab4/test_webui.py:102: in login
+    alert = WebDriverWait(driver, 10).until(EC.visibility_of_element_located(
+lab4/.venv/lib/python3.14/site-packages/selenium/webdriver/support/wait.py:121: in until
+    raise TimeoutException(message, screen, stacktrace)
+E   selenium.common.exceptions.TimeoutException: Message: 
+E   Stacktrace:
+E   RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+E   WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5
+E   NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:538:5
+E   dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:137:16
+
+During handling of the above exception, another exception occurred:
+lab4/test_webui.py:134: in test_invalid_credentials
+    login(browser, username, password, success=False)
+lab4/test_webui.py:105: in login
+    pytest.fail('Вход отклонён HTTP 401, но Web UI не показывает сообщение об ошибке')
+E   Failed: Вход отклонён HTTP 401, но Web UI не показывает сообщение об ошибке
+___________________ test_invalid_credentials[wrong_password] ___________________
+lab4/test_webui.py:102: in login
+    alert = WebDriverWait(driver, 10).until(EC.visibility_of_element_located(
+lab4/.venv/lib/python3.14/site-packages/selenium/webdriver/support/wait.py:121: in until
+    raise TimeoutException(message, screen, stacktrace)
+E   selenium.common.exceptions.TimeoutException: Message: 
+E   Stacktrace:
+E   RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+E   WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5
+E   NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:538:5
+E   dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:137:16
+
+During handling of the above exception, another exception occurred:
+lab4/test_webui.py:134: in test_invalid_credentials
+    login(browser, username, password, success=False)
+lab4/test_webui.py:105: in login
+    pytest.fail('Вход отклонён HTTP 401, но Web UI не показывает сообщение об ошибке')
+E   Failed: Вход отклонён HTTP 401, но Web UI не показывает сообщение об ошибке
+______________________________ test_logs_on_error ______________________________
+lab4/test_webui.py:189: in test_logs_on_error
+    pytest.fail('После подтверждённой ошибки входа за 60 с нет новой записи Warning/Critical '
+E   Failed: После подтверждённой ошибки входа за 60 с нет новой записи Warning/Critical об авторизации в Event logs. Новые строки: set()
+- generated xml file: /home/kathlyju/VSCODEEEEE/study/TPO/lab4/results/junit.xml -
+=========================== short test summary info ============================
+SKIPPED [1] lab4/test_webui.py:144: Blocked: датчик матплаты и допустимые пределы не заданы; строки UI: ['No items available']
+SKIPPED [1] lab4/test_webui.py:199: Blocked: AccountLockoutThreshold=0, блокировка отключена в образе
+FAILED lab4/test_webui.py::test_invalid_credentials[wrong_username] - Failed:...
+FAILED lab4/test_webui.py::test_invalid_credentials[wrong_password] - Failed:...
+FAILED lab4/test_webui.py::test_logs_on_error - Failed: После подтверждённой ...
+============== 3 failed, 1 passed, 2 skipped in 211.60s (0:03:31) ==============

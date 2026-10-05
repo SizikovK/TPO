@@ -1,0 +1,17 @@
+Collecting pytest (from -r lab5/requirements.txt (line 1))
+  Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+Requirement already satisfied: requests in /usr/lib/python3.14/site-packages (from -r lab5/requirements.txt (line 2)) (2.34.2)
+Collecting iniconfig>=1.0.1 (from pytest->-r lab5/requirements.txt (line 1))
+  Using cached iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+Requirement already satisfied: packaging>=22 in /usr/lib/python3.14/site-packages (from pytest->-r lab5/requirements.txt (line 1)) (26.3)
+Requirement already satisfied: pluggy<2,>=1.5 in /usr/lib/python3.14/site-packages (from pytest->-r lab5/requirements.txt (line 1)) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in /usr/lib/python3.14/site-packages (from pytest->-r lab5/requirements.txt (line 1)) (2.21.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in /usr/lib/python3.14/site-packages (from requests->-r lab5/requirements.txt (line 2)) (3.5.1)
+Requirement already satisfied: idna<4,>=2.5 in /usr/lib/python3.14/site-packages (from requests->-r lab5/requirements.txt (line 2)) (3.20)
+Requirement already satisfied: urllib3<3,>=1.26 in /usr/lib/python3.14/site-packages (from requests->-r lab5/requirements.txt (line 2)) (2.7.0)
+Requirement already satisfied: certifi>=2023.5.7 in /usr/lib/python3.14/site-packages (from requests->-r lab5/requirements.txt (line 2)) (2026.7.22)
+Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+Using cached iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+Installing collected packages: iniconfig, pytest
+
+Successfully installed iniconfig-2.3.0 pytest-9.1.1

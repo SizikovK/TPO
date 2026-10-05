@@ -1,0 +1,15 @@
+# Python environments and caches
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+# Downloaded browser drivers
+.selenium/
+# QEMU firmware images (sources are documented in reports)
+*.mtd
+# Local agent configuration
+.agents/
+.codex/
+.aws/
+# Generated SSH host keys
+known_hosts

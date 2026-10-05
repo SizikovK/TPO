@@ -1,0 +1,408 @@
+QEMU 11.1.1 monitor - type 'help' for more information
+(qemu) i[K[Din[K[D[Dinf[K[D[D[Dinfo[K[D[D[D[Dinfo [K[D[D[D[D[Dinfo q[K[D[D[D[D[D[Dinfo qt[K[D[D[D[D[D[D[Dinfo qtr[K[D[D[D[D[D[D[D[Dinfo qtre[K[D[D[D[D[D[D[D[D[Dinfo qtree[K
+bus: main-system-bus
+  type System
+  dev: aspeed.hace-ast2500, id ""
+    gpio-out "sysbus-irq" 1
+    dram = "/objects/ram/ram[0]"
+    mmio ffffffffffffffff/0000000000000064
+  dev: aspeed.lpc, id ""
+    gpio-in "" 5
+    gpio-out "sysbus-irq" 6
+    hicr7 = 0 (0x0)
+    mmio ffffffffffffffff/0000000000001000
+  dev: generic-sdhci, id ""
+    gpio-out "sysbus-irq" 1
+    sd-spec-version = 2 (0x2)
+    uhs = 0 (0x0)
+    capareg = 31981696 (0x1e80080)
+    maxcurr = 0 (0x0)
+    pending-insert-quirk = false
+    dma = ""
+    wp-inverted = false
+    mmio ffffffffffffffff/0000000000000100
+    bus: sd-bus
+      type sdhci-bus
+  dev: generic-sdhci, id ""
+    gpio-out "sysbus-irq" 1
+    sd-spec-version = 2 (0x2)
+    uhs = 0 (0x0)
+    capareg = 31981696 (0x1e80080)
+    maxcurr = 0 (0x0)
+    pending-insert-quirk = false
+    dma = ""
+    wp-inverted = false
+    mmio ffffffffffffffff/0000000000000100
+    bus: sd-bus
+      type sdhci-bus
+  dev: aspeed.sdhci-ast2500, id ""
+    gpio-out "sysbus-irq" 1
+    gpio-in "" 2
+    num-slots = 2 (0x2)
+    mmio ffffffffffffffff/0000000000001000
+  dev: aspeed.gpio-ast2500, id ""
+    gpio-out "sysbus-irq" 229
+    mmio ffffffffffffffff/0000000000001000
+  dev: aspeed.xdma-ast2500, id ""
+    gpio-out "sysbus-irq" 1
+    mmio ffffffffffffffff/0000000000001000
+  dev: ftgmac100, id ""
+    gpio-out "sysbus-irq" 1
+    aspeed = true
+    mac = "52:54:00:12:34:57"
+    netdev = ""
+    dma64 = false
+    mmio ffffffffffffffff/0000000000001000
+  dev: ftgmac100, id ""
+    gpio-out "sysbus-irq" 1
+    aspeed = true
+    mac = "52:54:00:12:34:56"
+    netdev = "hub0port0"
+    dma64 = false
+    mmio ffffffffffffffff/0000000000001000
+  dev: unimplemented-device, id ""
+    size = 805306368 (0x30000000)
+    name = "ram-empty"
+    mmio ffffffffffffffff/0000000030000000
+  dev: aspeed.wdt-ast2500, id ""
+    scu = "/machine/soc/scu"
+    mmio ffffffffffffffff/0000000000000020
+  dev: aspeed.wdt-ast2500, id ""
+    scu = "/machine/soc/scu"
+    mmio ffffffffffffffff/0000000000000020
+  dev: aspeed.wdt-ast2500, id ""
+    scu = "/machine/soc/scu"
+    mmio ffffffffffffffff/0000000000000020
+  dev: aspeed.sdmc-ast2500, id ""
+    max-ram-size = 1073741824 (0x40000000)
+    unlocked = false
+    mmio ffffffffffffffff/0000000000001000
+  dev: platform-ehci-usb, id ""
+    gpio-out "sysbus-irq" 1
+    maxframes = 128 (0x80)
+    companion-enable = false
+    mmio ffffffffffffffff/0000000000001000
+    bus: usb-bus.1
+      type usb-bus
+  dev: platform-ehci-usb, id ""
+    gpio-out "sysbus-irq" 1
+    maxframes = 128 (0x80)
+    companion-enable = false
+    mmio ffffffffffffffff/0000000000001000
+    bus: usb-bus.0
+      type usb-bus
+  dev: aspeed.smc.flash, id ""
+    cs = 1 (0x1)
+    controller = "/machine/soc/spi[1]"
+    mmio ffffffffffffffff/0000000006000000
+  dev: aspeed.smc.flash, id ""
+    cs = 0 (0x0)
+    controller = "/machine/soc/spi[1]"
+    mmio ffffffffffffffff/0000000002000000
+  dev: aspeed.spi2-ast2500, id ""
+    gpio-out "cs" 2
+    gpio-out "sysbus-irq" 1
+    inject-failure = false
+    dram-base = 0 (0x0)
+    dram = ""
+    mmio ffffffffffffffff/0000000000000100
+    mmio ffffffffffffffff/0000000008000000
+    bus: ssi.2
+      type SSI
+  dev: aspeed.smc.flash, id ""
+    cs = 1 (0x1)
+    controller = "/machine/soc/spi[0]"
+    mmio ffffffffffffffff/0000000006000000
+  dev: aspeed.smc.flash, id ""
+    cs = 0 (0x0)
+    controller = "/machine/soc/spi[0]"
+    mmio ffffffffffffffff/0000000002000000
+  dev: aspeed.spi1-ast2500, id ""
+    gpio-out "cs" 2
+    gpio-out "sysbus-irq" 1
+    inject-failure = false
+    dram-base = 0 (0x0)
+    dram = ""
+    mmio ffffffffffffffff/0000000000000100
+    mmio ffffffffffffffff/0000000008000000
+    bus: ssi.1
+      type SSI
+      dev: mx66l1g45g, id ""
+        gpio-in "WP#" 1
+        gpio-in "ssi-gpio-cs" 1
+        write-enable = false
+        nonvolatile-cfg = 36863 (0x8fff)
+        spansion-cr1nv = 0 (0x0)
+        spansion-cr2nv = 8 (0x8)
+        spansion-cr3nv = 2 (0x2)
+        spansion-cr4nv = 16 (0x10)
+        drive = ""
+        cs = 0 (0x0)
+  dev: aspeed.smc.flash, id ""
+    cs = 2 (0x2)
+    controller = "/machine/soc/fmc"
+    mmio ffffffffffffffff/0000000002000000
+  dev: aspeed.smc.flash, id ""
+    cs = 1 (0x1)
+    controller = "/machine/soc/fmc"
+    mmio ffffffffffffffff/0000000002000000
+  dev: aspeed.smc.flash, id ""
+    cs = 0 (0x0)
+    controller = "/machine/soc/fmc"
+    mmio ffffffffffffffff/0000000008000000
+  dev: aspeed.fmc-ast2500, id ""
+    gpio-out "cs" 3
+    gpio-out "sysbus-irq" 1
+    inject-failure = false
+    dram-base = 0 (0x0)
+    dram = "/objects/ram/ram[0]"
+    mmio ffffffffffffffff/0000000000000100
+    mmio ffffffffffffffff/0000000010000000
+    bus: ssi.0
+      type SSI
+      dev: n25q256a, id ""
+        gpio-in "WP#" 1
+        gpio-in "ssi-gpio-cs" 1
+        write-enable = false
+        nonvolatile-cfg = 36863 (0x8fff)
+        spansion-cr1nv = 0 (0x0)
+        spansion-cr2nv = 8 (0x8)
+        spansion-cr3nv = 2 (0x2)
+        spansion-cr4nv = 16 (0x10)
+        drive = ""
+        cs = 1 (0x1)
+      dev: n25q256a, id ""
+        gpio-in "WP#" 1
+        gpio-in "ssi-gpio-cs" 1
+        write-enable = false
+        nonvolatile-cfg = 36863 (0x8fff)
+        spansion-cr1nv = 0 (0x0)
+        spansion-cr2nv = 8 (0x8)
+        spansion-cr3nv = 2 (0x2)
+        spansion-cr4nv = 16 (0x10)
+        drive = ""
+        cs = 0 (0x0)
+  dev: aspeed.peci, id ""
+    gpio-out "sysbus-irq" 1
+    mmio ffffffffffffffff/0000000000001000
+  dev: aspeed.i2c.bus, id ""
+    gpio-out "sysbus-irq" 1
+    bus-id = 13 (0xd)
+    controller = "/machine/soc/i2c"
+    bus-name = "aspeed.i2c.bus.13"
+    mmio ffffffffffffffff/0000000000000040
+    mmio ffffffffffffffff/0000000000000010
+    bus: aspeed.i2c.bus.13
+      type i2c-bus
+      dev: aspeed.i2c.slave, id ""
+        address = 255 (0xff)
+  dev: aspeed.i2c.bus, id ""
+    gpio-out "sysbus-irq" 1
+    bus-id = 12 (0xc)
+    controller = "/machine/soc/i2c"
+    bus-name = "aspeed.i2c.bus.12"
+    mmio ffffffffffffffff/0000000000000040
+    mmio ffffffffffffffff/0000000000000010
+    bus: aspeed.i2c.bus.12
+      type i2c-bus
+      dev: aspeed.i2c.slave, id ""
+        address = 255 (0xff)
+  dev: aspeed.i2c.bus, id ""
+    gpio-out "sysbus-irq" 1
+    bus-id = 11 (0xb)
+    controller = "/machine/soc/i2c"
+    bus-name = "aspeed.i2c.bus.11"
+    mmio ffffffffffffffff/0000000000000040
+    mmio ffffffffffffffff/0000000000000010
+    bus: aspeed.i2c.bus.11
+      type i2c-bus
+      dev: ds1338, id ""
+        address = 50 (0x32)
+      dev: aspeed.i2c.slave, id ""
+        address = 255 (0xff)
+  dev: aspeed.i2c.bus, id ""
+    gpio-out "sysbus-irq" 1
+    bus-id = 10 (0xa)
+    controller = "/machine/soc/i2c"
+    bus-name = "aspeed.i2c.bus.10"
+    mmio ffffffffffffffff/0000000000000040
+    mmio ffffffffffffffff/0000000000000010
+    bus: aspeed.i2c.bus.10
+      type i2c-bus
+      dev: aspeed.i2c.slave, id ""
+        address = 255 (0xff)
+  dev: aspeed.i2c.bus, id ""
+    gpio-out "sysbus-irq" 1
+    bus-id = 9 (0x9)
+    controller = "/machine/soc/i2c"
+    bus-name = "aspeed.i2c.bus.9"
+    mmio ffffffffffffffff/0000000000000040
+    mmio ffffffffffffffff/0000000000000010
+    bus: aspeed.i2c.bus.9
+      type i2c-bus
+      dev: aspeed.i2c.slave, id ""
+        address = 255 (0xff)
+  dev: aspeed.i2c.bus, id ""
+    gpio-out "sysbus-irq" 1
+    bus-id = 8 (0x8)
+    controller = "/machine/soc/i2c"
+    bus-name = "aspeed.i2c.bus.8"
+    mmio ffffffffffffffff/0000000000000040
+    mmio ffffffffffffffff/0000000000000010
+    bus: aspeed.i2c.bus.8
+      type i2c-bus
+      dev: aspeed.i2c.slave, id ""
+        address = 255 (0xff)
+  dev: aspeed.i2c.bus, id ""
+    gpio-out "sysbus-irq" 1
+    bus-id = 7 (0x7)
+    controller = "/machine/soc/i2c"
+    bus-name = "aspeed.i2c.bus.7"
+    mmio ffffffffffffffff/0000000000000040
+    mmio ffffffffffffffff/0000000000000010
+    bus: aspeed.i2c.bus.7
+      type i2c-bus
+      dev: aspeed.i2c.slave, id ""
+        address = 255 (0xff)
+  dev: aspeed.i2c.bus, id ""
+    gpio-out "sysbus-irq" 1
+    bus-id = 6 (0x6)
+    controller = "/machine/soc/i2c"
+    bus-name = "aspeed.i2c.bus.6"
+    mmio ffffffffffffffff/0000000000000040
+    mmio ffffffffffffffff/0000000000000010
+    bus: aspeed.i2c.bus.6
+      type i2c-bus
+      dev: aspeed.i2c.slave, id ""
+        address = 255 (0xff)
+  dev: aspeed.i2c.bus, id ""
+    gpio-out "sysbus-irq" 1
+    bus-id = 5 (0x5)
+    controller = "/machine/soc/i2c"
+    bus-name = "aspeed.i2c.bus.5"
+    mmio ffffffffffffffff/0000000000000040
+    mmio ffffffffffffffff/0000000000000010
+    bus: aspeed.i2c.bus.5
+      type i2c-bus
+      dev: aspeed.i2c.slave, id ""
+        address = 255 (0xff)
+  dev: aspeed.i2c.bus, id ""
+    gpio-out "sysbus-irq" 1
+    bus-id = 4 (0x4)
+    controller = "/machine/soc/i2c"
+    bus-name = "aspeed.i2c.bus.4"
+    mmio ffffffffffffffff/0000000000000040
+    mmio ffffffffffffffff/0000000000000010
+    bus: aspeed.i2c.bus.4
+      type i2c-bus
+      dev: aspeed.i2c.slave, id ""
+        address = 255 (0xff)
+  dev: aspeed.i2c.bus, id ""
+    gpio-out "sysbus-irq" 1
+    bus-id = 3 (0x3)
+    controller = "/machine/soc/i2c"
+    bus-name = "aspeed.i2c.bus.3"
+    mmio ffffffffffffffff/0000000000000040
+    mmio ffffffffffffffff/0000000000000010
+    bus: aspeed.i2c.bus.3
+      type i2c-bus
+      dev: aspeed.i2c.slave, id ""
+        address = 255 (0xff)
+  dev: aspeed.i2c.bus, id ""
+    gpio-out "sysbus-irq" 1
+    bus-id = 2 (0x2)
+    controller = "/machine/soc/i2c"
+    bus-name = "aspeed.i2c.bus.2"
+    mmio ffffffffffffffff/0000000000000040
+    mmio ffffffffffffffff/0000000000000010
+    bus: aspeed.i2c.bus.2
+      type i2c-bus
+      dev: aspeed.i2c.slave, id ""
+        address = 255 (0xff)
+  dev: aspeed.i2c.bus, id ""
+    gpio-out "sysbus-irq" 1
+    bus-id = 1 (0x1)
+    controller = "/machine/soc/i2c"
+    bus-name = "aspeed.i2c.bus.1"
+    mmio ffffffffffffffff/0000000000000040
+    mmio ffffffffffffffff/0000000000000010
+    bus: aspeed.i2c.bus.1
+      type i2c-bus
+      dev: aspeed.i2c.slave, id ""
+        address = 255 (0xff)
+  dev: aspeed.i2c.bus, id ""
+    gpio-out "sysbus-irq" 1
+    bus-id = 0 (0x0)
+    controller = "/machine/soc/i2c"
+    bus-name = "aspeed.i2c.bus.0"
+    mmio ffffffffffffffff/0000000000000040
+    mmio ffffffffffffffff/0000000000000010
+    bus: aspeed.i2c.bus.0
+      type i2c-bus
+      dev: aspeed.i2c.slave, id ""
+        address = 255 (0xff)
+  dev: aspeed.i2c-ast2500, id ""
+    gpio-out "sysbus-irq" 1
+    dram = "/objects/ram/ram[0]"
+    bus-label = "aspeed.i2c.bus"
+    mmio ffffffffffffffff/0000000000001000
+  dev: serial-mm, id ""
+    gpio-out "sysbus-irq" 1
+    regshift = 2 (0x2)
+    endianness = 2 (0x2)
+    mmio ffffffffffffffff/0000000000000020
+  dev: serial-mm, id ""
+    gpio-out "sysbus-irq" 1
+    regshift = 2 (0x2)
+    endianness = 2 (0x2)
+    mmio ffffffffffffffff/0000000000000020
+  dev: serial-mm, id ""
+    gpio-out "sysbus-irq" 1
+    regshift = 2 (0x2)
+    endianness = 2 (0x2)
+    mmio ffffffffffffffff/0000000000000020
+  dev: serial-mm, id ""
+    gpio-out "sysbus-irq" 1
+    regshift = 2 (0x2)
+    endianness = 2 (0x2)
+    mmio ffffffffffffffff/0000000000000020
+  dev: serial-mm, id ""
+    gpio-out "sysbus-irq" 1
+    regshift = 2 (0x2)
+    endianness = 2 (0x2)
+    mmio ffffffffffffffff/0000000000000020
+  dev: aspeed.adc.engine, id ""
+    gpio-out "sysbus-irq" 1
+    engine-id = 0 (0x0)
+    nr-channels = 16 (0x10)
+    mmio ffffffffffffffff/0000000000000100
+  dev: aspeed.adc-ast2500, id ""
+    gpio-out "sysbus-irq" 1
+    gpio-in "" 1
+    mmio ffffffffffffffff/0000000000001000
+  dev: aspeed.timer-ast2500, id ""
+    gpio-out "sysbus-irq" 8
+    scu = "/machine/soc/scu"
+    mmio ffffffffffffffff/0000000000001000
+  dev: aspeed.rtc, id ""
+    gpio-out "sysbus-irq" 1
+    mmio ffffffffffffffff/0000000000000018
+  dev: aspeed.vic, id ""
+    gpio-out "sysbus-irq" 2
+    gpio-in "" 51
+    mmio ffffffffffffffff/0000000000020000
+  dev: aspeed.scu-ast2500, id ""
+    silicon-rev = 67175171 (0x4010303)
+    hw-strap1 = 4044018182 (0xf10ad206)
+    hw-strap2 = 0 (0x0)
+    hw-prot-key = 0 (0x0)
+    mmio ffffffffffffffff/0000000000001000
+  dev: unimplemented-device, id ""
+    size = 4096 (0x1000)
+    name = "aspeed.video"
+    mmio ffffffffffffffff/0000000000001000
+  dev: unimplemented-device, id ""
+    size = 2097152 (0x200000)
+    name = "aspeed.io"
+    mmio ffffffffffffffff/0000000000200000
+(qemu) q[K[Dqu[K[D[Dqui[K[D[D[Dquit[K

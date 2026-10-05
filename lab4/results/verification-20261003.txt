@@ -1,0 +1,121 @@
+============================= test session starts ==============================
+platform linux -- Python 3.14.7, pytest-9.1.1, pluggy-1.6.0 -- /home/kathlyju/VSCODEEEEE/study/TPO/lab4/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/kathlyju/VSCODEEEEE/study/TPO
+collecting ... collected 6 items
+
+lab4/test_webui.py::test_successful_login PASSED                         [ 16%]
+lab4/test_webui.py::test_invalid_credentials[wrong_username] FAILED      [ 33%]
+lab4/test_webui.py::test_invalid_credentials[wrong_password] FAILED      [ 50%]
+lab4/test_webui.py::test_voltage_monitoring SKIPPED (Blocked: датчик...) [ 66%]
+lab4/test_webui.py::test_logs_on_error FAILED                            [ 83%]
+lab4/test_webui.py::test_account_lockout FAILED                          [100%]
+
+=================================== FAILURES ===================================
+___________________ test_invalid_credentials[wrong_username] ___________________
+lab4/test_webui.py:102: in login
+    alert = WebDriverWait(driver, 10).until(EC.visibility_of_element_located(
+lab4/.venv/lib/python3.14/site-packages/selenium/webdriver/support/wait.py:121: in until
+    raise TimeoutException(message, screen, stacktrace)
+E   selenium.common.exceptions.TimeoutException: Message: 
+E   Stacktrace:
+E   RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+E   WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5
+E   NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:538:5
+E   dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:137:16
+
+During handling of the above exception, another exception occurred:
+lab4/test_webui.py:134: in test_invalid_credentials
+    login(browser, username, password, success=False)
+lab4/test_webui.py:105: in login
+    pytest.fail('Вход отклонён HTTP 401, но Web UI не показывает сообщение об ошибке')
+E   Failed: Вход отклонён HTTP 401, но Web UI не показывает сообщение об ошибке
+___________________ test_invalid_credentials[wrong_password] ___________________
+lab4/test_webui.py:102: in login
+    alert = WebDriverWait(driver, 10).until(EC.visibility_of_element_located(
+lab4/.venv/lib/python3.14/site-packages/selenium/webdriver/support/wait.py:121: in until
+    raise TimeoutException(message, screen, stacktrace)
+E   selenium.common.exceptions.TimeoutException: Message: 
+E   Stacktrace:
+E   RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+E   WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5
+E   NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:538:5
+E   dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:137:16
+
+During handling of the above exception, another exception occurred:
+lab4/test_webui.py:134: in test_invalid_credentials
+    login(browser, username, password, success=False)
+lab4/test_webui.py:105: in login
+    pytest.fail('Вход отклонён HTTP 401, но Web UI не показывает сообщение об ошибке')
+E   Failed: Вход отклонён HTTP 401, но Web UI не показывает сообщение об ошибке
+______________________________ test_logs_on_error ______________________________
+lab4/test_webui.py:174: in test_logs_on_error
+    login(browser)
+lab4/test_webui.py:66: in login
+    driver.get(BASE + '/#/login')
+lab4/.venv/lib/python3.14/site-packages/selenium/webdriver/remote/webdriver.py:526: in get
+    self.execute(Command.GET, {"url": url})
+lab4/.venv/lib/python3.14/site-packages/selenium/webdriver/remote/webdriver.py:506: in execute
+    self.error_handler.check_response(response)
+lab4/.venv/lib/python3.14/site-packages/selenium/webdriver/remote/errorhandler.py:232: in check_response
+    raise exception_class(message, screen, stacktrace)
+E   selenium.common.exceptions.WebDriverException: Message: Reached error page: about:neterror?e=netTimeout&u=https%3A//127.0.0.1%3A3443/%23/login&c=UTF-8&captivePortalState=unknown&d=The%20server%20at%20127.0.0.1%20is%20taking%20too%20long%20to%20respond.&a=
+E   Stacktrace:
+E   RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+E   WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5
+E   UnknownError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:960:5
+E   checkReadyState@chrome://remote/content/marionette/navigate.sys.mjs:59:24
+E   onNavigation@chrome://remote/content/marionette/navigate.sys.mjs:360:39
+E   emit@resource://gre/modules/EventEmitter.sys.mjs:156:19
+E   receiveMessage@chrome://remote/content/marionette/actors/MarionetteEventsParent.sys.mjs:33:25
+_____________________________ test_account_lockout _____________________________
+/usr/lib/python3.14/urllib/request.py:1320: in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+/usr/lib/python3.14/http/client.py:1386: in request
+    self._send_request(method, url, body, headers, encode_chunked)
+/usr/lib/python3.14/http/client.py:1432: in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+/usr/lib/python3.14/http/client.py:1381: in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+/usr/lib/python3.14/http/client.py:1141: in _send_output
+    self.send(msg)
+/usr/lib/python3.14/http/client.py:1085: in send
+    self.connect()
+/usr/lib/python3.14/http/client.py:1527: in connect
+    self.sock = self._context.wrap_socket(self.sock,
+/usr/lib/python3.14/ssl.py:455: in wrap_socket
+    return self.sslsocket_class._create(
+/usr/lib/python3.14/ssl.py:1076: in _create
+    self.do_handshake()
+/usr/lib/python3.14/ssl.py:1372: in do_handshake
+    self._sslobj.do_handshake()
+E   TimeoutError: _ssl.c:1064: The handshake operation timed out
+
+During handling of the above exception, another exception occurred:
+lab4/test_webui.py:195: in test_account_lockout
+    policy = account_policy()
+             ^^^^^^^^^^^^^^^^
+lab4/test_webui.py:33: in account_policy
+    with opener.open(request, timeout=30) as r:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.14/urllib/request.py:487: in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.14/urllib/request.py:504: in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+/usr/lib/python3.14/urllib/request.py:464: in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+/usr/lib/python3.14/urllib/request.py:1368: in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+/usr/lib/python3.14/urllib/request.py:1323: in do_open
+    raise URLError(err)
+E   urllib.error.URLError: <urlopen error _ssl.c:1064: The handshake operation timed out>
+- generated xml file: /home/kathlyju/VSCODEEEEE/study/TPO/lab4/results/verification-20261003.xml -
+=========================== short test summary info ============================
+SKIPPED [1] lab4/test_webui.py:144: Blocked: датчик матплаты и допустимые пределы не заданы; строки UI: ['No items available']
+FAILED lab4/test_webui.py::test_invalid_credentials[wrong_username] - Failed:...
+FAILED lab4/test_webui.py::test_invalid_credentials[wrong_password] - Failed:...
+FAILED lab4/test_webui.py::test_logs_on_error - selenium.common.exceptions.We...
+FAILED lab4/test_webui.py::test_account_lockout - urllib.error.URLError: <url...
+============== 4 failed, 1 passed, 1 skipped in 178.94s (0:02:58) ==============

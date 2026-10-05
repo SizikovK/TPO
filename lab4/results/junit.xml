@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="2" tests="6" time="211.604" timestamp="2026-09-30T10:51:16.762919+07:00" hostname="cachyos-x8664"><testcase classname="lab4.test_webui" name="test_successful_login" time="9.603" /><testcase classname="lab4.test_webui" name="test_invalid_credentials[wrong_username]" time="18.051"><failure message="Failed: Вход отклонён HTTP 401, но Web UI не показывает сообщение об ошибке">lab4/test_webui.py:102: in login
+    alert = WebDriverWait(driver, 10).until(EC.visibility_of_element_located(
+lab4/.venv/lib/python3.14/site-packages/selenium/webdriver/support/wait.py:121: in until
+    raise TimeoutException(message, screen, stacktrace)
+E   selenium.common.exceptions.TimeoutException: Message: 
+E   Stacktrace:
+E   RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+E   WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5
+E   NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:538:5
+E   dom.find/&lt;/&lt;@chrome://remote/content/shared/DOM.sys.mjs:137:16
+
+During handling of the above exception, another exception occurred:
+lab4/test_webui.py:134: in test_invalid_credentials
+    login(browser, username, password, success=False)
+lab4/test_webui.py:105: in login
+    pytest.fail('Вход отклонён HTTP 401, но Web UI не показывает сообщение об ошибке')
+E   Failed: Вход отклонён HTTP 401, но Web UI не показывает сообщение об ошибке</failure></testcase><testcase classname="lab4.test_webui" name="test_invalid_credentials[wrong_password]" time="20.140"><failure message="Failed: Вход отклонён HTTP 401, но Web UI не показывает сообщение об ошибке">lab4/test_webui.py:102: in login
+    alert = WebDriverWait(driver, 10).until(EC.visibility_of_element_located(
+lab4/.venv/lib/python3.14/site-packages/selenium/webdriver/support/wait.py:121: in until
+    raise TimeoutException(message, screen, stacktrace)
+E   selenium.common.exceptions.TimeoutException: Message: 
+E   Stacktrace:
+E   RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+E   WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5
+E   NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:538:5
+E   dom.find/&lt;/&lt;@chrome://remote/content/shared/DOM.sys.mjs:137:16
+
+During handling of the above exception, another exception occurred:
+lab4/test_webui.py:134: in test_invalid_credentials
+    login(browser, username, password, success=False)
+lab4/test_webui.py:105: in login
+    pytest.fail('Вход отклонён HTTP 401, но Web UI не показывает сообщение об ошибке')
+E   Failed: Вход отклонён HTTP 401, но Web UI не показывает сообщение об ошибке</failure></testcase><testcase classname="lab4.test_webui" name="test_voltage_monitoring" time="8.004"><skipped type="pytest.skip" message="Blocked: датчик матплаты и допустимые пределы не заданы; строки UI: ['No items available']">/home/kathlyju/VSCODEEEEE/study/TPO/lab4/test_webui.py:144: Blocked: датчик матплаты и допустимые пределы не заданы; строки UI: ['No items available']</skipped></testcase><testcase classname="lab4.test_webui" name="test_logs_on_error" time="148.496"><failure message="Failed: После подтверждённой ошибки входа за 60 с нет новой записи Warning/Critical об авторизации в Event logs. Новые строки: set()">lab4/test_webui.py:189: in test_logs_on_error
+    pytest.fail('После подтверждённой ошибки входа за 60 с нет новой записи Warning/Critical '
+E   Failed: После подтверждённой ошибки входа за 60 с нет новой записи Warning/Critical об авторизации в Event logs. Новые строки: set()</failure></testcase><testcase classname="lab4.test_webui" name="test_account_lockout" time="6.645"><skipped type="pytest.skip" message="Blocked: AccountLockoutThreshold=0, блокировка отключена в образе">/home/kathlyju/VSCODEEEEE/study/TPO/lab4/test_webui.py:199: Blocked: AccountLockoutThreshold=0, блокировка отключена в образе</skipped></testcase></testsuite></testsuites>
