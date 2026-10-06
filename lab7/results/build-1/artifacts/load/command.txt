@@ -1,0 +1,1 @@
+/opt/test-venv/bin/python -m locust -f lab6/locustfile.py OpenBMCUser --headless -u 10 -r 2 -t 30s --stop-timeout 20 --csv /var/jenkins_home/workspace/openbmc-ci/lab7/results/load/locust --csv-full-history --html /var/jenkins_home/workspace/openbmc-ci/lab7/results/load/locust.html --only-summary

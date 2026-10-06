@@ -1,0 +1,1 @@
+/opt/test-venv/bin/python -m pytest lab4/test_webui.py -v -ra --tb=short --junitxml=/var/jenkins_home/workspace/openbmc-ci/lab7/results/webui/junit.xml

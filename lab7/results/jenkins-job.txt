@@ -1,0 +1,55 @@
+Jenkins
+openbmc-ci
+Search
+Manage Jenkins
+admin
+Status
+Changes
+Build with Parameters
+Delete Pipeline
+Configure
+Rename
+Full Stage View
+Pipeline Syntax
+Git Polling Log
+Builds
+Today
+#1
+5:40 AM
+openbmc-ci
+Edit description
+Лабораторная №7: QEMU, Redfish API, Selenium WebUI, Locust; код из GitHub.
+Test Result Trend
+Last Successful Artifacts
+Stage View
+Declarative: Checkout SCM Prepare QEMU OpenBMC API tests WebUI tests Load test Declarative: Post Actions
+Average stage times:
+  5s
+4s
+2min 36s
+1min 8s
+10min 13s
+39s
+2s
+#1
+Oct 06
+12:40
+No Changes
+5s
+4s
+2min 36s
+1min 8s
+failed
+10min 13s
+failed
+39s
+2s
+Latest Test Result (5 failures )
+Permalinks
+Last build (#1), 16 min ago
+Last successful build (#1), 16 min ago
+Last unstable build (#1), 16 min ago
+Last unsuccessful build (#1), 16 min ago
+Last completed build (#1), 16 min ago
+REST API
+Jenkins 2.580.1

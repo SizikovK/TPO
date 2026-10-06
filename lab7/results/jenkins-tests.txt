@@ -1,0 +1,70 @@
+Jenkins
+openbmc-ci
+#1
+Tests
+Search
+Manage Jenkins
+admin
+Status
+Changes
+Console Output
+Delete build ‘#1’
+Git Build Data
+Tests
+See Fingerprints
+Edit build information
+Restart from Stage
+Replay
+Pipeline Steps
+Workspaces
+Tests 11
+5
+3
+3
+Took 8 min 47 sec
+All Failed Tests
+Name
+Age
+Duration
+test_authentication
+test_redfish
+1 1.3 sec
+test_power_on
+test_redfish
+1 1 min 1 sec
+test_account_lockout
+lab4.test_webui
+1 1 min 34 sec
+test_invalid_credentials[wrong_username]
+lab4.test_webui
+1 8.9 sec
+test_logs_on_error
+lab4.test_webui
+1 1 min 18 sec
+All Tests
+Package
+Failed
+Skipped
+Passed
+Total
+Duration
+(root) 2
++2
+2
++2
+1
++1
+5
++5
+1 min 5 sec
+lab4 3
++3
+1
++1
+2
++2
+6
++6
+6 min 40 sec
+REST API
+Jenkins 2.580.1

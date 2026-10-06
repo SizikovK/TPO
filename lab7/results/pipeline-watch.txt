@@ -1,0 +1,8 @@
+Build #1: []
+Build #1: [('Declarative: Checkout SCM', 'SUCCESS'), ('Prepare', 'IN_PROGRESS')]
+Build #1: [('Declarative: Checkout SCM', 'SUCCESS'), ('Prepare', 'SUCCESS'), ('QEMU OpenBMC', 'IN_PROGRESS')]
+Build #1: [('Declarative: Checkout SCM', 'SUCCESS'), ('Prepare', 'SUCCESS'), ('QEMU OpenBMC', 'SUCCESS'), ('API tests', 'IN_PROGRESS')]
+Build #1: [('Declarative: Checkout SCM', 'SUCCESS'), ('Prepare', 'SUCCESS'), ('QEMU OpenBMC', 'SUCCESS'), ('API tests', 'FAILED'), ('WebUI tests', 'IN_PROGRESS')]
+Build #1: [('Declarative: Checkout SCM', 'SUCCESS'), ('Prepare', 'SUCCESS'), ('QEMU OpenBMC', 'SUCCESS'), ('API tests', 'FAILED'), ('WebUI tests', 'FAILED'), ('Load test', 'IN_PROGRESS')]
+Build #1: [('Declarative: Checkout SCM', 'SUCCESS'), ('Prepare', 'SUCCESS'), ('QEMU OpenBMC', 'SUCCESS'), ('API tests', 'FAILED'), ('WebUI tests', 'FAILED'), ('Load test', 'SUCCESS'), ('Declarative: Post Actions', 'SUCCESS')]
+Build #1: UNSTABLE; duration=909125 ms

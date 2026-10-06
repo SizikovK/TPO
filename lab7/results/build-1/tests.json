@@ -1,0 +1,82 @@
+{
+  "_class": "hudson.tasks.junit.TestResult",
+  "failCount": 5,
+  "passCount": 3,
+  "skipCount": 3,
+  "suites": [
+    {
+      "cases": [
+        {
+          "className": "test_redfish",
+          "errorDetails": "AssertionError: \u041f\u043e \u0437\u0430\u0434\u0430\u043d\u0438\u044e HTTP 200, \u0444\u0430\u043a\u0442\u0438\u0447\u0435\u0441\u043a\u0438 201\nassert 201 == 200\n +  where 201 = <Response [201]>.status_code",
+          "name": "test_authentication",
+          "status": "FAILED"
+        },
+        {
+          "className": "test_redfish",
+          "errorDetails": null,
+          "name": "test_system_information",
+          "status": "PASSED"
+        },
+        {
+          "className": "test_redfish",
+          "errorDetails": "AssertionError: \u041e\u0436\u0438\u0434\u0430\u043b\u0438\u0441\u044c HTTP 202 \u0438 PowerState=On; HTTP 204, \u0441\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u044f=['Off', 'PoweringOn', 'PoweringOn', 'PoweringOff', 'PoweringOff', 'PoweringOff', 'Off', 'Off', 'Off', 'Off', 'Off', 'PoweringOn']\nassert (204 == 202)\n +  where 204 = <Response [204]>.status_code",
+          "name": "test_power_on",
+          "status": "FAILED"
+        },
+        {
+          "className": "test_redfish",
+          "errorDetails": null,
+          "name": "test_cpu_temperature_normal",
+          "status": "SKIPPED"
+        },
+        {
+          "className": "test_redfish",
+          "errorDetails": null,
+          "name": "test_cpu_sensors_redfish_ipmi",
+          "status": "SKIPPED"
+        }
+      ]
+    },
+    {
+      "cases": [
+        {
+          "className": "lab4.test_webui",
+          "errorDetails": null,
+          "name": "test_successful_login",
+          "status": "PASSED"
+        },
+        {
+          "className": "lab4.test_webui",
+          "errorDetails": "failed on teardown with \"selenium.common.exceptions.WebDriverException: Message: Unable to capture screenshot: \nStacktrace:\nRemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5\nUnknownError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:944:5\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:145:11\"",
+          "name": "test_invalid_credentials[wrong_username]",
+          "status": "FAILED"
+        },
+        {
+          "className": "lab4.test_webui",
+          "errorDetails": null,
+          "name": "test_invalid_credentials[wrong_password]",
+          "status": "PASSED"
+        },
+        {
+          "className": "lab4.test_webui",
+          "errorDetails": null,
+          "name": "test_voltage_monitoring",
+          "status": "SKIPPED"
+        },
+        {
+          "className": "lab4.test_webui",
+          "errorDetails": "AssertionError: assert '/login' not in 'https://127...ext=/login#/'\n  \n  '/login' is contained here:\n    https://127.0.0.1:3443/?next=/login#/\n  ?                              ++++++",
+          "name": "test_logs_on_error",
+          "status": "FAILED"
+        },
+        {
+          "className": "lab4.test_webui",
+          "errorDetails": "urllib.error.URLError: <urlopen error _ssl.c:1012: The handshake operation timed out>",
+          "name": "test_account_lockout",
+          "status": "FAILED"
+        }
+      ]
+    }
+  ]
+}

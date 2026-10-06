@@ -30,6 +30,8 @@ try:
                          ('tests', f'/job/openbmc-ci/{args.number}/testReport/')]:
         driver.get('http://127.0.0.1:18080' + suffix)
         wait.until(lambda d: d.find_elements(By.ID, 'main-panel'))
+        if name == 'job':
+            wait.until(lambda d: 'QEMU OpenBMC' in d.find_element(By.TAG_NAME, 'body').text)
         driver.save_screenshot(str(ROOT / 'results' / f'jenkins-{name}.png'))
         (ROOT / 'results' / f'jenkins-{name}.txt').write_text(driver.find_element(By.TAG_NAME, 'body').text)
         print(f'Сохранён скриншот Jenkins: {name}; HTTP-страница {suffix}')

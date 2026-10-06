@@ -1,0 +1,111 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.5, pytest-9.1.1, pluggy-1.6.0 -- /opt/test-venv/bin/python
+cachedir: .pytest_cache
+rootdir: /var/jenkins_home/workspace/openbmc-ci
+plugins: locust-2.46.7
+collecting ... collected 6 items
+
+lab4/test_webui.py::test_successful_login PASSED                         [ 16%]
+lab4/test_webui.py::test_invalid_credentials[wrong_username] PASSED      [ 33%]
+lab4/test_webui.py::test_invalid_credentials[wrong_username] ERROR       [ 33%]
+lab4/test_webui.py::test_invalid_credentials[wrong_password] PASSED      [ 50%]
+lab4/test_webui.py::test_voltage_monitoring SKIPPED (Blocked: датчик...) [ 66%]
+lab4/test_webui.py::test_logs_on_error FAILED                            [ 83%]
+lab4/test_webui.py::test_account_lockout FAILED                          [100%]
+
+==================================== ERRORS ====================================
+________ ERROR at teardown of test_invalid_credentials[wrong_username] _________
+lab4/test_webui.py:53: in browser
+    driver.save_screenshot(str(OUT / (name + '.png')))
+/opt/test-venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py:993: in save_screenshot
+    return self.get_screenshot_as_file(filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/test-venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py:970: in get_screenshot_as_file
+    png = self.get_screenshot_as_png()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/test-venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py:1001: in get_screenshot_as_png
+    return b64decode(self.get_screenshot_as_base64().encode("ascii"))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/test-venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py:1011: in get_screenshot_as_base64
+    return self.execute(Command.SCREENSHOT)["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/test-venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py:506: in execute
+    self.error_handler.check_response(response)
+/opt/test-venv/lib/python3.13/site-packages/selenium/webdriver/remote/errorhandler.py:232: in check_response
+    raise exception_class(message, screen, stacktrace)
+E   selenium.common.exceptions.WebDriverException: Message: Unable to capture screenshot: 
+E   Stacktrace:
+E   RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+E   WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5
+E   UnknownError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:944:5
+E   capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:145:11
+=================================== FAILURES ===================================
+______________________________ test_logs_on_error ______________________________
+lab4/test_webui.py:182: in test_logs_on_error
+    login(browser)
+lab4/test_webui.py:92: in login
+    assert '/login' not in driver.current_url
+E   AssertionError: assert '/login' not in 'https://127...ext=/login#/'
+E     
+E     '/login' is contained here:
+E       https://127.0.0.1:3443/?next=/login#/
+E     ?                              ++++++
+_____________________________ test_account_lockout _____________________________
+/usr/lib/python3.13/urllib/request.py:1319: in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+/usr/lib/python3.13/http/client.py:1367: in request
+    self._send_request(method, url, body, headers, encode_chunked)
+/usr/lib/python3.13/http/client.py:1413: in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+/usr/lib/python3.13/http/client.py:1362: in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+/usr/lib/python3.13/http/client.py:1122: in _send_output
+    self.send(msg)
+/usr/lib/python3.13/http/client.py:1066: in send
+    self.connect()
+/usr/lib/python3.13/http/client.py:1508: in connect
+    self.sock = self._context.wrap_socket(self.sock,
+/usr/lib/python3.13/ssl.py:455: in wrap_socket
+    return self.sslsocket_class._create(
+/usr/lib/python3.13/ssl.py:1076: in _create
+    self.do_handshake()
+/usr/lib/python3.13/ssl.py:1372: in do_handshake
+    self._sslobj.do_handshake()
+E   TimeoutError: _ssl.c:1012: The handshake operation timed out
+
+During handling of the above exception, another exception occurred:
+lab4/test_webui.py:198: in test_account_lockout
+    policy = account_policy()
+             ^^^^^^^^^^^^^^^^
+lab4/test_webui.py:33: in account_policy
+    with opener.open(request, timeout=30) as r:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.13/urllib/request.py:489: in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.13/urllib/request.py:506: in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+/usr/lib/python3.13/urllib/request.py:466: in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+/usr/lib/python3.13/urllib/request.py:1367: in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+/usr/lib/python3.13/urllib/request.py:1322: in do_open
+    raise URLError(err)
+E   urllib.error.URLError: <urlopen error _ssl.c:1012: The handshake operation timed out>
+- generated xml file: /var/jenkins_home/workspace/openbmc-ci/lab7/results/webui/junit.xml -
+=========================== short test summary info ============================
+SKIPPED [1] lab4/test_webui.py:147: Blocked: датчик матплаты и допустимые пределы не заданы; строки UI: ['No items available']
+ERROR lab4/test_webui.py::test_invalid_credentials[wrong_username] - selenium.common.exceptions.WebDriverException: Message: Unable to capture screenshot: 
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5
+UnknownError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:944:5
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:145:11
+FAILED lab4/test_webui.py::test_logs_on_error - AssertionError: assert '/login' not in 'https://127...ext=/login#/'
+  
+  '/login' is contained here:
+    https://127.0.0.1:3443/?next=/login#/
+  ?                              ++++++
+FAILED lab4/test_webui.py::test_account_lockout - urllib.error.URLError: <urlopen error _ssl.c:1012: The handshake operation timed out>
+========= 2 failed, 3 passed, 1 skipped, 1 error in 461.27s (0:07:41) ==========

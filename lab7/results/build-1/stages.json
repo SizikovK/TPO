@@ -1,0 +1,118 @@
+{
+  "_links": {
+    "self": {
+      "href": "/job/openbmc-ci/1/wfapi/describe"
+    },
+    "artifacts": {
+      "href": "/job/openbmc-ci/1/wfapi/artifacts"
+    }
+  },
+  "id": "1",
+  "name": "#1",
+  "status": "UNSTABLE",
+  "startTimeMillis": 1791265251465,
+  "endTimeMillis": 1791266160590,
+  "durationMillis": 909125,
+  "queueDurationMillis": 35,
+  "pauseDurationMillis": 0,
+  "stages": [
+    {
+      "_links": {
+        "self": {
+          "href": "/job/openbmc-ci/1/execution/node/6/wfapi/describe"
+        }
+      },
+      "id": "6",
+      "name": "Declarative: Checkout SCM",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1791265267854,
+      "durationMillis": 5234,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/openbmc-ci/1/execution/node/17/wfapi/describe"
+        }
+      },
+      "id": "17",
+      "name": "Prepare",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1791265273809,
+      "durationMillis": 4395,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/openbmc-ci/1/execution/node/23/wfapi/describe"
+        }
+      },
+      "id": "23",
+      "name": "QEMU OpenBMC",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1791265278290,
+      "durationMillis": 156925,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/openbmc-ci/1/execution/node/29/wfapi/describe"
+        }
+      },
+      "id": "29",
+      "name": "API tests",
+      "execNode": "",
+      "status": "FAILED",
+      "startTimeMillis": 1791265435305,
+      "durationMillis": 68773,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/openbmc-ci/1/execution/node/40/wfapi/describe"
+        }
+      },
+      "id": "40",
+      "name": "WebUI tests",
+      "execNode": "",
+      "status": "FAILED",
+      "startTimeMillis": 1791265504159,
+      "durationMillis": 613731,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/openbmc-ci/1/execution/node/51/wfapi/describe"
+        }
+      },
+      "id": "51",
+      "name": "Load test",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1791266118002,
+      "durationMillis": 39692,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/openbmc-ci/1/execution/node/61/wfapi/describe"
+        }
+      },
+      "id": "61",
+      "name": "Declarative: Post Actions",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1791266157797,
+      "durationMillis": 2160,
+      "pauseDurationMillis": 0
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+Build #1: UNSTABLE; артефактов: 45
+JUnit: passed=3, failed=5, skipped=3
+Доказательства сохранены: lab7/results/build-1

@@ -1,0 +1,2 @@
+NAME               IMAGE                    COMMAND                  SERVICE   CREATED        STATUS                  PORTS
+tpo-lab7-jenkins   tpo-lab7-jenkins:local   "/usr/bin/tini -- /u…"   jenkins   1 second ago   Up Less than a second   127.0.0.1:18080->8080/tcp

@@ -1,0 +1,4 @@
+ Container tpo-lab7-jenkins Recreate 
+ Container tpo-lab7-jenkins Recreated 
+ Container tpo-lab7-jenkins Starting 
+ Container tpo-lab7-jenkins Started 

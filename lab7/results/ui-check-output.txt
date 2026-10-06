@@ -1,0 +1,3 @@
+Сохранён скриншот Jenkins: job; HTTP-страница /job/openbmc-ci/
+Сохранён скриншот Jenkins: build; HTTP-страница /job/openbmc-ci/1/
+Сохранён скриншот Jenkins: tests; HTTP-страница /job/openbmc-ci/1/testReport/

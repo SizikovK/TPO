@@ -1,0 +1,190 @@
+{
+  "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+  "artifacts": [
+    {
+      "fileName": "command.txt",
+      "relativePath": "lab7/results/api/command.txt"
+    },
+    {
+      "fileName": "GET_redfish_v1_Chassis.txt",
+      "relativePath": "lab7/results/api/details/GET_redfish_v1_Chassis.txt"
+    },
+    {
+      "fileName": "GET_redfish_v1_Chassis_chassis.txt",
+      "relativePath": "lab7/results/api/details/GET_redfish_v1_Chassis_chassis.txt"
+    },
+    {
+      "fileName": "GET_redfish_v1_Chassis_chassis_Thermal.txt",
+      "relativePath": "lab7/results/api/details/GET_redfish_v1_Chassis_chassis_Thermal.txt"
+    },
+    {
+      "fileName": "GET_redfish_v1_Systems_system.txt",
+      "relativePath": "lab7/results/api/details/GET_redfish_v1_Systems_system.txt"
+    },
+    {
+      "fileName": "POST_redfish_v1_Systems_system_Actions_ComputerSystem_Reset.txt",
+      "relativePath": "lab7/results/api/details/POST_redfish_v1_Systems_system_Actions_ComputerSystem_Reset.txt"
+    },
+    {
+      "fileName": "exit-code.txt",
+      "relativePath": "lab7/results/api/exit-code.txt"
+    },
+    {
+      "fileName": "junit.xml",
+      "relativePath": "lab7/results/api/junit.xml"
+    },
+    {
+      "fileName": "output.txt",
+      "relativePath": "lab7/results/api/output.txt"
+    },
+    {
+      "fileName": "pytest.log",
+      "relativePath": "lab7/results/api/pytest.log"
+    },
+    {
+      "fileName": "summary.md",
+      "relativePath": "lab7/results/api/summary.md"
+    },
+    {
+      "fileName": "cleanup.txt",
+      "relativePath": "lab7/results/cleanup.txt"
+    },
+    {
+      "fileName": "summary.md",
+      "relativePath": "lab7/results/environment/summary.md"
+    },
+    {
+      "fileName": "command.txt",
+      "relativePath": "lab7/results/load/command.txt"
+    },
+    {
+      "fileName": "exit-code.txt",
+      "relativePath": "lab7/results/load/exit-code.txt"
+    },
+    {
+      "fileName": "locust.html",
+      "relativePath": "lab7/results/load/locust.html"
+    },
+    {
+      "fileName": "locust_exceptions.csv",
+      "relativePath": "lab7/results/load/locust_exceptions.csv"
+    },
+    {
+      "fileName": "locust_failures.csv",
+      "relativePath": "lab7/results/load/locust_failures.csv"
+    },
+    {
+      "fileName": "locust_stats.csv",
+      "relativePath": "lab7/results/load/locust_stats.csv"
+    },
+    {
+      "fileName": "locust_stats_history.csv",
+      "relativePath": "lab7/results/load/locust_stats_history.csv"
+    },
+    {
+      "fileName": "output.txt",
+      "relativePath": "lab7/results/load/output.txt"
+    },
+    {
+      "fileName": "summary.md",
+      "relativePath": "lab7/results/load/summary.md"
+    },
+    {
+      "fileName": "boot.log",
+      "relativePath": "lab7/results/qemu/boot.log"
+    },
+    {
+      "fileName": "command.txt",
+      "relativePath": "lab7/results/qemu/command.txt"
+    },
+    {
+      "fileName": "summary.md",
+      "relativePath": "lab7/results/qemu/summary.md"
+    },
+    {
+      "fileName": "system.json",
+      "relativePath": "lab7/results/qemu/system.json"
+    },
+    {
+      "fileName": "command.txt",
+      "relativePath": "lab7/results/webui/command.txt"
+    },
+    {
+      "fileName": "test_account_lockout.png",
+      "relativePath": "lab7/results/webui/details/test_account_lockout.png"
+    },
+    {
+      "fileName": "test_account_lockout.txt",
+      "relativePath": "lab7/results/webui/details/test_account_lockout.txt"
+    },
+    {
+      "fileName": "test_invalid_credentials_wrong_password_.png",
+      "relativePath": "lab7/results/webui/details/test_invalid_credentials_wrong_password_.png"
+    },
+    {
+      "fileName": "test_invalid_credentials_wrong_password_.txt",
+      "relativePath": "lab7/results/webui/details/test_invalid_credentials_wrong_password_.txt"
+    },
+    {
+      "fileName": "test_logs_on_error.png",
+      "relativePath": "lab7/results/webui/details/test_logs_on_error.png"
+    },
+    {
+      "fileName": "test_logs_on_error.txt",
+      "relativePath": "lab7/results/webui/details/test_logs_on_error.txt"
+    },
+    {
+      "fileName": "test_successful_login.png",
+      "relativePath": "lab7/results/webui/details/test_successful_login.png"
+    },
+    {
+      "fileName": "test_successful_login.txt",
+      "relativePath": "lab7/results/webui/details/test_successful_login.txt"
+    },
+    {
+      "fileName": "test_voltage_monitoring.png",
+      "relativePath": "lab7/results/webui/details/test_voltage_monitoring.png"
+    },
+    {
+      "fileName": "test_voltage_monitoring.txt",
+      "relativePath": "lab7/results/webui/details/test_voltage_monitoring.txt"
+    },
+    {
+      "fileName": "exit-code.txt",
+      "relativePath": "lab7/results/webui/exit-code.txt"
+    },
+    {
+      "fileName": "junit.xml",
+      "relativePath": "lab7/results/webui/junit.xml"
+    },
+    {
+      "fileName": "output.txt",
+      "relativePath": "lab7/results/webui/output.txt"
+    },
+    {
+      "fileName": "boot.log",
+      "relativePath": "lab7/results/webui/qemu/boot.log"
+    },
+    {
+      "fileName": "command.txt",
+      "relativePath": "lab7/results/webui/qemu/command.txt"
+    },
+    {
+      "fileName": "summary.md",
+      "relativePath": "lab7/results/webui/qemu/summary.md"
+    },
+    {
+      "fileName": "system.json",
+      "relativePath": "lab7/results/webui/qemu/system.json"
+    },
+    {
+      "fileName": "summary.md",
+      "relativePath": "lab7/results/webui/summary.md"
+    }
+  ],
+  "building": false,
+  "duration": 909125,
+  "number": 1,
+  "result": "UNSTABLE",
+  "timestamp": 1791265251430
+}

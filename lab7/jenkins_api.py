@@ -41,11 +41,8 @@ def main():
         crumb = read_json(BASE + '/crumbIssuer/api/json')
         headers = {crumb['crumbRequestField']: crumb['crumb']}
         if args.action == 'validate':
-            content = (ROOT / 'Jenkinsfile').read_bytes()
-            boundary = 'Lab7JenkinsfileBoundary'
-            payload = (f'--{boundary}\r\nContent-Disposition: form-data; name="jenkinsfile"; filename="Jenkinsfile"\r\nContent-Type: text/plain\r\n\r\n'.encode()
-                       + content + f'\r\n--{boundary}--\r\n'.encode())
-            headers['Content-Type'] = f'multipart/form-data; boundary={boundary}'
+            payload = urllib.parse.urlencode({'jenkinsfile': (ROOT / 'Jenkinsfile').read_text()}).encode()
+            headers['Content-Type'] = 'application/x-www-form-urlencoded'
             output = request(BASE + '/pipeline-model-converter/validate', payload, headers)[0].decode()
             (OUT / 'jenkinsfile-validation.txt').write_text(output)
             print(output)
@@ -58,16 +55,24 @@ def main():
     if args.number:
         build = JOB + '/' + str(args.number)
     else:
-        queue = json.loads((OUT / 'queue.json').read_text())['url']
-        deadline = time.monotonic() + 300
-        while True:
-            data = read_json(queue + 'api/json')
-            if data.get('executable'):
-                build = JOB + '/' + str(data['executable']['number'])
-                break
-            if data.get('cancelled') or time.monotonic() > deadline:
-                raise RuntimeError('Очередь отменена или сборка не началась за 300 с')
-            time.sleep(2)
+        saved_queue = json.loads((OUT / 'queue.json').read_text())
+        if saved_queue.get('number'):
+            build = JOB + '/' + str(saved_queue['number'])
+        else:
+            queue = saved_queue['url']
+            deadline = time.monotonic() + 300
+            while True:
+                data = read_json(queue + 'api/json')
+                if data.get('executable'):
+                    number = data['executable']['number']
+                    build = JOB + '/' + str(number)
+                    saved_queue['number'] = number
+                    # Запись очереди Jenkins позднее удаляется; номер сборки сохраняем.
+                    (OUT / 'queue.json').write_text(json.dumps(saved_queue, indent=2))
+                    break
+                if data.get('cancelled') or time.monotonic() > deadline:
+                    raise RuntimeError('Очередь отменена или сборка не началась за 300 с')
+                time.sleep(2)
     if args.action == 'watch':
         deadline = time.monotonic() + 1800
         last = None

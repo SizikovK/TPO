@@ -1,0 +1,12 @@
+{
+  "_class": "hudson.model.Hudson",
+  "mode": "NORMAL",
+  "jobs": [
+    {
+      "_class": "org.jenkinsci.plugins.workflow.job.WorkflowJob",
+      "name": "openbmc-ci",
+      "color": "notbuilt"
+    }
+  ],
+  "quietingDown": false
+}

@@ -1,0 +1,1 @@
+qemu-system-arm -M romulus-bmc -m 256 -snapshot -drive file=/opt/openbmc/image.static.mtd,format=raw,if=mtd -nographic -net nic -net user,hostfwd=tcp:127.0.0.1:3443-:443,hostfwd=udp:127.0.0.1:3623-:623

@@ -1,0 +1,2 @@
+ Container tpo-lab7-jenkins Stopping 
+ Container tpo-lab7-jenkins Stopped 

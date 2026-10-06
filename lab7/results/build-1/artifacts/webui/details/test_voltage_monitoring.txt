@@ -1,0 +1,25 @@
+Health
+Power
+Refresh
+root
+Overview
+Logs
+Hardware status
+Operations
+Settings
+Security and access
+Resource management
+Sensors
+0 items
+Filter
+Select all
+Name
+(Click to sort ascending)
+Status
+(Click to sort ascending)
+Lower critical
+Lower warning
+Current value
+Upper warning
+Upper critical
+No items available

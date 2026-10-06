@@ -1,0 +1,50 @@
+Health
+Power
+Refresh
+root
+Overview
+Logs
+Hardware status
+Operations
+Settings
+Security and access
+Resource management
+Overview
+BMC date and time
+--
+SOL console
+System information
+Server information
+View more
+Model
+--
+Serial number
+--
+Server manufacturer
+--
+Firmware information
+View more
+Running
+--
+Backup
+--
+Firmware version
+--
+Power information
+View more
+Power consumption
+Not available
+Power cap
+Disabled
+Status information
+Event logs
+Export all
+|View more
+Critical
+0
+Warning
+0
+Inventory and LEDs
+View more
+System identify LED
+Off

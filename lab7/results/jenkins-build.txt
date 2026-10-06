@@ -1,0 +1,38 @@
+Jenkins
+openbmc-ci
+#1
+Search
+Manage Jenkins
+admin
+Status
+Changes
+Console Output
+Delete build ‘#1’
+Git Build Data
+Tests
+See Fingerprints
+Edit build information
+Restart from Stage
+Replay
+Pipeline Steps
+Workspaces
+Unstable
+#1 (Oct 6, 2026, 5:40:51 AM)
+Add description
+Keep this build forever
+Started 16 min ago
+Took 15 min
+Build Artifacts
+Started by user admin
+Revision: d9b187e4f8e9b94c90c31bb9a7be06424b6a5882
+Repository: https://github.com/SizikovK/TPO.git
+refs/remotes/origin/main
+Tests (5 failures )
+API tests / test_redfish.test_authentication
+API tests / test_redfish.test_power_on
+WebUI tests / lab4.test_webui.test_account_lockout
+WebUI tests / lab4.test_webui.test_invalid_credentials[wrong_username]
+WebUI tests / lab4.test_webui.test_logs_on_error
+No changes.
+REST API
+Jenkins 2.580.1

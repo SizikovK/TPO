@@ -1,0 +1,478 @@
+Started by user admin
+Obtained lab7/Jenkinsfile from git https://github.com/SizikovK/TPO.git
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/jenkins_home/workspace/openbmc-ci
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/SizikovK/TPO.git
+ > git init /var/jenkins_home/workspace/openbmc-ci # timeout=10
+Fetching upstream changes from https://github.com/SizikovK/TPO.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.47.3'
+ > git fetch --tags --force --progress -- https://github.com/SizikovK/TPO.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/SizikovK/TPO.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision d9b187e4f8e9b94c90c31bb9a7be06424b6a5882 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f d9b187e4f8e9b94c90c31bb9a7be06424b6a5882 # timeout=10
+Commit message: "Use Jenkins image built-in process init"
+First time build. Skipping changelog.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] timeout
+Timeout set to expire in 25 min
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Prepare)
+[Pipeline] sh
++ /opt/test-venv/bin/python lab7/ci.py prepare
+$ python --version
+Python 3.13.5
+
+$ qemu-system-arm --version
+QEMU emulator version 10.0.13 (Debian 1:10.0.13+ds-0+deb13u1)
+Copyright (c) 2003-2025 Fabrice Bellard and the QEMU Project developers
+
+$ firefox --version
+Mozilla Firefox 153.4.0esr
+[1084] Sandbox: CanCreateUserNamespace() clone() failure: EPERM
+
+$ geckodriver --version
+geckodriver 0.37.1 (300705c65d1b 2026-07-17 09:25 +0000)
+
+The source code of this program is available from
+testing/geckodriver in https://hg.mozilla.org/mozilla-central.
+
+This program is subject to the terms of the Mozilla Public License 2.0.
+You can obtain a copy of the license at https://mozilla.org/MPL/2.0/.
+
+$ ipmitool -V
+ipmitool version 1.8.19
+
+$ locust --version
+locust 2.46.7 from /opt/test-venv/lib/python3.13/site-packages/locust (Python 3.13.5)
+
+$ git rev-parse HEAD
+d9b187e4f8e9b94c90c31bb9a7be06424b6a5882
+
+$ sha256sum /opt/openbmc/image.static.mtd
+0d6bc73c8641555d1df0e8eb9c0ae5d64cdae14e0b819c151fd56686d9d3d764  /opt/openbmc/image.static.mtd
+
+Post stage
+[Pipeline] archiveArtifacts
+Archiving artifacts
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (QEMU OpenBMC)
+[Pipeline] sh
++ /opt/test-venv/bin/python lab7/ci.py qemu
+Нет запущенного этим Pipeline QEMU
+QEMU готов: HTTP 200; PowerState=Off; attempts=24
+Post stage
+[Pipeline] archiveArtifacts
+Archiving artifacts
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (API tests)
+[Pipeline] catchError
+[Pipeline] {
+[Pipeline] sh
++ /opt/test-venv/bin/python lab7/ci.py api
+============================= test session starts ==============================
+platform linux -- Python 3.13.5, pytest-9.1.1, pluggy-1.6.0 -- /opt/test-venv/bin/python
+cachedir: .pytest_cache
+rootdir: /var/jenkins_home/workspace/openbmc-ci/lab5
+configfile: pytest.ini
+plugins: locust-2.46.7
+collecting ... collected 5 items
+
+lab5/test_redfish.py::test_authentication 
+-------------------------------- live log setup --------------------------------
+INFO     test_redfish:test_redfish.py:30 POST /redfish/v1/SessionService/Sessions -> HTTP 201
+FAILED                                                                   [ 20%]
+lab5/test_redfish.py::test_system_information 
+-------------------------------- live log call ---------------------------------
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:82 Status={'Health': 'OK', 'State': 'Disabled'}; PowerState=Off
+PASSED                                                                   [ 40%]
+lab5/test_redfish.py::test_power_on 
+-------------------------------- live log call ---------------------------------
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 POST /redfish/v1/Systems/system/Actions/ComputerSystem.Reset -> HTTP 204
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:98 Включение: HTTP 204; состояния=['Off', 'PoweringOn', 'PoweringOn', 'PoweringOff', 'PoweringOff', 'PoweringOff', 'Off', 'Off', 'Off', 'Off', 'Off', 'PoweringOn']
+FAILED                                                                   [ 60%]
+lab5/test_redfish.py::test_cpu_temperature_normal 
+-------------------------------- live log setup --------------------------------
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Chassis -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Chassis/chassis -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Chassis/chassis/Thermal -> HTTP 200
+SKIPPED (Blocked: в Redfish Thermal нет датчиков температуры CPU)        [ 80%]
+lab5/test_redfish.py::test_cpu_sensors_redfish_ipmi 
+-------------------------------- live log setup --------------------------------
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Chassis -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Chassis/chassis -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Chassis/chassis/Thermal -> HTTP 200
+SKIPPED (Blocked: в Redfish Thermal нет датчиков температуры CPU)        [100%]
+------------------------------ live log teardown -------------------------------
+INFO     test_redfish:test_redfish.py:30 DELETE /redfish/v1/SessionService/Sessions/wqqo4nXd4n -> HTTP 200
+
+
+=================================== FAILURES ===================================
+_____________________________ test_authentication ______________________________
+lab5/test_redfish.py:74: in test_authentication
+    assert response.status_code == 200, f'По заданию HTTP 200, фактически {response.status_code}'
+E   AssertionError: По заданию HTTP 200, фактически 201
+E   assert 201 == 200
+E    +  where 201 = <Response [201]>.status_code
+------------------------------ Captured log setup ------------------------------
+INFO     test_redfish:test_redfish.py:30 POST /redfish/v1/SessionService/Sessions -> HTTP 201
+________________________________ test_power_on _________________________________
+lab5/test_redfish.py:99: in test_power_on
+    assert response.status_code == 202 and states[-1] == 'On', (
+E   AssertionError: Ожидались HTTP 202 и PowerState=On; HTTP 204, состояния=['Off', 'PoweringOn', 'PoweringOn', 'PoweringOff', 'PoweringOff', 'PoweringOff', 'Off', 'Off', 'Off', 'Off', 'Off', 'PoweringOn']
+E   assert (204 == 202)
+E    +  where 204 = <Response [204]>.status_code
+------------------------------ Captured log call -------------------------------
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 POST /redfish/v1/Systems/system/Actions/ComputerSystem.Reset -> HTTP 204
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:30 GET /redfish/v1/Systems/system -> HTTP 200
+INFO     test_redfish:test_redfish.py:98 Включение: HTTP 204; состояния=['Off', 'PoweringOn', 'PoweringOn', 'PoweringOff', 'PoweringOff', 'PoweringOff', 'Off', 'Off', 'Off', 'Off', 'Off', 'PoweringOn']
+=============================== warnings summary ===============================
+test_redfish.py::test_authentication
+test_redfish.py::test_system_information
+test_redfish.py::test_power_on
+test_redfish.py::test_cpu_temperature_normal
+test_redfish.py::test_cpu_sensors_redfish_ipmi
+  /opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: /var/jenkins_home/workspace/openbmc-ci/lab7/results/api/junit.xml -
+=========================== short test summary info ============================
+SKIPPED [1] lab5/test_redfish.py:125: Blocked: в Redfish Thermal нет датчиков температуры CPU
+SKIPPED [1] lab5/test_redfish.py:145: Blocked: в Redfish Thermal нет датчиков температуры CPU
+FAILED lab5/test_redfish.py::test_authentication - AssertionError: По заданию HTTP 200, фактически 201
+assert 201 == 200
+ +  where 201 = <Response [201]>.status_code
+FAILED lab5/test_redfish.py::test_power_on - AssertionError: Ожидались HTTP 202 и PowerState=On; HTTP 204, состояния=['Off', 'PoweringOn', 'PoweringOn', 'PoweringOff', 'PoweringOff', 'PoweringOff', 'Off', 'Off', 'Off', 'Off', 'Off', 'PoweringOn']
+assert (204 == 202)
+ +  where 204 = <Response [204]>.status_code
+======== 2 failed, 1 passed, 2 skipped, 5 warnings in 66.35s (0:01:06) =========
+
+[Pipeline] }
+ERROR: script returned exit code 1
+Setting overall build result to UNSTABLE
+[Pipeline] // catchError
+Post stage
+[Pipeline] junit
+Recording test results
+[Checks API] No suitable checks publisher found.
+[Pipeline] archiveArtifacts
+Archiving artifacts
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (WebUI tests)
+[Pipeline] catchError
+[Pipeline] {
+[Pipeline] sh
++ /opt/test-venv/bin/python lab7/ci.py webui
+QEMU PID 1122 остановлен
+QEMU готов: HTTP 200; PowerState=Off; attempts=24
+============================= test session starts ==============================
+platform linux -- Python 3.13.5, pytest-9.1.1, pluggy-1.6.0 -- /opt/test-venv/bin/python
+cachedir: .pytest_cache
+rootdir: /var/jenkins_home/workspace/openbmc-ci
+plugins: locust-2.46.7
+collecting ... collected 6 items
+
+lab4/test_webui.py::test_successful_login PASSED                         [ 16%]
+lab4/test_webui.py::test_invalid_credentials[wrong_username] PASSED      [ 33%]
+lab4/test_webui.py::test_invalid_credentials[wrong_username] ERROR       [ 33%]
+lab4/test_webui.py::test_invalid_credentials[wrong_password] PASSED      [ 50%]
+lab4/test_webui.py::test_voltage_monitoring SKIPPED (Blocked: датчик...) [ 66%]
+lab4/test_webui.py::test_logs_on_error FAILED                            [ 83%]
+lab4/test_webui.py::test_account_lockout FAILED                          [100%]
+
+==================================== ERRORS ====================================
+________ ERROR at teardown of test_invalid_credentials[wrong_username] _________
+lab4/test_webui.py:53: in browser
+    driver.save_screenshot(str(OUT / (name + '.png')))
+/opt/test-venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py:993: in save_screenshot
+    return self.get_screenshot_as_file(filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/test-venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py:970: in get_screenshot_as_file
+    png = self.get_screenshot_as_png()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/test-venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py:1001: in get_screenshot_as_png
+    return b64decode(self.get_screenshot_as_base64().encode("ascii"))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/test-venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py:1011: in get_screenshot_as_base64
+    return self.execute(Command.SCREENSHOT)["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/test-venv/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py:506: in execute
+    self.error_handler.check_response(response)
+/opt/test-venv/lib/python3.13/site-packages/selenium/webdriver/remote/errorhandler.py:232: in check_response
+    raise exception_class(message, screen, stacktrace)
+E   selenium.common.exceptions.WebDriverException: Message: Unable to capture screenshot: 
+E   Stacktrace:
+E   RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+E   WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5
+E   UnknownError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:944:5
+E   capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:145:11
+=================================== FAILURES ===================================
+______________________________ test_logs_on_error ______________________________
+lab4/test_webui.py:182: in test_logs_on_error
+    login(browser)
+lab4/test_webui.py:92: in login
+    assert '/login' not in driver.current_url
+E   AssertionError: assert '/login' not in 'https://127...ext=/login#/'
+E     
+E     '/login' is contained here:
+E       https://127.0.0.1:3443/?next=/login#/
+E     ?                              ++++++
+_____________________________ test_account_lockout _____________________________
+/usr/lib/python3.13/urllib/request.py:1319: in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+/usr/lib/python3.13/http/client.py:1367: in request
+    self._send_request(method, url, body, headers, encode_chunked)
+/usr/lib/python3.13/http/client.py:1413: in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+/usr/lib/python3.13/http/client.py:1362: in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+/usr/lib/python3.13/http/client.py:1122: in _send_output
+    self.send(msg)
+/usr/lib/python3.13/http/client.py:1066: in send
+    self.connect()
+/usr/lib/python3.13/http/client.py:1508: in connect
+    self.sock = self._context.wrap_socket(self.sock,
+/usr/lib/python3.13/ssl.py:455: in wrap_socket
+    return self.sslsocket_class._create(
+/usr/lib/python3.13/ssl.py:1076: in _create
+    self.do_handshake()
+/usr/lib/python3.13/ssl.py:1372: in do_handshake
+    self._sslobj.do_handshake()
+E   TimeoutError: _ssl.c:1012: The handshake operation timed out
+
+During handling of the above exception, another exception occurred:
+lab4/test_webui.py:198: in test_account_lockout
+    policy = account_policy()
+             ^^^^^^^^^^^^^^^^
+lab4/test_webui.py:33: in account_policy
+    with opener.open(request, timeout=30) as r:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.13/urllib/request.py:489: in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.13/urllib/request.py:506: in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+/usr/lib/python3.13/urllib/request.py:466: in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+/usr/lib/python3.13/urllib/request.py:1367: in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+/usr/lib/python3.13/urllib/request.py:1322: in do_open
+    raise URLError(err)
+E   urllib.error.URLError: <urlopen error _ssl.c:1012: The handshake operation timed out>
+- generated xml file: /var/jenkins_home/workspace/openbmc-ci/lab7/results/webui/junit.xml -
+=========================== short test summary info ============================
+SKIPPED [1] lab4/test_webui.py:147: Blocked: датчик матплаты и допустимые пределы не заданы; строки UI: ['No items available']
+ERROR lab4/test_webui.py::test_invalid_credentials[wrong_username] - selenium.common.exceptions.WebDriverException: Message: Unable to capture screenshot: 
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:169:5
+UnknownError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:944:5
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:145:11
+FAILED lab4/test_webui.py::test_logs_on_error - AssertionError: assert '/login' not in 'https://127...ext=/login#/'
+  
+  '/login' is contained here:
+    https://127.0.0.1:3443/?next=/login#/
+  ?                              ++++++
+FAILED lab4/test_webui.py::test_account_lockout - urllib.error.URLError: <urlopen error _ssl.c:1012: The handshake operation timed out>
+========= 2 failed, 3 passed, 1 skipped, 1 error in 461.27s (0:07:41) ==========
+
+[Pipeline] }
+ERROR: script returned exit code 1
+[Pipeline] // catchError
+Post stage
+[Pipeline] junit
+Recording test results
+[Checks API] No suitable checks publisher found.
+[Pipeline] archiveArtifacts
+Archiving artifacts
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Load test)
+[Pipeline] catchError
+[Pipeline] {
+[Pipeline] sh
++ /opt/test-venv/bin/python lab7/ci.py load
+[2026-10-06 05:55:20,633] 54f57f503f37/INFO/locust.main: Starting Locust 2.46.7
+[2026-10-06 05:55:20,635] 54f57f503f37/INFO/locust.main: Run time limit set to 30 seconds
+[2026-10-06 05:55:20,637] 54f57f503f37/INFO/locust.runners: Ramping to 10 users at a rate of 2.00 per second
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+[2026-10-06 05:55:24,642] 54f57f503f37/INFO/locust.runners: All users spawned: {"OpenBMCUser": 10} (10 total users)
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/opt/test-venv/lib/python3.13/site-packages/urllib3/connectionpool.py:1129: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+[2026-10-06 05:55:49,701] 54f57f503f37/INFO/locust.main: --run-time limit reached, shutting down
+[2026-10-06 05:55:53,414] 54f57f503f37/INFO/locust.main: Shutting down (exit code 0)
+Type     Name                                                                          # reqs      # fails |    Avg     Min     Max    Med |   req/s  failures/s
+--------|----------------------------------------------------------------------------|-------|-------------|-------|-------|-------|-------|--------|-----------
+GET      BMC: PowerState                                                                   20     0(0.00%) |   5984    1142    8350   6000 |    0.61        0.00
+GET      BMC: system information                                                           21     0(0.00%) |   5755    4491    7495   5700 |    0.64        0.00
+--------|----------------------------------------------------------------------------|-------|-------------|-------|-------|-------|-------|--------|-----------
+         Aggregated                                                                        41     0(0.00%) |   5867    1142    8350   5700 |    1.25        0.00
+
+Response time percentiles (approximated)
+Type     Name                                                                                  50%    66%    75%    80%    90%    95%    98%    99%  99.9% 99.99%   100% # reqs
+--------|--------------------------------------------------------------------------------|--------|------|------|------|------|------|------|------|------|------|------|------
+GET      BMC: PowerState                                                                      6000   6500   6600   7900   8300   8400   8400   8400   8400   8400   8400     20
+GET      BMC: system information                                                              5700   5900   6000   6200   6500   7500   7500   7500   7500   7500   7500     21
+--------|--------------------------------------------------------------------------------|--------|------|------|------|------|------|------|------|------|------|------|------
+         Aggregated                                                                           5700   6000   6500   6500   7500   7900   8400   8400   8400   8400   8400     41
+
+
+[Pipeline] }
+[Pipeline] // catchError
+Post stage
+[Pipeline] archiveArtifacts
+Archiving artifacts
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] sh
++ /opt/test-venv/bin/python lab7/ci.py stop
+[Pipeline] archiveArtifacts
+Archiving artifacts
+Recording fingerprints
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: UNSTABLE

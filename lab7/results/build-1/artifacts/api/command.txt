@@ -1,0 +1,1 @@
+/opt/test-venv/bin/python -m pytest lab5/test_redfish.py -v -ra --tb=short --junitxml=/var/jenkins_home/workspace/openbmc-ci/lab7/results/api/junit.xml -o log_file=/var/jenkins_home/workspace/openbmc-ci/lab7/results/api/pytest.log
