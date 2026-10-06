@@ -147,7 +147,8 @@ def prepare():
             shutil.rmtree(path)
         path.mkdir(parents=True)
     commands = [['python', '--version'], ['qemu-system-arm', '--version'], ['firefox', '--version'],
-                ['geckodriver', '--version'], ['ipmitool', '-V'], ['locust', '--version']]
+                ['geckodriver', '--version'], ['ipmitool', '-V'], ['locust', '--version'],
+                ['git', 'rev-parse', 'HEAD'], ['sha256sum', IMAGE]]
     output = []
     for command in commands:
         result = subprocess.run(command, text=True, capture_output=True)
