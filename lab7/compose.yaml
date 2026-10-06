@@ -1,0 +1,26 @@
+name: tpo-lab7
+services:
+  jenkins:
+    build:
+      context: .
+    image: tpo-lab7-jenkins:local
+    container_name: tpo-lab7-jenkins
+    ports:
+      - "127.0.0.1:18080:8080"
+    environment:
+      JAVA_OPTS: "-Djenkins.install.runSetupWizard=false"
+      JENKINS_ADMIN_USER: "${JENKINS_ADMIN_USER:-admin}"
+      JENKINS_ADMIN_PASSWORD: "${JENKINS_ADMIN_PASSWORD:?Create lab7/.env with setup_env.py}"
+      TPO_REPOSITORY: "https://github.com/SizikovK/TPO.git"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - type: bind
+        source: ../investigation/romulus-20250902/image.static.mtd
+        target: /opt/openbmc/image.static.mtd
+        read_only: true
+        bind:
+          create_host_path: false
+    shm_size: "1gb"
+    init: true
+volumes:
+  jenkins_home:

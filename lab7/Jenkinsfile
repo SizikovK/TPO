@@ -1,0 +1,68 @@
+pipeline {
+    agent any
+    options {
+        disableConcurrentBuilds()
+        timeout(time: 25, unit: 'MINUTES')
+        buildDiscarder(logRotator(numToKeepStr: '10'))
+    }
+    triggers { pollSCM('H/15 * * * *') }
+    parameters {
+        string(name: 'BMC_FIRMWARE', defaultValue: '/opt/openbmc/image.static.mtd', description: 'Файл прошивки, подключённый к контейнеру только для чтения')
+        string(name: 'BMC_USER', defaultValue: 'root', description: 'Учётная запись учебного OpenBMC')
+        password(name: 'BMC_PASSWORD', defaultValue: '0penBmc', description: 'Пароль учебного OpenBMC')
+    }
+    environment {
+        BMC_URL = 'https://127.0.0.1:3443'
+        HEADLESS = '1'
+    }
+    stages {
+        stage('Prepare') {
+            steps { sh '/opt/test-venv/bin/python lab7/ci.py prepare' }
+            post { always { archiveArtifacts artifacts: 'lab7/results/environment/**', allowEmptyArchive: true } }
+        }
+        stage('QEMU OpenBMC') {
+            steps { sh '/opt/test-venv/bin/python lab7/ci.py qemu' }
+            post { always { archiveArtifacts artifacts: 'lab7/results/qemu/**', allowEmptyArchive: true } }
+        }
+        stage('API tests') {
+            steps {
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                    sh '/opt/test-venv/bin/python lab7/ci.py api'
+                }
+            }
+            post {
+                always {
+                    junit testResults: 'lab7/results/api/junit.xml', allowEmptyResults: false
+                    archiveArtifacts artifacts: 'lab7/results/api/**', allowEmptyArchive: true
+                }
+            }
+        }
+        stage('WebUI tests') {
+            steps {
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                    sh '/opt/test-venv/bin/python lab7/ci.py webui'
+                }
+            }
+            post {
+                always {
+                    junit testResults: 'lab7/results/webui/junit.xml', allowEmptyResults: false
+                    archiveArtifacts artifacts: 'lab7/results/webui/**', allowEmptyArchive: true
+                }
+            }
+        }
+        stage('Load test') {
+            steps {
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                    sh '/opt/test-venv/bin/python lab7/ci.py load'
+                }
+            }
+            post { always { archiveArtifacts artifacts: 'lab7/results/load/**', allowEmptyArchive: true } }
+        }
+    }
+    post {
+        always {
+            sh returnStatus: true, script: '/opt/test-venv/bin/python lab7/ci.py stop > lab7/results/cleanup.txt 2>&1'
+            archiveArtifacts artifacts: 'lab7/results/**', allowEmptyArchive: true, fingerprint: true
+        }
+    }
+}
