@@ -21,6 +21,5 @@ services:
         bind:
           create_host_path: false
     shm_size: "1gb"
-    init: true
 volumes:
   jenkins_home:
