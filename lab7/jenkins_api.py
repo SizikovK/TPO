@@ -87,7 +87,8 @@ def main():
             build = JOB + '/' + str(saved_queue['number'])
         else:
             queue = saved_queue['url']
-            deadline = time.monotonic() + 300
+            deadline = time.monotonic() + 1800
+            last_queue_reason = None
             while True:
                 try:
                     data = read_json(queue + 'api/json')
@@ -110,7 +111,11 @@ def main():
                     (OUT / 'queue.json').write_text(json.dumps(saved_queue, indent=2))
                     break
                 if data.get('cancelled') or time.monotonic() > deadline:
-                    raise RuntimeError('Очередь отменена или сборка не началась за 300 с')
+                    raise RuntimeError('Очередь отменена или сборка не началась за 30 минут')
+                reason = data.get('why')
+                if reason and reason != last_queue_reason:
+                    print('Ожидание очереди: ' + reason, flush=True)
+                    last_queue_reason = reason
                 time.sleep(2)
     if args.action == 'watch':
         deadline = time.monotonic() + 1800
