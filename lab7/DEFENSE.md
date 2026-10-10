@@ -17,7 +17,7 @@ docker compose --env-file lab7/.env -f lab7/compose.yaml ps
 python3 lab7/jenkins_api.py status
 ```
 
-Если Jenkins ещё загружается, повтори status через несколько секунд.
+Скрипт автоматически ждёт готовности Jenkins до 180 секунд. Если время истекло, проверь `docker compose --env-file lab7/.env -f lab7/compose.yaml logs --tail 50` и повтори status.
 
 Открой **http://localhost:18080**. Логин — `admin`, пароль находится в локальном файле `lab7/.env`, в поле `JENKINS_ADMIN_PASSWORD`. Файл не включается в репозиторий и отчёт.
 
@@ -36,11 +36,13 @@ QEMU запускается самим Pipeline внутри контейнер�
 Если уже запустил сборку через интерфейс, эту команду повторно не выполняй: она создаёт ещё одну сборку.
 
 ```bash
-python3 lab7/jenkins_api.py validate
-python3 lab7/jenkins_api.py build
-python3 lab7/jenkins_api.py watch
+python3 lab7/jenkins_api.py validate &&
+python3 lab7/jenkins_api.py build &&
+python3 lab7/jenkins_api.py watch &&
 python3 lab7/jenkins_api.py collect
 ```
+
+Команды связаны через `&&`: при ошибке следующая команда не запускается. build использует `buildWithParameters` для задания с параметрами по умолчанию. Если очередь уже удалена, скрипт ищет связанную сборку по queueId и сохраняет её номер.
 
 validate проверяет Groovy Jenkinsfile валидатором самого Jenkins. watch выводит ход выполнения, collect скачивает реальные отчёты и артефакты последней поставленной этим скриптом в очередь сборки. Для сборки, запущенной через интерфейс, укажи её номер:
 

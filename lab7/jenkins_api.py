@@ -3,6 +3,7 @@ import argparse
 import base64
 import http.cookiejar
 import json
+import sys
 from pathlib import Path
 import time
 import urllib.error
@@ -19,7 +20,9 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('action', choices=['status', 'validate', 'build', 'watch', 'collect'])
     parser.add_argument('--number', type=int)
+    parser.add_argument('--wait-ready', type=float, default=180, help='Ожидание запуска Jenkins, секунды')
     args = parser.parse_args()
+    OUT.mkdir(parents=True, exist_ok=True)
     settings = dict(line.split('=', 1) for line in (ROOT / '.env').read_text().splitlines() if '=' in line)
     encoded = base64.b64encode((settings['JENKINS_ADMIN_USER'] + ':' + settings['JENKINS_ADMIN_PASSWORD']).encode()).decode()
     opener = urllib.request.build_opener(urllib.request.ProxyHandler({}),
@@ -33,9 +36,26 @@ def main():
     def read_json(url):
         return json.loads(request(url)[0])
 
+    deadline = time.monotonic() + args.wait_ready
+    announced = False
+    while True:
+        try:
+            ready = read_json(BASE + '/api/json?tree=mode,quietingDown,jobs[name,color]')
+            break
+        except (urllib.error.URLError, TimeoutError) as exc:
+            if isinstance(exc, urllib.error.HTTPError) and exc.code not in (502, 503, 504):
+                raise
+            if isinstance(exc, urllib.error.HTTPError):
+                exc.close()
+            if time.monotonic() >= deadline:
+                raise RuntimeError('Jenkins не готов. Проверь docker compose ps и logs; повтори команду после запуска.') from exc
+            if not announced:
+                print('Ожидание готовности Jenkins…', file=sys.stderr, flush=True)
+                announced = True
+            time.sleep(min(2, max(0, deadline - time.monotonic())))
+
     if args.action == 'status':
-        data = read_json(BASE + '/api/json?tree=mode,quietingDown,jobs[name,color]')
-        print(json.dumps(data, indent=2))
+        print(json.dumps(ready, indent=2))
         return 0
     if args.action in ('build', 'validate'):
         crumb = read_json(BASE + '/crumbIssuer/api/json')
@@ -47,14 +67,21 @@ def main():
             (OUT / 'jenkinsfile-validation.txt').write_text(output)
             print(output)
             return 0 if 'Jenkinsfile successfully validated' in output else 1
-        _, response_headers = request(JOB + '/build', b'', headers)
-        queue = response_headers['Location']
-        (OUT / 'queue.json').write_text(json.dumps({'url': queue}, indent=2))
+        job = read_json(JOB + '/api/json?tree=property[parameterDefinitions[name]]')
+        parameterized = any(prop.get('parameterDefinitions') for prop in job.get('property', []))
+        endpoint = '/buildWithParameters' if parameterized else '/build'
+        headers['Content-Type'] = 'application/x-www-form-urlencoded'
+        _, response_headers = request(JOB + endpoint, b'', headers)
+        queue = urllib.parse.urljoin(BASE, response_headers['Location'])
+        queue_id = int(urllib.parse.urlparse(queue).path.rstrip('/').split('/')[-1])
+        (OUT / 'queue.json').write_text(json.dumps({'url': queue, 'id': queue_id}, indent=2))
         print('Pipeline поставлен в очередь: ' + queue)
         return 0
     if args.number:
         build = JOB + '/' + str(args.number)
     else:
+        if not (OUT / 'queue.json').exists():
+            raise RuntimeError('Нет сохранённой очереди. Выполни build или укажи --number НОМЕР.')
         saved_queue = json.loads((OUT / 'queue.json').read_text())
         if saved_queue.get('number'):
             build = JOB + '/' + str(saved_queue['number'])
@@ -62,7 +89,19 @@ def main():
             queue = saved_queue['url']
             deadline = time.monotonic() + 300
             while True:
-                data = read_json(queue + 'api/json')
+                try:
+                    data = read_json(queue + 'api/json')
+                except urllib.error.HTTPError as exc:
+                    if exc.code != 404:
+                        raise
+                    exc.close()
+                    # Jenkins удаляет очередь; ищем именно её сборку, а не любую последнюю.
+                    queue_id = saved_queue.get('id', int(urllib.parse.urlparse(queue).path.rstrip('/').split('/')[-1]))
+                    history = read_json(JOB + '/api/json?tree=builds[number,queueId]{0,100}')
+                    match = next((item for item in history.get('builds', []) if item.get('queueId') == queue_id), None)
+                    if not match:
+                        raise RuntimeError('Очередь удалена и связанная сборка не найдена. Выполни build либо укажи --number НОМЕР.') from exc
+                    data = {'executable': {'number': match['number']}}
                 if data.get('executable'):
                     number = data['executable']['number']
                     build = JOB + '/' + str(number)
@@ -108,9 +147,17 @@ def main():
         target.write_bytes(request(build + '/artifact/' + urllib.parse.quote(artifact['relativePath']))[0])
     print(f"Build #{info['number']}: {info['result']}; артефактов: {len(info['artifacts'])}")
     print(f"JUnit: passed={tests['passCount']}, failed={tests['failCount']}, skipped={tests['skipCount']}")
-    print('Доказательства сохранены: ' + str(folder.relative_to(ROOT.parent)))
+    print('Доказательства сохранены: ' + str(folder))
     return 0
 
 
 if __name__ == '__main__':
-    raise SystemExit(main())
+    try:
+        raise SystemExit(main())
+    except urllib.error.HTTPError as exc:
+        exc.close()
+        print(f'Ошибка Jenkins: HTTP {exc.code} ({exc.reason}). Проверь доступ и задание openbmc-ci.', file=sys.stderr)
+        raise SystemExit(1)
+    except (urllib.error.URLError, RuntimeError, OSError, ValueError, KeyError) as exc:
+        print(f'Ошибка: {exc}', file=sys.stderr)
+        raise SystemExit(1)
